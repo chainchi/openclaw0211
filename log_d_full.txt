@@ -1,0 +1,772 @@
+[2026-01-20T09:39:07.420-06:00] [INFO] Foximan version: 0.5.140[0m
+[2026-01-20T09:39:07.420-06:00] ############## OneDiag (6618e88bac8ed3235702eb47077932715d622474) ##############[0m
+[2026-01-20T09:39:07.421-06:00] Core version: 0.1.5-dev[0m
+[2026-01-20T09:39:07.421-06:00] Core release date: 2026-01-15 00:16:49+0800[0m
+[2026-01-20T09:39:07.421-06:00] OneDiag - FOXIMAN module version: 0.0.156[0m
+[2026-01-20T09:39:07.421-06:00] OneDiag - FOXIMAN release date: 2026-01-16 23:51:33+0800[0m
+[2026-01-20T09:39:07.421-06:00] FOXIMAN version: 0.5.140[0m
+[2026-01-20T09:39:07.431-06:00] DHCP Server IP: 172.20.48.248[0m
+[2026-01-20T09:39:07.431-06:00] ################################################################################[0m
+[2026-01-20T09:39:07.431-06:00] [0m
+[2026-01-20T09:39:07.431-06:00] [0m
+[2026-01-20T09:39:07.431-06:00] [0m
+[2026-01-20T09:39:07.431-06:00] [0m
+[2026-01-20T09:39:07.431-06:00] [0m
+[2026-01-20T09:39:07.432-06:00] E6 PN input: [1A72EJ600-36L-G][0m
+[2026-01-20T09:39:07.432-06:00] E6 SN input: [MX-P1A72EJ625520123][0m
+[2026-01-20T09:39:07.432-06:00] OPID input: [FXTE123][0m
+[2026-01-20T09:39:07.432-06:00] MTF input: [MTF#14-8][0m
+[2026-01-20T09:39:07.432-06:00] [0m
+[2026-01-20T09:39:07.432-06:00] [0m
+[2026-01-20T09:39:07.554-06:00] Checking controller: e6_foximan_init[0m
+[2026-01-20T09:39:07.554-06:00] Found configuration file: configs/e6_foximan_init.yaml[0m
+[2026-01-20T09:39:07.554-06:00] Found Python module: module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.567-06:00] Verified: Function 'check_bash_prompt' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.567-06:00] Verified: Function 'show_test_info' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.567-06:00] Verified: Function 'check_sp_bmc_status' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.567-06:00] Verified: Function 'login_e6_ilom_or_ami_bmc_precheck' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.567-06:00] Verified: Function 'check_cpld_versions_precheck' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.567-06:00] Verified: Function 'find_e6_rot_ip' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.567-06:00] Verified: Function 'quit_telnet' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.567-06:00] Verified: Function 'rot_clear_lockdown' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.567-06:00] Verified: Function 'telnet_to_ilom_or_ami_bmc_via_digi_server' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.567-06:00] Verified: Function 'find_ilom_or_bmc_ip' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.567-06:00] Verified: Function 'upgrade_hpm_cpld_if_necessary' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.567-06:00] Verified: Function 'ac_cycle_for_ilom_or_ami_bmc_hpm_cpld' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.567-06:00] Verified: Function 'wait_until_ilom_or_ami_bmc_ready_hpm_cpld' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.567-06:00] Verified: Function 'login_e6_ilom_or_ami_bmc_hpm_cpld' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.567-06:00] Verified: Function 'check_cpld_versions_hpm_cpld' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.567-06:00] Verified: Function 'upgrade_bmc_cpld_if_necessary' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.567-06:00] Verified: Function 'ac_cycle_for_ilom_or_ami_bmc_bmc_cpld' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.567-06:00] Verified: Function 'wait_until_ilom_or_ami_bmc_ready_bmc_cpld' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.567-06:00] Verified: Function 'login_e6_ilom_or_ami_bmc_bmc_cpld' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.567-06:00] Verified: Function 'check_cpld_versions_bmc_cpld' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.568-06:00] Verified: Function 'quit_telnet' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.568-06:00] Verified: Function 'run_foximan_init' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.568-06:00] Verified: Function 'dummy_trigger_fru_start' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.568-06:00] Skipping flow control command check: WAIT:ssh_e6_foximan_fru:enable_i2c_polling[0m
+[2026-01-20T09:39:07.568-06:00] Verified: Function 'telnet_to_e6_via_digi_server' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.568-06:00] Verified: Function 'reset_e6_ilom_to_login_prompt' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.568-06:00] Verified: Function 'login_e6_ilom_after_fru' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.568-06:00] Verified: Function 'ac_cycle' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.568-06:00] Verified: Function 'wait_until_ilom_ready' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.568-06:00] Verified: Function 'login_e6_ilom_verify_fru' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.568-06:00] Verified: Function 'verify_fru_all' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.568-06:00] Verified: Function 'verify_fru_vendor' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.568-06:00] Verified: Function 'quit_telnet' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.568-06:00] Verified: Function 'rot_set_lockdown' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-20T09:39:07.568-06:00] Checking controller: ssh_e6_foximan_fru[0m
+[2026-01-20T09:39:07.568-06:00] Found configuration file: configs/ssh_e6_foximan_fru.yaml[0m
+[2026-01-20T09:39:07.568-06:00] Found Python module: module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.578-06:00] Skipping flow control command check: WAIT:e6_foximan_init:dummy_trigger_fru_start[0m
+[2026-01-20T09:39:07.578-06:00] Verified: Function 'connect_to_e6_ilom' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.578-06:00] Verified: Function 'check_e6_ilom_prompt' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.578-06:00] Verified: Function 'check_assembly' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.578-06:00] Verified: Function 'write_oracle_12vpdb_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.578-06:00] Verified: Function 'write_oracle_bmc_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.578-06:00] Verified: Function 'write_oracle_hpm_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.578-06:00] Verified: Function 'set_system_identity_and_asset_tag_pdb' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.578-06:00] Verified: Function 'verify_and_fix_fru_vendor' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'load_riser1_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'write_e6_cableriser1_fru_data_by_eepromblaster' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'load_riser2_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'write_e6_cableriser2_fru_data_by_eepromblaster' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'load_riser3_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'write_e6_cableriser3_fru_data_by_eepromblaster' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'load_riser4_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'write_e6_cableriser4_fru_data_by_eepromblaster' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'load_riser5_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'write_e6_cableriser5_fru_data_by_eepromblaster' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'load_riser6_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'write_e6_cableriser6_fru_data_by_eepromblaster' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'load_riser7_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'write_e6_cableriser7_fru_data_by_eepromblaster' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'load_riser8_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'write_e6_cableriser8_fru_data_by_eepromblaster' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'write_fan_psu_module_fru' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'set_hpm_fru' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'set_sp_fru' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'disable_i2c_polling' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'load_riser_host_nic_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'write_e6_cableriser_host_nic_fru_data_by_eepromblaster' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'load_riser_dpu_top_bottom_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'write_e6_cableriser_dpu_fru_data_by_eepromblaster' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] Verified: Function 'enable_i2c_polling' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-20T09:39:07.579-06:00] [0m
+[2026-01-20T09:39:07.579-06:00] All configuration checks passed successfully[0m
+[2026-01-20T09:39:07.579-06:00] [0m
+[2026-01-20T09:39:07.580-06:00] Fetching E6 SFC data for SN: MX-P1A72EJ625520123[0m
+[2026-01-20T09:39:07.580-06:00] ========[0m
+[2026-01-20T09:39:07.580-06:00] {[0m
+[2026-01-20T09:39:07.580-06:00]   "SN": "MX-P1A72EJ625520123",[0m
+[2026-01-20T09:39:07.580-06:00]   "STATION_ID": "SYSTEM",[0m
+[2026-01-20T09:39:07.580-06:00]   "PROJECT": "ORACLE_E6-IS"[0m
+[2026-01-20T09:39:07.580-06:00] }[0m
+[2026-01-20T09:39:07.580-06:00] ========[0m
+[2026-01-20T09:39:08.254-06:00] Successfully fetched data from http://10.12.192.157:8001/SFCAPI/SFC/GetConfigurations[0m
+[2026-01-20T09:39:08.273-06:00] Running E6 process_start/check_route for SN: MX-P1A72EJ625520123[0m
+[2026-01-20T09:39:08.273-06:00] ========[0m
+[2026-01-20T09:39:08.274-06:00] {[0m
+[2026-01-20T09:39:08.274-06:00]   "TimeStamp": "2026-01-20T09:39:06.898154-06:00",[0m
+[2026-01-20T09:39:08.274-06:00]   "EQP_No": "INIT_TEST-MTF#14-8",[0m
+[2026-01-20T09:39:08.274-06:00]   "Station_Name": "INIT_TEST",[0m
+[2026-01-20T09:39:08.274-06:00]   "Emp_No": "FXTE123",[0m
+[2026-01-20T09:39:08.274-06:00]   "Serial_Number": "MX-P1A72EJ625520123",[0m
+[2026-01-20T09:39:08.274-06:00]   "Start_Time": "2026-01-20T15:39:06.898154+00:00",[0m
+[2026-01-20T09:39:08.274-06:00]   "Result": "OK",[0m
+[2026-01-20T09:39:08.274-06:00]   "Message": ""[0m
+[2026-01-20T09:39:08.274-06:00] }[0m
+[2026-01-20T09:39:08.274-06:00] curl -X POST -H 'Content-Type: application/json' -d '{"TimeStamp": "2026-01-20T09:39:06.898154-06:00", "EQP_No": "INIT_TEST-MTF#14-8", "Station_Name": "INIT_TEST", "Emp_No": "FXTE123", "Serial_Number": "MX-P1A72EJ625520123", "Start_Time": "2026-01-20T15:39:06.898154+00:00", "Result": "OK", "Message": ""}' 'http://10.12.192.157:8001/SFCAPI/SFC/ProcessStart'[0m
+[2026-01-20T09:39:08.274-06:00] ========[0m
+[2026-01-20T09:39:08.280-06:00] Successfully run TCCS process start at http://10.12.192.157:8001/SFCAPI/SFC/ProcessStart[0m
+[2026-01-20T09:39:08.280-06:00] {'Code': '0', 'Message': ''}[0m
+[2026-01-20T09:39:08.281-06:00] ========[0m
+[2026-01-20T09:39:08.281-06:00] {[0m
+[2026-01-20T09:39:08.281-06:00]   "SN": "MX-P1A72EJ625520123",[0m
+[2026-01-20T09:39:08.281-06:00]   "STATION_ID": "INIT_TEST",[0m
+[2026-01-20T09:39:08.281-06:00]   "EMP_NO": "FXTE123",[0m
+[2026-01-20T09:39:08.281-06:00]   "MODEL_NAME": "1A72EJ600-36L-G"[0m
+[2026-01-20T09:39:08.281-06:00] }[0m
+[2026-01-20T09:39:08.281-06:00] curl -X POST -H 'Content-Type: application/json' -d '{"SN": "MX-P1A72EJ625520123", "STATION_ID": "INIT_TEST", "EMP_NO": "FXTE123", "MODEL_NAME": "1A72EJ600-36L-G"}' 'http://10.12.192.157:8001/SFCAPI/SFC/CheckRoute'[0m
+[2026-01-20T09:39:08.281-06:00] ========[0m
+[2026-01-20T09:39:08.309-06:00] Successfully checked route at http://10.12.192.157:8001/SFCAPI/SFC/CheckRoute[0m
+[2026-01-20T09:39:08.309-06:00] {'RESULT': 'OK'}[0m
+[2026-01-20T09:39:08.376-06:00] Base folder created: logs/20260120_093906.898_INGRASYS_MX-P1A72EJ625520123_L10_INIT[0m
+[2026-01-20T09:39:08.385-06:00] Collected E6 MAC addresses.[0m
+[2026-01-20T09:39:08.522-06:00] TDMS directory structure created: logs/20260120_093906.898_INGRASYS_MX-P1A72EJ625520123_L10_INIT/INGRASYS_2552XQ104G_L10INIT_20260120093906_collected[0m
+[2026-01-20T09:39:08.522-06:00] TDMS xml directory created: logs/20260120_093906.898_INGRASYS_MX-P1A72EJ625520123_L10_INIT/INGRASYS_2552XQ104G_L10INIT_20260120093906_collected/INGRASYS_2552XQ104G_L10INIT_20260120093906.xml/2552XQ104G[0m
+[2026-01-20T09:39:08.522-06:00] TDMS xml directory created: logs/20260120_093906.898_INGRASYS_MX-P1A72EJ625520123_L10_INIT/INGRASYS_2552XQ104G_L10INIT_20260120093906_collected/INGRASYS_2552XQ104G_L10INIT_20260120093906.xml[0m
+[2026-01-20T09:39:08.522-06:00] TDMS bin directory created: logs/20260120_093906.898_INGRASYS_MX-P1A72EJ625520123_L10_INIT/INGRASYS_2552XQ104G_L10INIT_20260120093906_collected/INGRASYS_2552XQ104G_L10INIT_20260120093906.bin[0m
+[2026-01-20T09:39:08.522-06:00] TDMS view_archive directory created: logs/20260120_093906.898_INGRASYS_MX-P1A72EJ625520123_L10_INIT/INGRASYS_2552XQ104G_L10INIT_20260120093906_collected/INGRASYS_2552XQ104G_L10INIT_20260120093906[0m
+[2026-01-20T09:39:08.530-06:00] 2026-01-20 09:39:08,530 - INFO - Successfully created BOM for '2552XQ104G' with 81 sub-items.[0m
+[2026-01-20T09:39:08.532-06:00] 2026-01-20 09:39:08,532 - INFO - Added device '9MN0131O50023_100-000001554' at '/SYS/MB/CPU1' (CPU).[0m
+[2026-01-20T09:39:08.532-06:00] 2026-01-20 09:39:08,532 - INFO - Added device '9MN0131O50022_100-000001554' at '/SYS/MB/CPU2' (CPU).[0m
+[2026-01-20T09:39:08.532-06:00] 2026-01-20 09:39:08,532 - INFO - Added device '802C0624414B63DB58' at '/SYS/MB/CPU1/A1' (RDIMM).[0m
+[2026-01-20T09:39:08.532-06:00] 2026-01-20 09:39:08,532 - INFO - Added device '802C0624414B63D466' at '/SYS/MB/CPU1/A2' (RDIMM).[0m
+[2026-01-20T09:39:08.532-06:00] 2026-01-20 09:39:08,532 - INFO - Added device '802C0624414B63D472' at '/SYS/MB/CPU1/A3' (RDIMM).[0m
+[2026-01-20T09:39:08.533-06:00] 2026-01-20 09:39:08,532 - INFO - Added device '802C0624414B63DBE7' at '/SYS/MB/CPU1/A4' (RDIMM).[0m
+[2026-01-20T09:39:08.533-06:00] 2026-01-20 09:39:08,533 - INFO - Added device '802C0624414B63D568' at '/SYS/MB/CPU1/A5' (RDIMM).[0m
+[2026-01-20T09:39:08.533-06:00] 2026-01-20 09:39:08,533 - INFO - Added device '802C0624414B63D79B' at '/SYS/MB/CPU1/A6' (RDIMM).[0m
+[2026-01-20T09:39:08.533-06:00] 2026-01-20 09:39:08,533 - INFO - Added device '802C0624414B63D58C' at '/SYS/MB/CPU1/A7' (RDIMM).[0m
+[2026-01-20T09:39:08.533-06:00] 2026-01-20 09:39:08,533 - INFO - Added device '802C0624414B63D13E' at '/SYS/MB/CPU1/A8' (RDIMM).[0m
+[2026-01-20T09:39:08.533-06:00] 2026-01-20 09:39:08,533 - INFO - Added device '802C0624414B63D0A6' at '/SYS/MB/CPU1/A9' (RDIMM).[0m
+[2026-01-20T09:39:08.533-06:00] 2026-01-20 09:39:08,533 - INFO - Added device '802C0624414B63DB38' at '/SYS/MB/CPU1/A10' (RDIMM).[0m
+[2026-01-20T09:39:08.533-06:00] 2026-01-20 09:39:08,533 - INFO - Added device '802C0624414B63D0B8' at '/SYS/MB/CPU1/A11' (RDIMM).[0m
+[2026-01-20T09:39:08.534-06:00] 2026-01-20 09:39:08,534 - INFO - Added device '802C0624414B63E0E1' at '/SYS/MB/CPU2/B12' (RDIMM).[0m
+[2026-01-20T09:39:08.534-06:00] 2026-01-20 09:39:08,534 - INFO - Added device '802C0624414B686204' at '/SYS/MB/CPU2/B1' (RDIMM).[0m
+[2026-01-20T09:39:08.534-06:00] 2026-01-20 09:39:08,534 - INFO - Added device '802C0624414B685FBE' at '/SYS/MB/CPU2/B2' (RDIMM).[0m
+[2026-01-20T09:39:08.534-06:00] 2026-01-20 09:39:08,534 - INFO - Added device '802C0624414B686287' at '/SYS/MB/CPU2/B3' (RDIMM).[0m
+[2026-01-20T09:39:08.534-06:00] 2026-01-20 09:39:08,534 - INFO - Added device '802C0624414B685803' at '/SYS/MB/CPU2/B4' (RDIMM).[0m
+[2026-01-20T09:39:08.534-06:00] 2026-01-20 09:39:08,534 - INFO - Added device '802C0624414B686229' at '/SYS/MB/CPU2/B5' (RDIMM).[0m
+[2026-01-20T09:39:08.534-06:00] 2026-01-20 09:39:08,534 - INFO - Added device '802C0624414B686221' at '/SYS/MB/CPU2/B6' (RDIMM).[0m
+[2026-01-20T09:39:08.535-06:00] 2026-01-20 09:39:08,535 - INFO - Added device '802C0624414B6858E6' at '/SYS/MB/CPU2/B7' (RDIMM).[0m
+[2026-01-20T09:39:08.535-06:00] 2026-01-20 09:39:08,535 - INFO - Added device '802C0624414B686248' at '/SYS/MB/CPU2/B8' (RDIMM).[0m
+[2026-01-20T09:39:08.535-06:00] 2026-01-20 09:39:08,535 - INFO - Added device '802C0624414B6862BE' at '/SYS/MB/CPU2/B9' (RDIMM).[0m
+[2026-01-20T09:39:08.535-06:00] 2026-01-20 09:39:08,535 - INFO - Added device '802C0624414B6858CB' at '/SYS/MB/CPU2/B10' (RDIMM).[0m
+[2026-01-20T09:39:08.535-06:00] 2026-01-20 09:39:08,535 - INFO - Added device '802C0624414B68627F' at '/SYS/MB/CPU2/B11' (RDIMM).[0m
+[2026-01-20T09:39:08.535-06:00] 2026-01-20 09:39:08,535 - INFO - Added device '802C0624414B6858CE' at '/SYS/MB/CPU3/B12' (RDIMM).[0m
+[2026-01-20T09:39:08.536-06:00] 2026-01-20 09:39:08,536 - INFO - Added device 'FPF25370609' at '/SYS/DPU1' (DPU).[0m
+[2026-01-20T09:39:08.536-06:00] 2026-01-20 09:39:08,536 - INFO - Added device 'FPF253802A0' at '/SYS/DPU2' (DPU).[0m
+[2026-01-20T09:39:08.536-06:00] 2026-01-20 09:39:08,536 - INFO - Added device 'TW-B1A72EEU254600V3' at '/SYS/SP' (BMC).[0m
+[2026-01-20T09:39:08.536-06:00] 2026-01-20 09:39:08,536 - INFO - Added device 'AK03477790' at '/SYS/FIM' (ROT).[0m
+[2026-01-20T09:39:08.536-06:00] 2026-01-20 09:39:08,536 - INFO - Added device '4657746-2501703362' at '/SYS/CX7_1' (CX7_HOSTNIC).[0m
+[2026-01-20T09:39:08.547-06:00] E6 TDMS generator initialized.[0m
+[2026-01-20T09:39:08.547-06:00] Port 48727 is available (attempt 1/3)[0m
+[2026-01-20T09:39:08.547-06:00] Found available port: 48727[0m
+[2026-01-20T09:39:08.547-06:00] Assigned port 48727 to controller e6_foximan_init (type: subprocess)[0m
+[2026-01-20T09:39:08.550-06:00] Port 48728 is available (attempt 1/3)[0m
+[2026-01-20T09:39:08.550-06:00] Found available port: 48728[0m
+[2026-01-20T09:39:08.551-06:00] Assigned port 48728 to controller ssh_e6_foximan_fru (type: ssh)[0m
+[2026-01-20T09:39:08.551-06:00] Starting async operations:[0m
+[2026-01-20T09:39:08.551-06:00] Waiting for async_start to complete...[0m
+[2026-01-20T09:39:08.554-06:00] Controller 'e6_foximan_init' in Eager-Init mode. Initializing now.[0m
+[33m[2026-01-20T09:39:08.555-06:00] Controller 'ssh_e6_foximan_fru' in On-Demand mode. Deferring initialization.[0m
+[2026-01-20T09:39:08.555-06:00] Controller 'e6_foximan_init': JIT Initializing worker resources...[0m
+[2026-01-20T09:39:08.556-06:00] ssh_e6_foximan_fru process start successfully[0m
+[2026-01-20T09:39:09.559-06:00] Connected to worker on port 48727[0m
+[2026-01-20T09:39:09.560-06:00] SubprocessController: Connected to worker on port 48727[0m
+[2026-01-20T09:39:09.560-06:00] Controller 'e6_foximan_init': Worker resources initialized successfully.[0m
+[2026-01-20T09:39:09.560-06:00] e6_foximan_init process start successfully[0m
+[2026-01-20T09:39:09.561-06:00] Scheduler: Dispatching 'check_bash_prompt' for agent 'e6_foximan_init' (Attempt 1/1)[0m
+[2026-01-20T09:39:09.564-06:00] 'ssh_e6_foximan_fru' is now waiting for sync point 'e6_foximan_init:dummy_trigger_fru_start'...[0m
+[2026-01-20T09:39:09.564-06:00] Scheduler: Dispatching 'show_test_info' for agent 'e6_foximan_init' (Attempt 1/1)[0m
+[2026-01-20T09:39:09.573-06:00] Scheduler: Dispatching 'check_sp_bmc_status' for agent 'e6_foximan_init' (Attempt 1/1)[0m
+[33m[2026-01-20T09:39:09.575-06:00] ================================================================================[0m
+[33m[2026-01-20T09:39:09.575-06:00] = FOXIMAN - BASH - Open Bash Shell (1)                                         =[0m
+[33m[2026-01-20T09:39:09.575-06:00] ================================================================================[0m
+[2026-01-20T09:39:09.575-06:00] (venv) root@DHCP:/home/op/e6_fvt_foximan#[0m
+[1m[32m[2026-01-20T09:39:09.576-06:00] ********************** FOXIMAN/BASH/Open Bash Shell PASS ***********************[0m
+[1m[32m[2026-01-20T09:39:09.576-06:00] * Test start time: 2026-01-20 09:39:09.561811-06:00                            *[0m
+[1m[32m[2026-01-20T09:39:09.576-06:00] * Test end time: 2026-01-20 09:39:09.564489-06:00                              *[0m
+[1m[32m[2026-01-20T09:39:09.576-06:00] ********************************************************************************[0m
+[33m[2026-01-20T09:39:09.576-06:00] ================================================================================[0m
+[33m[2026-01-20T09:39:09.576-06:00] [0m
+[33m[2026-01-20T09:39:11.581-06:00] ================================================================================[0m
+[33m[2026-01-20T09:39:11.581-06:00] = FOXIMAN - INFO - Dump test info (1)                                          =[0m
+[33m[2026-01-20T09:39:11.581-06:00] ================================================================================[0m
+[2026-01-20T09:39:11.582-06:00] {"mtf": "MTF#14-8", "foximan_cli": "foximan", "dhcp_ip": "172.20.48.248"}[0m
+[1m[32m[2026-01-20T09:39:11.582-06:00] *********************** FOXIMAN/INFO/Dump test info PASS ***********************[0m
+[1m[32m[2026-01-20T09:39:11.582-06:00] * Test start time: 2026-01-20 09:39:09.564771-06:00                            *[0m
+[1m[32m[2026-01-20T09:39:11.582-06:00] * Test end time: 2026-01-20 09:39:09.573622-06:00                              *[0m
+[1m[32m[2026-01-20T09:39:11.582-06:00] ********************************************************************************[0m
+[33m[2026-01-20T09:39:11.583-06:00] ================================================================================[0m
+[33m[2026-01-20T09:39:11.583-06:00] [0m
+[2026-01-20T09:39:13.188-06:00] Starting to enable sunservice...[0m
+[2026-01-20T09:39:15.373-06:00] End of enabling sunservice...[0m
+[2026-01-20T09:39:15.853-06:00] Scheduler: Dispatching 'login_e6_ilom_or_ami_bmc_precheck' for agent 'e6_foximan_init' (Attempt 1/1)[0m
+[33m[2026-01-20T09:39:15.854-06:00] ================================================================================[0m
+[33m[2026-01-20T09:39:15.854-06:00] = E6 - BMC - Check ILOM or AMI BMC status (1)                                  =[0m
+[33m[2026-01-20T09:39:15.854-06:00] ================================================================================[0m
+[2026-01-20T09:39:15.854-06:00] [0m
+[2026-01-20T09:39:15.855-06:00] [0m
+[2026-01-20T09:39:15.855-06:00] [0m
+[2026-01-20T09:39:15.855-06:00] [0m
+[2026-01-20T09:39:15.855-06:00] ORACLESP-2552XQ104G login:[0m
+[1m[32m[2026-01-20T09:39:15.855-06:00] ******************* E6/BMC/Check ILOM or AMI BMC status PASS *******************[0m
+[1m[32m[2026-01-20T09:39:15.856-06:00] * Test start time: 2026-01-20 09:39:09.573933-06:00                            *[0m
+[1m[32m[2026-01-20T09:39:15.856-06:00] * Test end time: 2026-01-20 09:39:15.853417-06:00                              *[0m
+[1m[32m[2026-01-20T09:39:15.856-06:00] ********************************************************************************[0m
+[33m[2026-01-20T09:39:15.856-06:00] ================================================================================[0m
+[33m[2026-01-20T09:39:15.856-06:00] [0m
+[2026-01-20T09:39:19.433-06:00] Scheduler: Dispatching 'check_cpld_versions_precheck' for agent 'e6_foximan_init' (Attempt 1/1)[0m
+[2026-01-20T09:39:19.434-06:00] bmc_cpld_need_upgrade: True, bmc_cpld_version:[0m
+[2026-01-20T09:39:19.434-06:00] hpm_cpld_need_upgrade: True, hpm_cpld_version:[0m
+[33m[2026-01-20T09:39:19.434-06:00] ================================================================================[0m
+[33m[2026-01-20T09:39:19.434-06:00] = E6_ILOM - LOGIN - Login E6 ILOM or AMI BMC and check prompt (PRECHECK) (1)   =[0m
+[33m[2026-01-20T09:39:19.435-06:00] ================================================================================[0m
+[2026-01-20T09:39:19.435-06:00] sunservice[0m
+[2026-01-20T09:39:19.435-06:00] Password:[0m
+[2026-01-20T09:39:19.435-06:00] [0m
+[2026-01-20T09:39:19.435-06:00] Copyright (c) 2025, Oracle and/or its affiliates. All rights reserved.[0m
+[2026-01-20T09:39:19.435-06:00] [0m
+[2026-01-20T09:39:19.435-06:00] WARNING: The "sunservice" account is provided solely to allow[0m
+[2026-01-20T09:39:19.436-06:00] Sun Services to perform diagnosis and recovery tasks. Customer use of[0m
+[2026-01-20T09:39:19.436-06:00] the "sunservice" account may interfere with the correct operation of[0m
+[2026-01-20T09:39:19.436-06:00] ILOM and is not supported other than to perform recovery procedures as[0m
+[2026-01-20T09:39:19.436-06:00] documented by Oracle. Normal ILOM operations must be performed using[0m
+[2026-01-20T09:39:19.436-06:00] other (non-"sunservice") accounts. Further usage of the "sunservice"[0m
+[2026-01-20T09:39:19.436-06:00] account implies your agreement with these terms.[0m
+[2026-01-20T09:39:19.436-06:00] [0m
+[2026-01-20T09:39:19.436-06:00] Detecting screen size; please wait...78resize failed[0m
+[2026-01-20T09:39:19.436-06:00] done[0m
+[2026-01-20T09:39:19.437-06:00] [(flash)root@ORACLESP-2552XQ104G:~]#[0m
+[1m[32m[2026-01-20T09:39:19.438-06:00] *** E6_ILOM/LOGIN/Login E6 ILOM or AMI BMC and check prompt (PRECHECK) PASS ****[0m
+[1m[32m[2026-01-20T09:39:19.438-06:00] * Test start time: 2026-01-20 09:39:15.853797-06:00                            *[0m
+[1m[32m[2026-01-20T09:39:19.438-06:00] * Test end time: 2026-01-20 09:39:19.433541-06:00                              *[0m
+[1m[32m[2026-01-20T09:39:19.438-06:00] ********************************************************************************[0m
+[33m[2026-01-20T09:39:19.438-06:00] ================================================================================[0m
+[33m[2026-01-20T09:39:19.438-06:00] [0m
+[2026-01-20T09:39:21.444-06:00] Scheduler: Dispatching 'find_e6_rot_ip' for agent 'e6_foximan_init' (Attempt 1/1)[0m
+[2026-01-20T09:39:21.444-06:00] mac_list: ['a8:69:8c:4c:4b:2d'][0m
+[2026-01-20T09:39:21.444-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[33m[2026-01-20T09:39:21.447-06:00] ================================================================================[0m
+[33m[2026-01-20T09:39:21.447-06:00] = E6_ILOM - CPLD - Check CPLD versions (PRECHECK) (1)                          =[0m
+[33m[2026-01-20T09:39:21.447-06:00] ================================================================================[0m
+[2026-01-20T09:39:21.448-06:00] hwdiag vers[0m
+[2026-01-20T09:39:21.448-06:00] HWdiag - Build Number 167382 (Fri Nov 21 10:59:08 PST 2025)[0m
+[2026-01-20T09:39:21.448-06:00]          Current Date/Time: Jan 08 2000, 23:58:41[0m
+[2026-01-20T09:39:21.448-06:00] Platform - WB SERVER E6-IS[0m
+[2026-01-20T09:39:21.448-06:00] ILOM                              5.1.5.98(r167382) Built on Fri Nov 21 10:59:08 PST 2025[0m
+[2026-01-20T09:39:21.448-06:00] The pcie utilities require host power to be on and pcie enumeration to be complete.[0m
+[2026-01-20T09:39:21.448-06:00] /SYS/PDB/VRD12V_STBY              Model: raa228, FW version: 0x01[0m
+[2026-01-20T09:39:21.448-06:00] /SYS/PDB/VRD12V                   Model: raa228, FW version: 0x01[0m
+[2026-01-20T09:39:21.448-06:00] /SYS/PDB/HSC48V                   Model: ltc4286, Revision: 0x10[0m
+[2026-01-20T09:39:21.449-06:00] /SYS/PDB/HSC48V_AUX               Model: ltc4286, Revision: 0x10[0m
+[2026-01-20T09:39:21.449-06:00] /SYS/PDB/HSC48V_PLD               Model: ltc4286, Revision: 0x10[0m
+[2026-01-20T09:39:21.449-06:00] /SYS/PDB/HSC48V_FAN1              Model: tps1689, FW version: 0x00[0m
+[2026-01-20T09:39:21.449-06:00] /SYS/PDB/HSC48V_FAN2              Model: tps1689, FW version: 0x00[0m
+[2026-01-20T09:39:21.449-06:00] /SYS/PDB/HSC48V_FAN3              Model: tps1689, FW version: 0x00[0m
+[2026-01-20T09:39:21.449-06:00] /SYS/PDB/HSC48V_FAN4              Model: tps1689, FW version: 0x00[0m
+[2026-01-20T09:39:21.449-06:00] /SYS/MB/VDD_CORE0_CPU1_REN        Model: ren229621, FW version: 0x00[0m
+[2026-01-20T09:39:21.449-06:00] /SYS/MB/VDD_CORE1_CPU1_REN        Model: ren229621, FW version: 0x00[0m
+[2026-01-20T09:39:21.449-06:00] /SYS/MB/VDD_IO_CPU1_REN           Model: ren229621, FW version: 0x00[0m
+[2026-01-20T09:39:21.450-06:00] /SYS/MB/VDD_CORE0_CPU2_REN        Model: ren229621, FW version: 0x00[0m
+[2026-01-20T09:39:21.450-06:00] /SYS/MB/VDD_CORE1_CPU2_REN        Model: ren229621, FW version: 0x00[0m
+[2026-01-20T09:39:21.450-06:00] /SYS/MB/VDD_IO_CPU2_REN           Model: ren229621, FW version: 0x00[0m
+[2026-01-20T09:39:21.450-06:00] BIOS                              Version: 96001500[0m
+[2026-01-20T09:39:21.450-06:00] UEFIDIAG                          Version: 2408[0m
+[2026-01-20T09:39:21.450-06:00] BMC CPLD                          Version: 01.02[0m
+[2026-01-20T09:39:21.450-06:00] PDB CPLD                          Version: 01.04[0m
+[2026-01-20T09:39:21.450-06:00] HPM CPLD                          Version: 01.07[0m
+[2026-01-20T09:39:21.450-06:00] [(flash)root@ORACLESP-2552XQ104G:~]#[0m
+[2026-01-20T09:39:21.451-06:00] BMC CPLD version: 01.02[0m
+[2026-01-20T09:39:21.451-06:00] HPM CPLD version: 01.07[0m
+[2026-01-20T09:39:21.451-06:00] PDB CPLD version: 01.04[0m
+[2026-01-20T09:39:21.451-06:00] Both HPM and BMC CPLD version are satisified (01.07), skip checking CPLD versions[0m
+[1m[32m[2026-01-20T09:39:21.453-06:00] *************** E6_ILOM/CPLD/Check CPLD versions (PRECHECK) PASS ***************[0m
+[1m[32m[2026-01-20T09:39:21.453-06:00] * Test start time: 2026-01-20 09:39:19.433907-06:00                            *[0m
+[1m[32m[2026-01-20T09:39:21.453-06:00] * Test end time: 2026-01-20 09:39:21.444011-06:00                              *[0m
+[1m[32m[2026-01-20T09:39:21.453-06:00] ********************************************************************************[0m
+[33m[2026-01-20T09:39:21.453-06:00] ================================================================================[0m
+[33m[2026-01-20T09:39:21.453-06:00] [0m
+[2026-01-20T09:39:22.957-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:23.960-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:24.963-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:25.967-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:26.970-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:27.973-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:28.976-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:29.979-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:30.982-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:31.985-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:32.988-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:33.992-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:34.997-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:36.001-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:37.005-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:38.009-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:39.013-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:40.018-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:41.022-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:42.026-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:43.031-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:44.035-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:45.039-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:46.043-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:47.047-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:48.051-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:49.056-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:50.060-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:51.064-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:52.068-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:53.072-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:54.076-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:55.081-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:56.085-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:57.089-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:58.093-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:39:59.098-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:00.102-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:01.106-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:02.110-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:03.115-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:04.119-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:05.123-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:06.127-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:07.132-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:08.136-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:09.141-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:10.145-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:11.150-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:12.154-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:13.158-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:14.162-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:15.167-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:16.171-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:17.175-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:18.179-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:19.184-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:20.188-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:21.192-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:22.196-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:23.200-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:24.205-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:25.209-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:26.213-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:27.217-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:28.221-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:29.226-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:30.230-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:31.233-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:32.237-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:33.240-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:34.243-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:35.247-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:36.250-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:37.253-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:38.256-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:39.260-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:40.263-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:41.267-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:42.271-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:43.274-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:44.277-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:45.281-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:46.284-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:47.288-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:48.291-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:49.295-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:50.300-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:51.304-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:52.308-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:53.313-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:54.317-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:55.322-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:56.326-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:57.330-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:58.335-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:40:59.339-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:00.344-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:01.348-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:02.353-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:03.357-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:04.361-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:05.366-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:06.370-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:07.374-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:08.379-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:09.383-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:10.387-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:11.391-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:12.396-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:13.400-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:14.404-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:15.408-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:16.412-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:17.417-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:18.421-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:19.425-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:20.430-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:21.434-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:22.439-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:23.443-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:24.447-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:25.452-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:26.456-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:27.460-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:28.465-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:29.469-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:30.473-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:31.478-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:32.482-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:33.486-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:34.490-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:35.495-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:36.499-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:37.504-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:38.508-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:39.512-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:40.517-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:41.521-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:42.526-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:43.530-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:44.535-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:45.539-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:46.543-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:47.548-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:48.552-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:49.556-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:50.560-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:51.563-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:52.566-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:53.570-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:54.573-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:55.576-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:56.580-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:57.583-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:58.586-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:41:59.590-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:42:00.593-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:42:01.596-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:42:02.600-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:42:03.604-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:42:04.608-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:42:05.612-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:42:06.616-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:42:07.620-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:42:08.625-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:42:09.629-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:42:10.633-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:42:11.638-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:42:12.642-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:42:13.646-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:42:14.650-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:42:15.655-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:42:16.659-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:42:17.663-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:42:18.667-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:42:19.671-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:42:20.675-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:42:21.679-06:00] 正在向 http://127.0.0.1:9999/get_ips 查詢 1 個 MAC 位址...[0m
+[2026-01-20T09:42:22.687-06:00] INFO: Changed ownership of /home/op/e6_fvt_foximan_the_same_as_epd2/logs/20260120_093906.898_INGRASYS_MX-P1A72EJ625520123_L10_INIT to 'op' (recursive, no-follow symlinks)[0m
+[2026-01-20T09:42:23.115-06:00] Command finished successfully[0m
+[35m[2026-01-20T09:42:23.115-06:00][CRITICAL] FIRST FAILURE DETECTED in 'find_e6_rot_ip'. Activating post-failure policies.[0m
+[33m[2026-01-20T09:42:23.116-06:00] SKIPPING 'quit_telnet': Item ('quit_telnet') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:23.116-06:00] SKIPPING 'rot_clear_lockdown': Item ('rot_clear_lockdown') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:23.116-06:00] SKIPPING 'telnet_to_ilom_or_ami_bmc_via_digi_server': Item ('telnet_to_ilom_or_ami_bmc_via_digi_server') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:23.116-06:00] SKIPPING 'find_ilom_or_bmc_ip': Item ('find_ilom_or_bmc_ip') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:23.116-06:00] SKIPPING 'upgrade_hpm_cpld_if_necessary': Item ('upgrade_hpm_cpld_if_necessary') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:23.117-06:00] SKIPPING 'ac_cycle_for_ilom_or_ami_bmc_hpm_cpld': Item ('ac_cycle_for_ilom_or_ami_bmc_hpm_cpld') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:23.117-06:00] SKIPPING 'wait_until_ilom_or_ami_bmc_ready_hpm_cpld': Item ('wait_until_ilom_or_ami_bmc_ready_hpm_cpld') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:23.117-06:00] SKIPPING 'login_e6_ilom_or_ami_bmc_hpm_cpld': Item ('login_e6_ilom_or_ami_bmc_hpm_cpld') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:23.117-06:00] SKIPPING 'check_cpld_versions_hpm_cpld': Item ('check_cpld_versions_hpm_cpld') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:23.117-06:00] SKIPPING 'upgrade_bmc_cpld_if_necessary': Item ('upgrade_bmc_cpld_if_necessary') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:23.117-06:00] SKIPPING 'ac_cycle_for_ilom_or_ami_bmc_bmc_cpld': Item ('ac_cycle_for_ilom_or_ami_bmc_bmc_cpld') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:23.118-06:00] SKIPPING 'wait_until_ilom_or_ami_bmc_ready_bmc_cpld': Item ('wait_until_ilom_or_ami_bmc_ready_bmc_cpld') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:23.118-06:00] SKIPPING 'login_e6_ilom_or_ami_bmc_bmc_cpld': Item ('login_e6_ilom_or_ami_bmc_bmc_cpld') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:23.118-06:00] SKIPPING 'check_cpld_versions_bmc_cpld': Item ('check_cpld_versions_bmc_cpld') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:23.118-06:00] SKIPPING 'quit_telnet': Item ('quit_telnet') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:23.118-06:00] SKIPPING 'run_foximan_init': Item ('run_foximan_init') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:23.119-06:00] SKIPPING 'dummy_trigger_fru_start': Item ('dummy_trigger_fru_start') is marked as critical (cof:false).[0m
+[2026-01-20T09:42:23.119-06:00] Releasing waiters for 'e6_foximan_init:dummy_trigger_fru_start' because it was SKIPPED.[0m
+[2026-01-20T09:42:23.119-06:00] 'e6_foximan_init' is now waiting for sync point 'ssh_e6_foximan_fru:enable_i2c_polling'...[0m
+[33m[2026-01-20T09:42:23.119-06:00] ================================================================================[0m
+[33m[2026-01-20T09:42:23.119-06:00] = E6_ROT - ROT - Find E6 ROT IP (1)                                            =[0m
+[33m[2026-01-20T09:42:23.120-06:00] ================================================================================[0m
+[2026-01-20T09:42:23.120-06:00] [0m
+[2026-01-20T09:42:23.120-06:00] ======= TRS Invocation on failure =======[0m
+[2026-01-20T09:42:23.120-06:00] This script should be run as the 'crabber_test' user.[0m
+[2026-01-20T09:42:23.120-06:00] [DHCPLeases] Monitoring thread started[0m
+[2026-01-20T09:42:23.120-06:00] [DHCPLeases] Writing Dict[0m
+[2026-01-20T09:42:23.120-06:00] [DHCPLeases] Setting populated event[0m
+[2026-01-20T09:42:23.121-06:00] Processing /home/op/e6_fvt_foximan_the_same_as_epd2/logs/20260120_093906.898_INGRASYS_MX-P1A72EJ625520123_L10_INIT:2026-01-20 09:42:23,080 [INFO] :: TRS starts running at: 2026-01-20 09:42:23.080918[0m
+[2026-01-20T09:42:23.121-06:00] 2026-01-20 09:42:23,084 [INFO] :: TRS data is saved in /home/op/e6_fvt_foximan_the_same_as_epd2/logs/20260120_093906.898_INGRASYS_MX-P1A72EJ625520123_L10_INIT/run.json[0m
+[2026-01-20T09:42:23.121-06:00] 2026-01-20 09:42:23,084 [INFO] :: TRS ends running at: 2026-01-20 09:42:23.084638[0m
+[2026-01-20T09:42:23.121-06:00] [0m
+[31m[2026-01-20T09:42:23.122-06:00] ********************* E6_ROT/ROT/Find E6 ROT IP Error List *********************[0m
+[31m[2026-01-20T09:42:23.122-06:00] * Unable to find ROT IP for a8:69:8c:4c:4b:2d                                  *[0m
+[31m[2026-01-20T09:42:23.122-06:00] * Test start time: 2026-01-20 09:39:21.444334-06:00                            *[0m
+[31m[2026-01-20T09:42:23.122-06:00] * Test end time: 2026-01-20 09:42:22.683265-06:00                              *[0m
+[31m[2026-01-20T09:42:23.122-06:00] ********************************************************************************[0m
+[33m[2026-01-20T09:42:23.123-06:00] ================================================================================[0m
+[33m[2026-01-20T09:42:23.123-06:00] [0m
+[1m[36m[2026-01-20T09:42:25.627-06:00] Test 'E6_ILOM/TELNET/Quit telnet' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.628-06:00] Test 'E6_ROT/LOCKDOWN/Clear lockdown status' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.628-06:00] Test 'E6_ILOM/TELNET/Telnet to E6 ILOM or AMI BMC via digi server' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.628-06:00] Test 'E6_ILOM/AVAILABILITY/Find ILOM or AMI BMC IP' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.628-06:00] Test 'E6/HPM_CPLD/Upgrade HPM CPLD firmware' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.628-06:00] Test 'E6_ILOM/AC/AC cycle E6 (HPM_CPLD)' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.628-06:00] Test 'E6_ILOM/READINESS/Wait until ILOM or AMI BMC is ready (HPM_CPLD)' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.628-06:00] Test 'E6_ILOM/LOGIN/Login E6 ILOM or AMI BMC and check prompt (HPM_CPLD)' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.629-06:00] Test 'E6_ILOM/CPLD/Check CPLD versions (HPM_CPLD)' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.629-06:00] Test 'E6/BMC_CPLD/Upgrade BMC CPLD firmware' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.629-06:00] Test 'E6_ILOM/AC/AC cycle E6 (BMC_CPLD)' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.629-06:00] Test 'E6_ILOM/READINESS/Wait until ILOM or AMI BMC is ready (BMC_CPLD)' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.629-06:00] Test 'E6_ILOM/LOGIN/Login E6 ILOM or AMI BMC and check prompt (BMC_CPLD)' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.629-06:00] Test 'E6_ILOM/CPLD/Check CPLD versions (BMC_CPLD)' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.629-06:00] Test 'E6_ILOM/TELNET/Quit telnet' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.630-06:00] Test 'FOXIMAN/AMD/INIT FOXIMAN run command' was SKIPPED.[0m
+[2026-01-20T09:42:25.630-06:00] 'ssh_e6_foximan_fru' released from wait on 'e6_foximan_init:dummy_trigger_fru_start'. Final state: SKIPPED.[0m
+[31m[2026-01-20T09:42:25.630-06:00] Dependency 'e6_foximan_init:dummy_trigger_fru_start' for agent 'ssh_e6_foximan_fru' did not complete (State: SKIPPED). Aborting subsequent tests for this agent.[0m
+[33m[2026-01-20T09:42:25.630-06:00] SKIPPING 'connect_to_e6_ilom': Item ('connect_to_e6_ilom') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.630-06:00] SKIPPING 'check_e6_ilom_prompt': Item ('check_e6_ilom_prompt') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.630-06:00] SKIPPING 'check_assembly': Item ('check_assembly') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.631-06:00] SKIPPING 'write_oracle_12vpdb_fru_bin': Item ('write_oracle_12vpdb_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.631-06:00] SKIPPING 'write_oracle_bmc_fru_bin': Item ('write_oracle_bmc_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.631-06:00] SKIPPING 'write_oracle_hpm_fru_bin': Item ('write_oracle_hpm_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.631-06:00] SKIPPING 'set_system_identity_and_asset_tag_pdb': Item ('set_system_identity_and_asset_tag_pdb') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.631-06:00] SKIPPING 'verify_and_fix_fru_vendor': Item ('verify_and_fix_fru_vendor') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.632-06:00] SKIPPING 'load_riser1_fru_bin': Item ('load_riser1_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.632-06:00] SKIPPING 'write_e6_cableriser1_fru_data_by_eepromblaster': Item ('write_e6_cableriser1_fru_data_by_eepromblaster') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.632-06:00] SKIPPING 'load_riser2_fru_bin': Item ('load_riser2_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.632-06:00] SKIPPING 'write_e6_cableriser2_fru_data_by_eepromblaster': Item ('write_e6_cableriser2_fru_data_by_eepromblaster') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.632-06:00] SKIPPING 'load_riser3_fru_bin': Item ('load_riser3_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.632-06:00] SKIPPING 'write_e6_cableriser3_fru_data_by_eepromblaster': Item ('write_e6_cableriser3_fru_data_by_eepromblaster') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.633-06:00] SKIPPING 'load_riser4_fru_bin': Item ('load_riser4_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.633-06:00] SKIPPING 'write_e6_cableriser4_fru_data_by_eepromblaster': Item ('write_e6_cableriser4_fru_data_by_eepromblaster') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.633-06:00] SKIPPING 'load_riser5_fru_bin': Item ('load_riser5_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.633-06:00] SKIPPING 'write_e6_cableriser5_fru_data_by_eepromblaster': Item ('write_e6_cableriser5_fru_data_by_eepromblaster') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.633-06:00] SKIPPING 'load_riser6_fru_bin': Item ('load_riser6_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.633-06:00] SKIPPING 'write_e6_cableriser6_fru_data_by_eepromblaster': Item ('write_e6_cableriser6_fru_data_by_eepromblaster') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.634-06:00] SKIPPING 'load_riser7_fru_bin': Item ('load_riser7_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.634-06:00] SKIPPING 'write_e6_cableriser7_fru_data_by_eepromblaster': Item ('write_e6_cableriser7_fru_data_by_eepromblaster') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.634-06:00] SKIPPING 'load_riser8_fru_bin': Item ('load_riser8_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.634-06:00] SKIPPING 'write_e6_cableriser8_fru_data_by_eepromblaster': Item ('write_e6_cableriser8_fru_data_by_eepromblaster') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.634-06:00] SKIPPING 'write_fan_psu_module_fru': Item ('write_fan_psu_module_fru') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.635-06:00] SKIPPING 'set_hpm_fru': Item ('set_hpm_fru') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.635-06:00] SKIPPING 'set_sp_fru': Item ('set_sp_fru') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.635-06:00] SKIPPING 'disable_i2c_polling': Item ('disable_i2c_polling') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.635-06:00] SKIPPING 'load_riser_host_nic_fru_bin': Item ('load_riser_host_nic_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.635-06:00] SKIPPING 'write_e6_cableriser_host_nic_fru_data_by_eepromblaster': Item ('write_e6_cableriser_host_nic_fru_data_by_eepromblaster') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.635-06:00] SKIPPING 'load_riser_dpu_top_bottom_fru_bin': Item ('load_riser_dpu_top_bottom_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.636-06:00] SKIPPING 'write_e6_cableriser_dpu_fru_data_by_eepromblaster': Item ('write_e6_cableriser_dpu_fru_data_by_eepromblaster') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.636-06:00] SKIPPING 'enable_i2c_polling': Item ('enable_i2c_polling') is marked as critical (cof:false).[0m
+[2026-01-20T09:42:25.636-06:00] Releasing waiters for 'ssh_e6_foximan_fru:enable_i2c_polling' because it was SKIPPED.[0m
+[2026-01-20T09:42:25.636-06:00] Agent 'ssh_e6_foximan_fru' has finished processing all its test items.[0m
+[1m[36m[2026-01-20T09:42:25.636-06:00] Test 'E6_ILOM/DUMMY/Dummy function to trigger FRU programming' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.636-06:00] Test 'E6_ILOM/SSH/Connect to ILOM via SSH' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.637-06:00] Test 'E6_ILOM/Availability/Login E6 ILOM and check prompt' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.637-06:00] Test 'E6_ILOM/ASSEMBLY/Check system assembly correctness' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.637-06:00] Test 'E6_ILOM/FRU/Write Oracle 12vpdb FRU bin file' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.637-06:00] Test 'E6_ILOM/FRU/Write Oracle bmc FRU bin file' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.637-06:00] Test 'E6_ILOM/FRU/Write Oracle hpm FRU bin file' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.637-06:00] Test 'E6_ILOM/FRU/Set System Identity and ASSET Tag pdb' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.638-06:00] Test 'E6_ILOM/FRU/Verify & Auto-Fix VENDOR FRU info' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.638-06:00] Test 'E6_ILOM/FRU/Load cableriser1 fru bin' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.638-06:00] Test 'E6_ILOM/I2C/Write E6 cableriser1 FRU data by eepromblaster' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.638-06:00] Test 'E6_ILOM/FRU/Load cableriser2 fru bin' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.638-06:00] Test 'E6_ILOM/FRU/Write E6 cableriser2 FRU data by eepromblaster' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.638-06:00] Test 'E6_ILOM/FRU/Load cableriser3 fru bin' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.638-06:00] Test 'E6_ILOM/FRU/Write E6 cableriser3 FRU data by eepromblaster' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.638-06:00] Test 'E6_ILOM/FRU/Load cableriser4 fru bin' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.639-06:00] Test 'E6_ILOM/FRU/Write E6 cableriser4 FRU data by eepromblaster' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.639-06:00] Test 'E6_ILOM/FRU/Load cableriser5 fru bin' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.639-06:00] Test 'E6_ILOM/FRU/Write E6 cableriser5 FRU data by eepromblaster' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.639-06:00] Test 'E6_ILOM/FRU/Load cableriser6 fru bin' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.639-06:00] Test 'E6_ILOM/FRU/Write E6 cableriser6 FRU data by eepromblaster' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.639-06:00] Test 'E6_ILOM/FRU/Load cableriser7 fru bin' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.639-06:00] Test 'E6_ILOM/FRU/Write E6 cableriser7 FRU data by eepromblaster' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.640-06:00] Test 'E6_ILOM/FRU/Load cableriser8 fru bin' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.640-06:00] Test 'E6_ILOM/FRU/Write E6 cableriser8 FRU data by eepromblaster' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.640-06:00] Test 'E6_ILOM/FRU/Write fan psu module fru' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.640-06:00] Test 'E6_ILOM/FRU/Set HPM FRU' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.640-06:00] Test 'E6_ILOM/FRU/Set SP FRU' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.640-06:00] Test 'E6_ILOM/I2C/Disable polling' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.640-06:00] Test 'E6_ILOM/FRU/Load cableriser HOST NIC fru bin' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.640-06:00] Test 'E6_ILOM/FRU/Write E6 cableriser HOST NIC FRU data' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.641-06:00] Test 'E6_ILOM/FRU/Load cableriser DPU TOP BOTTOM fru bin' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.641-06:00] Test 'E6_ILOM/FRU/Write E6 cableriser DPU FRU data' was SKIPPED.[0m
+[2026-01-20T09:42:25.641-06:00] 'e6_foximan_init' released from wait on 'ssh_e6_foximan_fru:enable_i2c_polling'. Final state: SKIPPED.[0m
+[31m[2026-01-20T09:42:25.641-06:00] Dependency 'ssh_e6_foximan_fru:enable_i2c_polling' for agent 'e6_foximan_init' did not complete (State: SKIPPED). Aborting subsequent tests for this agent.[0m
+[33m[2026-01-20T09:42:25.641-06:00] SKIPPING 'telnet_to_e6_via_digi_server': Item ('telnet_to_e6_via_digi_server') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.641-06:00] SKIPPING 'reset_e6_ilom_to_login_prompt': Item ('reset_e6_ilom_to_login_prompt') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.641-06:00] SKIPPING 'login_e6_ilom_after_fru': Item ('login_e6_ilom_after_fru') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.641-06:00] SKIPPING 'ac_cycle': Item ('ac_cycle') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.641-06:00] SKIPPING 'wait_until_ilom_ready': Item ('wait_until_ilom_ready') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.642-06:00] SKIPPING 'login_e6_ilom_verify_fru': Item ('login_e6_ilom_verify_fru') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.642-06:00] SKIPPING 'verify_fru_all': Item ('verify_fru_all') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.642-06:00] SKIPPING 'verify_fru_vendor': Item ('verify_fru_vendor') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.642-06:00] SKIPPING 'quit_telnet': Item ('quit_telnet') is marked as critical (cof:false).[0m
+[33m[2026-01-20T09:42:25.642-06:00] SKIPPING 'rot_set_lockdown': Item ('rot_set_lockdown') is marked as critical (cof:false).[0m
+[2026-01-20T09:42:25.642-06:00] Agent 'e6_foximan_init' has finished processing all its test items.[0m
+[1m[36m[2026-01-20T09:42:25.642-06:00] Test 'E6_ILOM/I2C/Enble polling' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.643-06:00] Test 'E6_ILOM/TELNET/Telnet to E6 headnode via digi server' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.643-06:00] Test 'E6_ILOM/RESET/Reset ILOM to login prompt' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.643-06:00] Test 'E6_ILOM/LOGIN/Login E6_ILOM and check prompt (AFTER FRU)' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.643-06:00] Test 'E6_ILOM/POWER/AC cycle E6' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.643-06:00] Test 'E6_ILOM/READINESS/Wait until ILOM is ready' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.643-06:00] Test 'E6_ILOM/LOGIN/Login E6_ILOM and check prompt (VERIFY FRU)' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.643-06:00] Test 'E6_ILOM/FRU/Verify all FRUID information' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.643-06:00] Test 'E6_ILOM/FRU/Verify VENDOR FRU information' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.643-06:00] Test 'E6_ILOM/TELNET/Quit telnet' was SKIPPED.[0m
+[1m[36m[2026-01-20T09:42:25.644-06:00] Test 'E6_ROT/LOCKDOWN/Set lockdown status' was SKIPPED.[0m
+[2026-01-20T09:42:26.592-06:00] Tasks finished. Breaking main loop.[0m
+[2026-01-20T09:42:26.593-06:00] No pending result handlers to wait for.[0m
+[2026-01-20T09:42:26.593-06:00] Final cleanup...[0m
+[2026-01-20T09:42:36.707-06:00] Port 48727 in use (attempt 1/1): [Errno 98] Address already in use[0m
+[2026-01-20T09:42:36.707-06:00] Port 48727 still in use after 1 retries[0m
+[33m[2026-01-20T09:42:36.707-06:00] Port 48727 still in use after cleanup.[0m
+[2026-01-20T09:42:36.808-06:00] Port 48728 is available (attempt 1/1)[0m
+[33m[2026-01-20T09:42:36.822-06:00] [0m
+[33m[2026-01-20T09:42:36.822-06:00] [0m
+[33m[2026-01-20T09:42:36.822-06:00] [0m
+[33m[2026-01-20T09:42:36.822-06:00] ################################## Test Ended ##################################[0m
+[33m[2026-01-20T09:42:36.822-06:00] Test start: 2026-01-20T09:39:06.898154-06:00[0m
+[33m[2026-01-20T09:42:36.822-06:00] Test end: 2026-01-20T09:42:36.821936-06:00[0m
+[33m[2026-01-20T09:42:36.822-06:00] Test duration: 00:03:29.923782[0m
+[33m[2026-01-20T09:42:36.823-06:00] [0m
+[33m[2026-01-20T09:42:36.823-06:00] --------------------------------- Test Result ----------------------------------[0m
+[1m[32m[2026-01-20T09:42:36.823-06:00] FOXIMAN/BASH/Open Bash Shell--------------------------------------------[PASSED][0m
+[1m[32m[2026-01-20T09:42:36.823-06:00] FOXIMAN/INFO/Dump test info---------------------------------------------[PASSED][0m
+[1m[32m[2026-01-20T09:42:36.823-06:00] E6/BMC/Check ILOM or AMI BMC status-------------------------------------[PASSED][0m
+[1m[32m[2026-01-20T09:42:36.823-06:00] E6_ILOM/LOGIN/Login E6 ILOM or AMI BMC and check prompt (PRECHECK)------[PASSED][0m
+[1m[32m[2026-01-20T09:42:36.824-06:00] E6_ILOM/CPLD/Check CPLD versions (PRECHECK)-----------------------------[PASSED][0m
+[31m[2026-01-20T09:42:36.824-06:00] E6_ROT/ROT/Find E6 ROT IP-----------------------------------------------[FAILED][0m
+[1m[36m[2026-01-20T09:42:36.824-06:00] E6_ILOM/TELNET/Quit telnet---------------------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.824-06:00] E6_ROT/LOCKDOWN/Clear lockdown status----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.824-06:00] E6_ILOM/TELNET/Telnet to E6 ILOM or AMI BMC via digi server------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.824-06:00] E6_ILOM/AVAILABILITY/Find ILOM or AMI BMC IP---------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.824-06:00] E6/HPM_CPLD/Upgrade HPM CPLD firmware----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.824-06:00] E6_ILOM/AC/AC cycle E6 (HPM_CPLD)--------------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.824-06:00] E6_ILOM/READINESS/Wait until ILOM or AMI BMC is ready (HPM_CPLD)-------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.825-06:00] E6_ILOM/LOGIN/Login E6 ILOM or AMI BMC and check prompt (HPM_CPLD)-----[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.825-06:00] E6_ILOM/CPLD/Check CPLD versions (HPM_CPLD)----------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.825-06:00] E6/BMC_CPLD/Upgrade BMC CPLD firmware----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.825-06:00] E6_ILOM/AC/AC cycle E6 (BMC_CPLD)--------------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.825-06:00] E6_ILOM/READINESS/Wait until ILOM or AMI BMC is ready (BMC_CPLD)-------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.825-06:00] E6_ILOM/LOGIN/Login E6 ILOM or AMI BMC and check prompt (BMC_CPLD)-----[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.825-06:00] E6_ILOM/CPLD/Check CPLD versions (BMC_CPLD)----------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.825-06:00] E6_ILOM/TELNET/Quit telnet---------------------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.826-06:00] FOXIMAN/AMD/INIT FOXIMAN run command-----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.826-06:00] E6_ILOM/DUMMY/Dummy function to trigger FRU programming----------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.826-06:00] E6_ILOM/SSH/Connect to ILOM via SSH------------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.826-06:00] E6_ILOM/Availability/Login E6 ILOM and check prompt--------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.826-06:00] E6_ILOM/ASSEMBLY/Check system assembly correctness---------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.826-06:00] E6_ILOM/FRU/Write Oracle 12vpdb FRU bin file---------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.826-06:00] E6_ILOM/FRU/Write Oracle bmc FRU bin file------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.826-06:00] E6_ILOM/FRU/Write Oracle hpm FRU bin file------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.826-06:00] E6_ILOM/FRU/Set System Identity and ASSET Tag pdb----------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.827-06:00] E6_ILOM/FRU/Verify & Auto-Fix VENDOR FRU info--------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.827-06:00] E6_ILOM/FRU/Load cableriser1 fru bin-----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.827-06:00] E6_ILOM/I2C/Write E6 cableriser1 FRU data by eepromblaster-------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.827-06:00] E6_ILOM/FRU/Load cableriser2 fru bin-----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.827-06:00] E6_ILOM/FRU/Write E6 cableriser2 FRU data by eepromblaster-------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.827-06:00] E6_ILOM/FRU/Load cableriser3 fru bin-----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.827-06:00] E6_ILOM/FRU/Write E6 cableriser3 FRU data by eepromblaster-------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.827-06:00] E6_ILOM/FRU/Load cableriser4 fru bin-----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.828-06:00] E6_ILOM/FRU/Write E6 cableriser4 FRU data by eepromblaster-------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.828-06:00] E6_ILOM/FRU/Load cableriser5 fru bin-----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.828-06:00] E6_ILOM/FRU/Write E6 cableriser5 FRU data by eepromblaster-------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.828-06:00] E6_ILOM/FRU/Load cableriser6 fru bin-----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.828-06:00] E6_ILOM/FRU/Write E6 cableriser6 FRU data by eepromblaster-------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.828-06:00] E6_ILOM/FRU/Load cableriser7 fru bin-----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.828-06:00] E6_ILOM/FRU/Write E6 cableriser7 FRU data by eepromblaster-------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.828-06:00] E6_ILOM/FRU/Load cableriser8 fru bin-----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.828-06:00] E6_ILOM/FRU/Write E6 cableriser8 FRU data by eepromblaster-------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.829-06:00] E6_ILOM/FRU/Write fan psu module fru-----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.829-06:00] E6_ILOM/FRU/Set HPM FRU------------------------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.829-06:00] E6_ILOM/FRU/Set SP FRU-------------------------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.829-06:00] E6_ILOM/I2C/Disable polling--------------------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.829-06:00] E6_ILOM/FRU/Load cableriser HOST NIC fru bin---------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.829-06:00] E6_ILOM/FRU/Write E6 cableriser HOST NIC FRU data----------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.829-06:00] E6_ILOM/FRU/Load cableriser DPU TOP BOTTOM fru bin---------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.829-06:00] E6_ILOM/FRU/Write E6 cableriser DPU FRU data---------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.829-06:00] E6_ILOM/I2C/Enble polling----------------------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.830-06:00] E6_ILOM/TELNET/Telnet to E6 headnode via digi server-------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.830-06:00] E6_ILOM/RESET/Reset ILOM to login prompt-------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.830-06:00] E6_ILOM/LOGIN/Login E6_ILOM and check prompt (AFTER FRU)---------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.830-06:00] E6_ILOM/POWER/AC cycle E6----------------------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.830-06:00] E6_ILOM/READINESS/Wait until ILOM is ready-----------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.830-06:00] E6_ILOM/LOGIN/Login E6_ILOM and check prompt (VERIFY FRU)--------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.830-06:00] E6_ILOM/FRU/Verify all FRUID information-------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.830-06:00] E6_ILOM/FRU/Verify VENDOR FRU information------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.831-06:00] E6_ILOM/TELNET/Quit telnet---------------------------------------------[SKIPPED][0m
+[1m[36m[2026-01-20T09:42:36.831-06:00] E6_ROT/LOCKDOWN/Set lockdown status------------------------------------[SKIPPED][0m
+[33m[2026-01-20T09:42:36.837-06:00] [0m
+[1m[31m[2026-01-20T09:42:36.837-06:00] ########    ###    #### ##          #### ####[0m
+[1m[31m[2026-01-20T09:42:36.838-06:00] ##         ## ##    ##  ##          #### ####[0m
+[1m[31m[2026-01-20T09:42:36.838-06:00] ##        ##   ##   ##  ##          #### ####[0m
+[1m[31m[2026-01-20T09:42:36.838-06:00] ######   ##     ##  ##  ##           ##   ##[0m
+[1m[31m[2026-01-20T09:42:36.838-06:00] ##       #########  ##  ##[0m
+[1m[31m[2026-01-20T09:42:36.838-06:00] ##       ##     ##  ##  ##          #### ####[0m
+[1m[31m[2026-01-20T09:42:36.838-06:00] ##       ##     ## #### ########    #### ####[0m
+[1m[31m[2026-01-20T09:42:36.838-06:00] [0m
+[31m[2026-01-20T09:42:36.838-06:00] All errors encountered during the test:[0m
+[31m[2026-01-20T09:42:36.838-06:00] ********************* E6_ROT/ROT/Find E6 ROT IP Error List *********************[0m
+[31m[2026-01-20T09:42:36.838-06:00] * Unable to find ROT IP for a8:69:8c:4c:4b:2d                                  *[0m
+[31m[2026-01-20T09:42:36.838-06:00] * Test start time: 2026-01-20 09:39:21.444334-06:00                            *[0m
+[31m[2026-01-20T09:42:36.838-06:00] * Test end time: 2026-01-20 09:42:22.683265-06:00                              *[0m
+[31m[2026-01-20T09:42:36.838-06:00] ********************************************************************************[0m
+[2026-01-20T09:42:36.839-06:00] Task Manager closing process starts now.[0m
+[2026-01-20T09:42:36.855-06:00] bin.jar: logs/20260120_093906.898_INGRASYS_MX-P1A72EJ625520123_L10_INIT/jar/INGRASYS_2552XQ104G_L10INIT_20260120093906_collected/INGRASYS_2552XQ104G_L10INIT_20260120093906.bin.jar[0m
+[2026-01-20T09:42:36.855-06:00] xml.jar: logs/20260120_093906.898_INGRASYS_MX-P1A72EJ625520123_L10_INIT/jar/INGRASYS_2552XQ104G_L10INIT_20260120093906_collected/INGRASYS_2552XQ104G_L10INIT_20260120093906.xml.jar[0m
+[2026-01-20T09:42:36.855-06:00] view_archive.jar: logs/20260120_093906.898_INGRASYS_MX-P1A72EJ625520123_L10_INIT/jar/INGRASYS_2552XQ104G_L10INIT_20260120093906_collected/INGRASYS_2552XQ104G_L10INIT_20260120093906.jar[0m
+[2026-01-20T09:42:36.855-06:00] TDMS jar: /home/op/e6_fvt_foximan_the_same_as_epd2/logs/20260120_093906.898_INGRASYS_MX-P1A72EJ625520123_L10_INIT/jar/INGRASYS_2552XQ104G_L10INIT_20260120093906_collected.jar[0m
+[2026-01-20T09:42:36.855-06:00] Executing command: sshpass -p 'Ingrasys123!@#' sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null oracle@10.12.192.157:/Oracle/OracleToTDMS <<< $'put /home/op/e6_fvt_foximan_the_same_as_epd2/logs/20260120_093906.898_INGRASYS_MX-P1A72EJ625520123_L10_INIT/jar/INGRASYS_2552XQ104G_L10INIT_20260120093906_collected.jar'[0m
+[2026-01-20T09:42:37.117-06:00] TDMS JAR uploaded successfully[0m
+[2026-01-20T09:42:37.117-06:00] Task Manager gracefully closed.[0m
+[33m[2026-01-20T09:42:37.127-06:00] E6 ec code:0003038E769JB0G7[0m
+[2026-01-20T09:42:37.127-06:00] Updating E6 test log for SN: MX-P1A72EJ625520123[0m
+[2026-01-20T09:42:37.128-06:00] ========[0m
+[2026-01-20T09:42:37.128-06:00] {[0m
+[2026-01-20T09:42:37.128-06:00]   "SN": "MX-P1A72EJ625520123",[0m
+[2026-01-20T09:42:37.128-06:00]   "STATION_ID": "INIT_TEST",[0m
+[2026-01-20T09:42:37.128-06:00]   "EMP_NO": "FXTE123",[0m
+[2026-01-20T09:42:37.128-06:00]   "EQP_NO": "INIT_TEST-MTF#14-8",[0m
+[2026-01-20T09:42:37.128-06:00]   "RESULT": "FAIL",[0m
+[2026-01-20T09:42:37.128-06:00]   "START_DATE": "2026/01/20 09:39:06",[0m
+[2026-01-20T09:42:37.129-06:00]   "END_DATE": "2026/01/20 09:42:36",[0m
+[2026-01-20T09:42:37.129-06:00]   "EC": "0003038E769JB0G7",[0m
+[2026-01-20T09:42:37.129-06:00]   "EC_DETAIL": {},[0m
+[2026-01-20T09:42:37.129-06:00]   "TEST_LOG_FILENAME": "IGS_GDL_L10INIT_SYSTEM_ORACLEE6-IS_1A72EJ600-36L-G_MX-P1A72EJ625520123_0.0.156_20260120_094236_FAIL.log",[0m
+[2026-01-20T09:42:37.129-06:00]   "TDMS_FILENAME": "INGRASYS_2552XQ104G_L10INIT_20260120093906_collected.jar"[0m
+[2026-01-20T09:42:37.129-06:00] }[0m
+[2026-01-20T09:42:37.129-06:00] curl -X POST -H 'Content-Type: application/json' -d '{"SN": "MX-P1A72EJ625520123", "STATION_ID": "INIT_TEST", "EMP_NO": "FXTE123", "EQP_NO": "INIT_TEST-MTF#14-8", "RESULT": "FAIL", "START_DATE": "2026/01/20 09:39:06", "END_DATE": "2026/01/20 09:42:36", "EC": "0003038E769JB0G7", "EC_DETAIL": {}, "TEST_LOG_FILENAME": "IGS_GDL_L10INIT_SYSTEM_ORACLEE6-IS_1A72EJ600-36L-G_MX-P1A72EJ625520123_0.0.156_20260120_094236_FAIL.log", "TDMS_FILENAME": "INGRASYS_2552XQ104G_L10INIT_20260120093906_collected.jar"}' 'http://10.12.192.157:8001/SFCAPI/SFC/UpdateTestLog'[0m
+[2026-01-20T09:42:37.129-06:00] ========[0m
+[2026-01-20T09:42:37.165-06:00] Successfully checked route at http://10.12.192.157:8001/SFCAPI/SFC/UpdateTestLog[0m
+[2026-01-20T09:42:37.165-06:00] {'RESULT': 'OK'}[0m
+[2026-01-20T09:42:37.165-06:00] [upload_test_log] Executing command:[0m
+[2026-01-20T09:42:37.165-06:00] sshpass -p 'Ingrasys123!@#' sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null oracle@10.12.192.157:/Oracle/OracleTestLog <<< $'put logs/20260120_093906.898_INGRASYS_MX-P1A72EJ625520123_L10_INIT/MX-P1A72EJ625520123.log IGS_GDL_L10INIT_SYSTEM_ORACLEE6-IS_1A72EJ600-36L-G_MX-P1A72EJ625520123_0.0.156_20260120_094236_FAIL.log'[0m
+[2026-01-20T09:42:37.485-06:00] [upload_test_log] Test log uploaded successfully[0m
+[2026-01-20T09:42:37.485-06:00] Changing to: /Oracle/OracleTestLog[0m
+[2026-01-20T09:42:37.486-06:00] sftp> put logs/20260120_093906.898_INGRASYS_MX-P1A72EJ625520123_L10_INIT/MX-P1A72EJ625520123.log IGS_GDL_L10INIT_SYSTEM_ORACLEE6-IS_1A72EJ600-36L-G_MX-P1A72EJ625520123_0.0.156_20260120_094236_FAIL.log[0m
+[2026-01-20T09:42:37.486-06:00] Uploading logs/20260120_093906.898_INGRASYS_MX-P1A72EJ625520123_L10_INIT/MX-P1A72EJ625520123.log to /Oracle/OracleTestLog/IGS_GDL_L10INIT_SYSTEM_ORACLEE6-IS_1A72EJ600-36L-G_MX-P1A72EJ625520123_0.0.156_20260120_094236_FAIL.log[0m
+[2026-01-20T09:42:37.486-06:00] [0m
+[2026-01-20T09:42:37.486-06:00] [0m
+[2026-01-20T09:42:37.486-06:00] [0m
+[2026-01-20T09:42:37.486-06:00] E6 PN input: [1A72EJ600-36L-G][0m
+[2026-01-20T09:42:37.486-06:00] E6 SN input: [MX-P1A72EJ625520123][0m
+[2026-01-20T09:42:37.486-06:00] OPID input: [FXTE123][0m
+[2026-01-20T09:42:37.487-06:00] MTF input: [MTF#14-8][0m
+[2026-01-20T09:42:37.487-06:00] [0m
+[2026-01-20T09:42:37.487-06:00] [0m

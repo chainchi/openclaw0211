@@ -1,0 +1,9 @@
+﻿檔案名稱,發生錯誤時間,錯誤主因,Runbook檔名
+MX-P1A72EJ625500114.log,2026-01-12 10:34:27,[2026-01-12T10:34:27.369-06:00] E6_ROT/ROT/Find E6 ROT IP-----------------------------------------------[FAILED],E6_INIT_Find_E6_ROT_IP.html
+MX-P1A72EJ625400009.log,2026-01-12 13:19:41,[2026-01-12T13:19:41.876-06:00] * [HWDiag System Fabric Test]: Verification failed: HWDiag System Fabric Test failed. Status: FAILED                                                        *,E6_SYS_HwDiag_System_Fabric_Test_failed.html
+MX-P1A72EJ625420048.log,2026-01-12 13:12:06,[2026-01-12T13:12:06.276-06:00] FOXIMAN/SYSTEM/Poll BKC firmware update progress------------------------[FAILED],-
+MX-P1A72EJ625430012.log,2026-01-12 09:29:46,[2026-01-12T09:29:46.892-06:00] E6/BMC/Check ILOM or AMI BMC status-------------------------------------[FAILED],E6_INIT_Check_ILOMorAMIBMCstatus.html
+MX-P1A72EJ625440237.log,2026-01-14 00:57:41,[2026-01-14T00:57:41.762-06:00] E6/BMC/Check ILOM or AMI BMC status-------------------------------------[FAILED],E6_INIT_Check_ILOMorAMIBMCstatus.html
+MX-P1A72EJ625470114.log,2026-01-23 19:25:25,[2026-01-23T19:25:25.788-06:00] E6_ILOM/LOGIN/Login E6 ILOM or AMI BMC and check prompt (PRECHECK)------[FAILED],E6_INIT_Check_ILOMorAMIBMCstatus.html
+MX-P1A72EJ625520123.log,2026-01-20 09:42:36,[2026-01-20T09:42:36.824-06:00] E6_ROT/ROT/Find E6 ROT IP-----------------------------------------------[FAILED],E6_INIT_Find_E6_ROT_IP.html
+MX-P1A72EJ626020339.log,2026-01-24 12:54:11,[2026-01-24T12:54:11.220-06:00] E6_ILOM/AVAILABILITY/Find ILOM or AMI BMC IP----------------------------[FAILED],E6_INIT_Check_ILOMorAMIBMCstatus.html

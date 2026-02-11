@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FVT 錯誤主因統計報告 (修正版)</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            max-width: 900px;
+            width: 100%;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+        .stats-table th, .stats-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .stats-table th {
+            background-color: #2c3e50;
+            color: white;
+        }
+        .stats-table tr:hover {
+            background-color: #f9f9f9;
+        }
+        .chart-container {
+            position: relative;
+            height: 400px;
+            width: 100%;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 FVT 錯誤主因統計分析</h1>
+        <p class="subtitle">根據 8 筆 Log 檔案歸納之統計結果</p>
+        
+        <table class="stats-table">
+            <thead>
+                <tr>
+                    <th>錯誤類別</th>
+                    <th>數量 (台)</th>
+                    <th>百分比 (%)</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+
+        <div class="chart-container">
+            <canvas id="errorChart"></canvas>
+        </div>
+
+        <div class="footer">
+            修正版本產生時間: 2026-02-10 14:47:55 | 由 阿琪 (moltbot) 💁‍♀️ 提供
+        </div>
+    </div>
+
+    <script>
+        const data = [{"error_reason": "BMC/ILOM 相關失敗", "count": 4, "percentage": 50.0}, {"error_reason": "ROT IP 尋找失敗", "count": 2, "percentage": 25.0}, {"error_reason": "Fabric Test 驗證失敗", "count": 1, "percentage": 12.5}, {"error_reason": "Firmware 更新進度逾時", "count": 1, "percentage": 12.5}];
+        
+        // Populate Table
+        const tableBody = document.getElementById('table-body');
+        data.forEach(row => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `<td>${row.error_reason}</td><td>${row.count}</td><td>${row.percentage}%</td>`;
+            tableBody.appendChild(tr);
+        });
+
+        // Render Chart
+        const ctx = document.getElementById('errorChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: data.map(d => d.error_reason),
+                datasets: [{
+                    label: '錯誤數量',
+                    data: data.map(d => d.count),
+                    backgroundColor: [
+                        'rgba(52, 152, 219, 0.8)',
+                        'rgba(231, 76, 60, 0.8)',
+                        'rgba(46, 204, 113, 0.8)',
+                        'rgba(241, 196, 15, 0.8)'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        ticks: { stepSize: 1 }
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    title: {
+                        display: true,
+                        text: '各類別錯誤分佈'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

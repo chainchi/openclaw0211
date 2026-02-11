@@ -1,0 +1,9 @@
+﻿檔案名稱,錯誤主因,Runbook檔名
+MX-P1A72EJ625470114.log,SunVTS 燒機測試等待逾時 (Timeout 180s),-
+MX-P1A72EJ625470114_INIT.log,Python TypeError (字串相加錯誤),-
+MX-P1A72EJ625470114.log (Duplicate),SunVTS 燒機測試等待逾時 (Timeout 180s),-
+MX-P1A72EJ625470114.log,Firmware Update Failed (CX7 set recovery failed),E6_SYS_Firmware_update_failed_cx7_set_recovery_failed.html
+MX-P1A72EJ625520075.log,HWDiag System Fabric Test Failed,E6_SYS_HwDiag_System_Fabric_Test_failed.html
+MX-P1A72EJ625440237.log,BMC Detection Timeout (No prompt),E6_INIT_Check_ILOMorAMIBMCstatus.html
+MX-P1A72EJ625470114.log (Retry),Python TypeError (String + None),E6_INIT_Check_ILOMorAMIBMCstatus.html
+MX-P1A72EJ625520123.log,E6_ROT/ROT/Find E6 ROT IP FAILED,E6_INIT_Find_E6_ROT_IP.html
