@@ -1,0 +1,822 @@
+[2026-01-07T16:00:00.403-06:00] [INFO] Foximan version: 0.5.137[0m
+[2026-01-07T16:00:00.403-06:00] ############## OneDiag (f6b164f9152b509454f9a5ab3597846d028c660e) ##############[0m
+[2026-01-07T16:00:00.403-06:00] Core version: 0.1.3-dev[0m
+[2026-01-07T16:00:00.403-06:00] Core release date: 2025-11-04 10:57:14+0800[0m
+[2026-01-07T16:00:00.403-06:00] OneDiag - FOXIMAN module version: 0.0.153[0m
+[2026-01-07T16:00:00.403-06:00] OneDiag - FOXIMAN release date: 2025-12-08 16:06:49+0800[0m
+[2026-01-07T16:00:00.404-06:00] FOXIMAN version: 0.5.137[0m
+[2026-01-07T16:00:00.415-06:00] DHCP Server IP: 172.20.48.242[0m
+[2026-01-07T16:00:00.415-06:00] ################################################################################[0m
+[2026-01-07T16:00:00.415-06:00] [0m
+[2026-01-07T16:00:00.415-06:00] [0m
+[2026-01-07T16:00:00.415-06:00] [0m
+[2026-01-07T16:00:00.415-06:00] [0m
+[2026-01-07T16:00:00.415-06:00] [0m
+[2026-01-07T16:00:00.416-06:00] E6 PN input: [1A72EJ600-36L-G][0m
+[2026-01-07T16:00:00.416-06:00] E6 SN input: [MX-P1A72EJ625420093][0m
+[2026-01-07T16:00:00.416-06:00] G6 PN input: [1A72ELA00-36L-G][0m
+[2026-01-07T16:00:00.416-06:00] G6 SN input: [MX-P1A72ELA26020130][0m
+[2026-01-07T16:00:00.416-06:00] OPID input: [FXTE123][0m
+[2026-01-07T16:00:00.416-06:00] MTF input: [MTF#22-1][0m
+[2026-01-07T16:00:00.416-06:00] [0m
+[2026-01-07T16:00:00.416-06:00] [0m
+[2026-01-07T16:00:00.486-06:00] Checking controller: e6_foximan_system[0m
+[2026-01-07T16:00:00.486-06:00] Found configuration file: configs/e6_foximan_system.yaml[0m
+[2026-01-07T16:00:00.486-06:00] Found Python module: module/oracle/e6_foximan_system.py[0m
+[2026-01-07T16:00:00.498-06:00] Verified: Function 'check_bash_prompt' exists in module/oracle/e6_foximan_system.py[0m
+[2026-01-07T16:00:00.498-06:00] Verified: Function 'show_test_info' exists in module/oracle/e6_foximan_system.py[0m
+[2026-01-07T16:00:00.498-06:00] Verified: Function 'run_foximan_system' exists in module/oracle/e6_foximan_system.py[0m
+[2026-01-07T16:00:00.498-06:00] Verified: Function 'foximan_tdms_generation' exists in module/oracle/e6_foximan_system.py[0m
+[2026-01-07T16:00:00.498-06:00] [0m
+[2026-01-07T16:00:00.498-06:00] All configuration checks passed successfully[0m
+[2026-01-07T16:00:00.498-06:00] [0m
+[2026-01-07T16:00:00.498-06:00] Fetching E6 SFC data for SN: MX-P1A72EJ625420093[0m
+[2026-01-07T16:00:00.498-06:00] ========[0m
+[2026-01-07T16:00:00.499-06:00] {[0m
+[2026-01-07T16:00:00.499-06:00]   "SN": "MX-P1A72EJ625420093",[0m
+[2026-01-07T16:00:00.499-06:00]   "STATION_ID": "SYSTEM",[0m
+[2026-01-07T16:00:00.499-06:00]   "PROJECT": "ORACLE_E6-IS"[0m
+[2026-01-07T16:00:00.499-06:00] }[0m
+[2026-01-07T16:00:00.499-06:00] ========[0m
+[2026-01-07T16:00:01.068-06:00] Successfully fetched data from http://10.12.192.157:8001/SFCAPI/SFC/GetConfigurations[0m
+[2026-01-07T16:00:01.088-06:00] E6 SFC data OK for SN: MX-P1A72EJ625420093, PN: 1A72EJ600-36L-G[0m
+[2026-01-07T16:00:01.088-06:00] Fetching G6 SFC data for SN: MX-P1A72ELA26020130[0m
+[2026-01-07T16:00:01.088-06:00] ========[0m
+[2026-01-07T16:00:01.088-06:00] {[0m
+[2026-01-07T16:00:01.088-06:00]   "SN": "MX-P1A72ELA26020130",[0m
+[2026-01-07T16:00:01.088-06:00]   "STATION_ID": "SYSTEM",[0m
+[2026-01-07T16:00:01.088-06:00]   "PROJECT": "ORACLE_G6-8HD"[0m
+[2026-01-07T16:00:01.089-06:00] }[0m
+[2026-01-07T16:00:01.089-06:00] ========[0m
+[2026-01-07T16:00:01.669-06:00] Successfully fetched data from http://10.12.192.157:8001/SFCAPI/SFC/GetConfigurations[0m
+[2026-01-07T16:00:01.687-06:00] G6 SFC data OK for SN: MX-P1A72ELA26020130, PN: 1A72ELA00-36L-G[0m
+[2026-01-07T16:00:01.687-06:00] Running G6 process_start/check_route for SN: MX-P1A72ELA26020130[0m
+[2026-01-07T16:00:01.687-06:00] ========[0m
+[2026-01-07T16:00:01.688-06:00] {[0m
+[2026-01-07T16:00:01.688-06:00]   "TimeStamp": "2026-01-07T15:59:59.829243-06:00",[0m
+[2026-01-07T16:00:01.688-06:00]   "EQP_No": "SYS_TEST-MTF#22-1",[0m
+[2026-01-07T16:00:01.688-06:00]   "Station_Name": "SYS_TEST",[0m
+[2026-01-07T16:00:01.688-06:00]   "Emp_No": "FXTE123",[0m
+[2026-01-07T16:00:01.688-06:00]   "Serial_Number": "MX-P1A72ELA26020130",[0m
+[2026-01-07T16:00:01.688-06:00]   "Start_Time": "2026-01-07T21:59:59.829243+00:00",[0m
+[2026-01-07T16:00:01.688-06:00]   "Result": "OK",[0m
+[2026-01-07T16:00:01.688-06:00]   "Message": ""[0m
+[2026-01-07T16:00:01.688-06:00] }[0m
+[2026-01-07T16:00:01.688-06:00] curl -X POST -H 'Content-Type: application/json' -d '{"TimeStamp": "2026-01-07T15:59:59.829243-06:00", "EQP_No": "SYS_TEST-MTF#22-1", "Station_Name": "SYS_TEST", "Emp_No": "FXTE123", "Serial_Number": "MX-P1A72ELA26020130", "Start_Time": "2026-01-07T21:59:59.829243+00:00", "Result": "OK", "Message": ""}' 'http://10.12.192.157:8001/SFCAPI/SFC/ProcessStart'[0m
+[2026-01-07T16:00:01.688-06:00] ========[0m
+[2026-01-07T16:00:01.695-06:00] Successfully run TCCS process start at http://10.12.192.157:8001/SFCAPI/SFC/ProcessStart[0m
+[2026-01-07T16:00:01.695-06:00] {'Code': '0', 'Message': ''}[0m
+[2026-01-07T16:00:01.695-06:00] ========[0m
+[2026-01-07T16:00:01.695-06:00] {[0m
+[2026-01-07T16:00:01.695-06:00]   "SN": "MX-P1A72ELA26020130",[0m
+[2026-01-07T16:00:01.695-06:00]   "STATION_ID": "SYS_TEST",[0m
+[2026-01-07T16:00:01.695-06:00]   "EMP_NO": "FXTE123",[0m
+[2026-01-07T16:00:01.695-06:00]   "MODEL_NAME": "1A72ELA00-36L-G"[0m
+[2026-01-07T16:00:01.695-06:00] }[0m
+[2026-01-07T16:00:01.696-06:00] curl -X POST -H 'Content-Type: application/json' -d '{"SN": "MX-P1A72ELA26020130", "STATION_ID": "SYS_TEST", "EMP_NO": "FXTE123", "MODEL_NAME": "1A72ELA00-36L-G"}' 'http://10.12.192.157:8001/SFCAPI/SFC/CheckRoute'[0m
+[2026-01-07T16:00:01.696-06:00] ========[0m
+[2026-01-07T16:00:01.721-06:00] Successfully checked route at http://10.12.192.157:8001/SFCAPI/SFC/CheckRoute[0m
+[2026-01-07T16:00:01.721-06:00] {'RESULT': 'OK'}[0m
+[2026-01-07T16:00:01.760-06:00] Base folder created: logs/20260107_155959.829_INGRASYS_MX-P1A72EJ625420093_L10_TEST[0m
+[2026-01-07T16:00:01.769-06:00] Collected E6 MAC addresses.[0m
+[2026-01-07T16:00:01.772-06:00] Collected G6 MAC addresses.[0m
+[2026-01-07T16:00:01.908-06:00] TDMS directory structure created: logs/20260107_155959.829_INGRASYS_MX-P1A72EJ625420093_L10_TEST/INGRASYS_2602XQ1076_L10TEST_20260107155959_collected[0m
+[2026-01-07T16:00:01.908-06:00] TDMS xml directory created: logs/20260107_155959.829_INGRASYS_MX-P1A72EJ625420093_L10_TEST/INGRASYS_2602XQ1076_L10TEST_20260107155959_collected/INGRASYS_2602XQ1076_L10TEST_20260107155959.xml/2602XQ1076[0m
+[2026-01-07T16:00:01.908-06:00] TDMS xml directory created: logs/20260107_155959.829_INGRASYS_MX-P1A72EJ625420093_L10_TEST/INGRASYS_2602XQ1076_L10TEST_20260107155959_collected/INGRASYS_2602XQ1076_L10TEST_20260107155959.xml[0m
+[2026-01-07T16:00:01.908-06:00] TDMS bin directory created: logs/20260107_155959.829_INGRASYS_MX-P1A72EJ625420093_L10_TEST/INGRASYS_2602XQ1076_L10TEST_20260107155959_collected/INGRASYS_2602XQ1076_L10TEST_20260107155959.bin[0m
+[2026-01-07T16:00:01.909-06:00] TDMS view_archive directory created: logs/20260107_155959.829_INGRASYS_MX-P1A72EJ625420093_L10_TEST/INGRASYS_2602XQ1076_L10TEST_20260107155959_collected/INGRASYS_2602XQ1076_L10TEST_20260107155959[0m
+[2026-01-07T16:00:01.916-06:00] 2026-01-07 16:00:01,916 - INFO - Successfully created BOM for '2602XQ1076' with 69 sub-items.[0m
+[2026-01-07T16:00:01.918-06:00] 2026-01-07 16:00:01,918 - INFO - Added device '54388IMX-2602100JD' at '/SYS/DBP/SSD1' (E1S_SSD).[0m
+[2026-01-07T16:00:01.919-06:00] 2026-01-07 16:00:01,919 - INFO - Added device '54388IMX-2602100JC' at '/SYS/DBP/SSD2' (E1S_SSD).[0m
+[2026-01-07T16:00:01.919-06:00] 2026-01-07 16:00:01,919 - INFO - Added device '54388IMX-2602100JB' at '/SYS/DBP/SSD3' (E1S_SSD).[0m
+[2026-01-07T16:00:01.919-06:00] 2026-01-07 16:00:01,919 - INFO - Added device '54388IMX-2602100JA' at '/SYS/DBP/SSD4' (E1S_SSD).[0m
+[2026-01-07T16:00:01.919-06:00] 2026-01-07 16:00:01,919 - INFO - Added device '54388IMX-2602100JH' at '/SYS/DBP/SSD5' (E1S_SSD).[0m
+[2026-01-07T16:00:01.920-06:00] 2026-01-07 16:00:01,919 - INFO - Added device '54388IMX-2602100JG' at '/SYS/DBP/SSD6' (E1S_SSD).[0m
+[2026-01-07T16:00:01.920-06:00] 2026-01-07 16:00:01,920 - INFO - Added device '54388IMX-2602100JF' at '/SYS/DBP/SSD7' (E1S_SSD).[0m
+[2026-01-07T16:00:01.920-06:00] 2026-01-07 16:00:01,920 - INFO - Added device '54388IMX-2602100JE' at '/SYS/DBP/SSD8' (E1S_SSD).[0m
+[2026-01-07T16:00:01.920-06:00] 2026-01-07 16:00:01,920 - ERROR - Failed to add device 'FPL25340B8D': Network device FPL25340B8D must have at least one MAC address[0m
+[2026-01-07T16:00:01.920-06:00] 2026-01-07 16:00:01,920 - ERROR - Failed to add device 'FPL25340B10': Network device FPL25340B10 must have at least one MAC address[0m
+[2026-01-07T16:00:01.921-06:00] 2026-01-07 16:00:01,920 - ERROR - Failed to add device 'FPL25360A56': Network device FPL25360A56 must have at least one MAC address[0m
+[2026-01-07T16:00:01.921-06:00] 2026-01-07 16:00:01,921 - ERROR - Failed to add device 'FPL25341D15': Network device FPL25341D15 must have at least one MAC address[0m
+[2026-01-07T16:00:01.921-06:00] 2026-01-07 16:00:01,921 - ERROR - Failed to add device 'FPL25341498': Network device FPL25341498 must have at least one MAC address[0m
+[2026-01-07T16:00:01.921-06:00] 2026-01-07 16:00:01,921 - ERROR - Failed to add device 'FPL2534148A': Network device FPL2534148A must have at least one MAC address[0m
+[2026-01-07T16:00:01.921-06:00] 2026-01-07 16:00:01,921 - ERROR - Failed to add device 'FPL25341546': Network device FPL25341546 must have at least one MAC address[0m
+[2026-01-07T16:00:01.921-06:00] 2026-01-07 16:00:01,921 - ERROR - Failed to add device 'FPL2534147F': Network device FPL2534147F must have at least one MAC address[0m
+[2026-01-07T16:00:01.922-06:00] 2026-01-07 16:00:01,922 - INFO - Added device 'AK03468102' at '/SYS/FIM' (ROT).[0m
+[2026-01-07T16:00:01.932-06:00] G6 TDMS generator initialized.[0m
+[2026-01-07T16:00:01.933-06:00] Port 30460 is available (attempt 1/3)[0m
+[2026-01-07T16:00:01.933-06:00] Found available port: 30460[0m
+[2026-01-07T16:00:01.933-06:00] Assigned port 30460 to controller e6_foximan_system (type: subprocess)[0m
+[2026-01-07T16:00:01.937-06:00] Starting async operations:[0m
+[2026-01-07T16:00:01.937-06:00] Waiting for async_start to complete...[0m
+[2026-01-07T16:00:01.940-06:00] Controller 'e6_foximan_system' in Eager-Init mode. Initializing now.[0m
+[2026-01-07T16:00:01.940-06:00] Controller 'e6_foximan_system': JIT Initializing worker resources...[0m
+[2026-01-07T16:00:02.944-06:00] Connected to worker on port 30460[0m
+[2026-01-07T16:00:02.944-06:00] SubprocessController: Connected to worker on port 30460[0m
+[2026-01-07T16:00:02.944-06:00] Controller 'e6_foximan_system': Worker resources initialized successfully.[0m
+[2026-01-07T16:00:02.944-06:00] e6_foximan_system process start successfully[0m
+[2026-01-07T16:00:02.946-06:00] Scheduler: Dispatching 'check_bash_prompt' for agent 'e6_foximan_system' (Attempt 1/1)[0m
+[2026-01-07T16:00:02.949-06:00] Scheduler: Dispatching 'show_test_info' for agent 'e6_foximan_system' (Attempt 1/1)[0m
+[2026-01-07T16:00:02.960-06:00] Scheduler: Dispatching 'run_foximan_system' for agent 'e6_foximan_system' (Attempt 1/1)[0m
+[33m[2026-01-07T16:00:02.961-06:00] ================================================================================[0m
+[33m[2026-01-07T16:00:02.962-06:00] = FOXIMAN - BASH - Open Bash Shell (1)                                         =[0m
+[33m[2026-01-07T16:00:02.962-06:00] ================================================================================[0m
+[2026-01-07T16:00:02.962-06:00] (venv) root@DHCP:/home/op/e6_fvt_foximan#[0m
+[1m[32m[2026-01-07T16:00:02.962-06:00] ********************** FOXIMAN/BASH/Open Bash Shell PASS ***********************[0m
+[1m[32m[2026-01-07T16:00:02.962-06:00] * Test start time: 2026-01-07 16:00:02.946613-06:00                            *[0m
+[1m[32m[2026-01-07T16:00:02.963-06:00] * Test end time: 2026-01-07 16:00:02.949098-06:00                              *[0m
+[1m[32m[2026-01-07T16:00:02.963-06:00] ********************************************************************************[0m
+[33m[2026-01-07T16:00:02.963-06:00] ================================================================================[0m
+[33m[2026-01-07T16:00:02.963-06:00] [0m
+[33m[2026-01-07T16:00:04.967-06:00] ================================================================================[0m
+[33m[2026-01-07T16:00:04.967-06:00] = FOXIMAN - INFO - Dump test info (1)                                          =[0m
+[33m[2026-01-07T16:00:04.967-06:00] ================================================================================[0m
+[2026-01-07T16:00:04.968-06:00] {"mtf": "MTF#22-1", "foximan_cli": "foximan", "dhcp_ip": "172.20.48.242"}[0m
+[1m[32m[2026-01-07T16:00:04.968-06:00] *********************** FOXIMAN/INFO/Dump test info PASS ***********************[0m
+[1m[32m[2026-01-07T16:00:04.968-06:00] * Test start time: 2026-01-07 16:00:02.949468-06:00                            *[0m
+[1m[32m[2026-01-07T16:00:04.968-06:00] * Test end time: 2026-01-07 16:00:02.959731-06:00                              *[0m
+[1m[32m[2026-01-07T16:00:04.968-06:00] ********************************************************************************[0m
+[33m[2026-01-07T16:00:04.969-06:00] ================================================================================[0m
+[33m[2026-01-07T16:00:04.969-06:00] [0m
+[2026-01-07T16:00:06.472-06:00] Starting to execute foximan amd_system: [foximan amd_system MX-P1A72EJ625420093,MX-P1A72ELA26020130 --test_type g6-system --mtf MTF#22-1][0m
+[2026-01-07T16:00:06.472-06:00] Foximan log path found: /var/log/foximan/runs/2026-01-07_16-00-04_439968_0[0m
+[33m[2026-01-07T16:00:06.475-06:00] Foximan starts test: [Ping ILOM IP with retries][0m
+[33m[2026-01-07T16:00:14.014-06:00] Foximan completed test: [Ping ILOM IP with retries][0m
+[33m[2026-01-07T16:00:14.017-06:00] Foximan starts test: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T16:03:14.046-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T16:03:14.046-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T16:05:15.137-06:00] Foximan completed test: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T16:05:15.139-06:00] Foximan starts test: [Fetch NTP server details][0m
+[33m[2026-01-07T16:05:15.144-06:00] Foximan skipping step: Disable NTP server[0m
+[33m[2026-01-07T16:05:15.144-06:00] Foximan skipping step: Set ILOM Time[0m
+[33m[2026-01-07T16:05:15.145-06:00] Foximan skipping step: Set NTP server address[0m
+[33m[2026-01-07T16:05:15.146-06:00] Foximan skipping step: Enable NTP server[0m
+[33m[2026-01-07T16:05:15.147-06:00] Foximan starts test: [Show SP Clock][0m
+[33m[2026-01-07T16:05:16.236-06:00] Foximan completed test: [Show SP Clock][0m
+[33m[2026-01-07T16:05:16.239-06:00] Foximan starts test: [Ping ILOM IP with retries][0m
+[33m[2026-01-07T16:08:16.248-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T16:08:16.248-06:00] Foximan continuing step: [Ping ILOM IP with retries][0m
+[33m[2026-01-07T16:11:16.256-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T16:11:16.256-06:00] Foximan continuing step: [Ping ILOM IP with retries][0m
+[33m[2026-01-07T16:12:46.105-06:00] Foximan starts test: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T16:15:46.115-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T16:15:46.115-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T16:17:47.179-06:00] Foximan completed test: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T16:17:47.182-06:00] Foximan starts test: [run liveos cmd: lspci -nntv][0m
+[33m[2026-01-07T16:20:47.190-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T16:20:47.191-06:00] Foximan continuing step: [run liveos cmd: lspci -nntv][0m
+[33m[2026-01-07T16:23:47.198-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T16:23:47.198-06:00] Foximan continuing step: [run liveos cmd: lspci -nntv][0m
+[33m[2026-01-07T16:23:53.524-06:00] Foximan starts test: [run liveos cmd: lspci -vvv][0m
+[33m[2026-01-07T16:26:53.529-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T16:26:53.529-06:00] Foximan continuing step: [run liveos cmd: lspci -vvv][0m
+[33m[2026-01-07T16:29:53.541-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T16:29:53.541-06:00] Foximan continuing step: [run liveos cmd: lspci -vvv][0m
+[33m[2026-01-07T16:29:59.867-06:00] Foximan starts test: [Run HWDiag I2C Test All][0m
+[33m[2026-01-07T16:30:02.178-06:00] Foximan completed test: [Run HWDiag I2C Test All][0m
+[33m[2026-01-07T16:30:02.178-06:00] Foximan starts test: [Get ilom snapshot][0m
+[33m[2026-01-07T16:33:02.183-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T16:33:02.183-06:00] Foximan continuing step: [Get ilom snapshot][0m
+[33m[2026-01-07T16:36:02.192-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T16:36:02.192-06:00] Foximan continuing step: [Get ilom snapshot][0m
+[33m[2026-01-07T16:39:02.197-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T16:39:02.198-06:00] Foximan continuing step: [Get ilom snapshot][0m
+[33m[2026-01-07T16:42:02.202-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T16:42:02.203-06:00] Foximan continuing step: [Get ilom snapshot][0m
+[33m[2026-01-07T16:44:20.852-06:00] Foximan completed test: [Get ilom snapshot][0m
+[33m[2026-01-07T16:44:20.855-06:00] Foximan starts test: [Scp /var/log/gpuv6_amd/gpuv6_update_amd.log from sunservice to DHCP][0m
+[33m[2026-01-07T16:44:22.174-06:00] Foximan completed test: [Scp /var/log/gpuv6_amd/gpuv6_update_amd.log from sunservice to DHCP][0m
+[33m[2026-01-07T16:44:22.381-06:00] Foximan starts test: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T16:47:22.386-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T16:47:22.386-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T16:50:22.392-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T16:50:22.392-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T16:53:22.398-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T16:53:22.398-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T16:56:22.404-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T16:56:22.404-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T16:59:22.414-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T16:59:22.414-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T17:02:22.421-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T17:02:22.421-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T17:05:22.426-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T17:05:22.427-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T17:08:22.432-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T17:08:22.432-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T17:11:22.438-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T17:11:22.438-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T17:14:22.448-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T17:14:22.448-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T17:17:22.454-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T17:17:22.454-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T17:20:22.460-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T17:20:22.460-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T17:23:22.465-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T17:23:22.466-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T17:26:22.471-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T17:26:22.472-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T17:29:22.478-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T17:29:22.478-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T17:32:22.484-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T17:32:22.484-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T17:35:22.495-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T17:35:22.495-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T17:38:22.501-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T17:38:22.501-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T17:41:22.507-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T17:41:22.507-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T17:44:22.514-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T17:44:22.514-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[33m[2026-01-07T17:47:22.520-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[33m[2026-01-07T17:47:22.521-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.063-06:00] output length: 4688[0m
+[2026-01-07T17:49:29.064-06:00] all output length: 44896[0m
+[2026-01-07T17:49:29.064-06:00] ----- Last 20 Lines Start -----[0m
+[2026-01-07T17:49:29.064-06:00] (venv) root@DHCP:/home/op/e6_fvt_foximan#[0m
+[2026-01-07T17:49:29.064-06:00] 2026-01-07 17:49:28,996 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: TRS report will be fill in /var/log/foximan/runs/2026-01-07_16-00-04_439968_0/run.json[0m
+[2026-01-07T17:49:29.064-06:00] 2026-01-07 17:49:28,996 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: TRS ends running at: 2026-01-07 17:49:28.996312[0m
+[2026-01-07T17:49:29.064-06:00] 2026-01-07 17:49:28,987 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: TRS starts running at: 2026-01-07 17:49:28.987239[0m
+[2026-01-07T17:49:29.064-06:00] 2026-01-07 17:49:28,985 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Invoke TRS for run_id: 2026-01-07_16-00-04_439968_0[0m
+[2026-01-07T17:49:29.064-06:00] 2026-01-07 17:49:28,985 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: CRABBER Structured step-by-step TDMS results available in: /var/log/foximan/runs/2026-01-07_16-00-04_439968_0/run_tdms.json[0m
+[2026-01-07T17:49:29.065-06:00] 2026-01-07 17:49:28,985 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: CRABBER Structured step-by-step results available in: /var/log/foximan/runs/2026-01-07_16-00-04_439968_0/run.json[0m
+[2026-01-07T17:49:29.065-06:00] 2026-01-07 17:49:28,985 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: CRABBER All Log files available in: /var/log/foximan/runs/2026-01-07_16-00-04_439968_0/[0m
+[2026-01-07T17:49:29.065-06:00] [0m
+[2026-01-07T17:49:29.065-06:00] Foximan v0.5.137[0m
+[2026-01-07T17:49:29.065-06:00] ================================================================================[0m
+[2026-01-07T17:49:29.065-06:00]   --> Error: Verification failed: Unable to ping ILOM IP for host[0m
+[2026-01-07T17:49:29.065-06:00]   FAILED at step: Ping ILOM IP with retries[0m
+[2026-01-07T17:49:29.065-06:00] [TARGET: MX-P1A72ELA26020130][0m
+[2026-01-07T17:49:29.065-06:00] [0m
+[2026-01-07T17:49:29.065-06:00] !!! 1 host(s)/rack(s) failed during the update process.[0m
+[2026-01-07T17:49:29.065-06:00] [0m
+[2026-01-07T17:49:29.066-06:00] =================================== SUMMARY ====================================[0m
+[2026-01-07T17:49:29.066-06:00] ================================================================================[0m
+[2026-01-07T17:49:29.066-06:00] 2026-01-07 17:49:28,985 [ERROR] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]::[0m
+[2026-01-07T17:49:29.066-06:00] ----- Last 20 Lines End -----[0m
+[35m[2026-01-07T17:49:29.068-06:00][CRITICAL] FIRST FAILURE DETECTED in 'run_foximan_system'. Activating post-failure policies.[0m
+[33m[2026-01-07T17:49:29.068-06:00] SKIPPING 'foximan_tdms_generation': Global stop policy is active.[0m
+[2026-01-07T17:49:29.069-06:00] Agent 'e6_foximan_system' has finished processing all its test items.[0m
+[33m[2026-01-07T17:49:29.069-06:00] ================================================================================[0m
+[33m[2026-01-07T17:49:29.069-06:00] = FOXIMAN - AMD - SYSTEM FOXIMAN run command (1)                               =[0m
+[33m[2026-01-07T17:49:29.069-06:00] ================================================================================[0m
+[2026-01-07T17:49:29.069-06:00] [2026-01-07T16:00:02.961-06:00] ================================================================================[0m
+[2026-01-07T17:49:29.069-06:00] [2026-01-07T16:00:02.962-06:00] = FOXIMAN - BASH - Open Bash Shell (1)                                         =[0m
+[2026-01-07T17:49:29.069-06:00] [2026-01-07T16:00:02.962-06:00] ================================================================================[0m
+[2026-01-07T17:49:29.069-06:00] [2026-01-07T16:00:02.962-06:00] (venv) root@DHCP:/home/op/e6_fvt_foximan#[0m
+[2026-01-07T17:49:29.069-06:00] [2026-01-07T16:00:02.962-06:00] ********************** FOXIMAN/BASH/Open Bash Shell PASS ***********************[0m
+[2026-01-07T17:49:29.069-06:00] [2026-01-07T16:00:02.962-06:00] * Test start time: 2026-01-07 16:00:02.946613-06:00                            *[0m
+[2026-01-07T17:49:29.070-06:00] [2026-01-07T16:00:02.963-06:00] * Test end time: 2026-01-07 16:00:02.949098-06:00                              *[0m
+[2026-01-07T17:49:29.070-06:00] [2026-01-07T16:00:02.963-06:00] ********************************************************************************[0m
+[2026-01-07T17:49:29.070-06:00] [2026-01-07T16:00:02.963-06:00] ================================================================================[0m
+[2026-01-07T17:49:29.070-06:00] [2026-01-07T16:00:02.963-06:00][0m
+[2026-01-07T17:49:29.070-06:00] [2026-01-07T16:00:04.967-06:00] ================================================================================[0m
+[2026-01-07T17:49:29.070-06:00] [2026-01-07T16:00:04.967-06:00] = FOXIMAN - INFO - Dump test info (1)                                          =[0m
+[2026-01-07T17:49:29.070-06:00] [2026-01-07T16:00:04.967-06:00] ================================================================================[0m
+[2026-01-07T17:49:29.070-06:00] [2026-01-07T16:00:04.968-06:00] {"mtf": "MTF#22-1", "foximan_cli": "foximan", "dhcp_ip": "172.20.48.242"}[0m
+[2026-01-07T17:49:29.070-06:00] [2026-01-07T16:00:04.968-06:00] *********************** FOXIMAN/INFO/Dump test info PASS ***********************[0m
+[2026-01-07T17:49:29.070-06:00] [2026-01-07T16:00:04.968-06:00] * Test start time: 2026-01-07 16:00:02.949468-06:00                            *[0m
+[2026-01-07T17:49:29.070-06:00] [2026-01-07T16:00:04.968-06:00] * Test end time: 2026-01-07 16:00:02.959731-06:00                              *[0m
+[2026-01-07T17:49:29.070-06:00] [2026-01-07T16:00:04.968-06:00] ********************************************************************************[0m
+[2026-01-07T17:49:29.070-06:00] [2026-01-07T16:00:04.968-06:00] ================================================================================[0m
+[2026-01-07T17:49:29.070-06:00] [2026-01-07T16:00:04.969-06:00][0m
+[2026-01-07T17:49:29.070-06:00] [2026-01-07T16:00:06.472-06:00] Starting to execute foximan amd_system: [foximan amd_system MX-P1A72EJ625420093,MX-P1A72ELA26020130 --test_type g6-system --mtf MTF#22-1][0m
+[2026-01-07T17:49:29.070-06:00] [2026-01-07T16:00:06.472-06:00] Foximan log path found: /var/log/foximan/runs/2026-01-07_16-00-04_439968_0[0m
+[2026-01-07T17:49:29.070-06:00] [0m
+[2026-01-07T17:49:29.070-06:00] 2026-01-07 16:00:04,796 [INFO] :: Beginning tests[0m
+[2026-01-07T17:49:29.070-06:00] [2026-01-07T16:00:06.475-06:00] Foximan starts test: [Ping ILOM IP with retries][0m
+[2026-01-07T17:49:29.070-06:00] [0m
+[2026-01-07T17:49:29.070-06:00] 2026-01-07 16:00:04,797 [INFO] :: Beginning AMD system tests[0m
+[2026-01-07T17:49:29.071-06:00] 2026-01-07 16:00:04,797 [INFO] :: Waiting for ILOM power on for all hosts[0m
+[2026-01-07T17:49:29.071-06:00] 2026-01-07 16:00:04,797 [INFO] :: Waiting for ILOM power on and setting up NTP clock[0m
+[2026-01-07T17:49:29.071-06:00] 2026-01-07 16:00:04,799 [INFO] [bmc_mac=d0:f4:05:76:52:4b, serial=MX-P1A72EJ625420093]:: [MX-P1A72EJ625420093] Executing step: Ping ILOM IP with retries[0m
+[2026-01-07T17:49:29.071-06:00] [2026-01-07T16:00:14.014-06:00] Foximan completed test: [Ping ILOM IP with retries][0m
+[2026-01-07T17:49:29.071-06:00] [0m
+[2026-01-07T17:49:29.071-06:00] 2026-01-07 16:00:14,010 [INFO] [bmc_mac=d0:f4:05:76:52:4b, serial=MX-P1A72EJ625420093]:: [MX-P1A72EJ625420093] SP 172.17.5.245 is reachable[0m
+[2026-01-07T17:49:29.071-06:00] 2026-01-07 16:00:14,011 [INFO] [bmc_mac=d0:f4:05:76:52:4b, serial=MX-P1A72EJ625420093]:: [MX-P1A72EJ625420093] Step=Ping ILOM IP with retries: Res=True[0m
+[2026-01-07T17:49:29.071-06:00] 2026-01-07 16:00:14,012 [INFO] [bmc_mac=d0:f4:05:76:52:4b, serial=MX-P1A72EJ625420093]:: [MX-P1A72EJ625420093] Completed step: Ping ILOM IP with retries[0m
+[2026-01-07T17:49:29.071-06:00] [2026-01-07T16:00:14.017-06:00] Foximan starts test: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.071-06:00] [0m
+[2026-01-07T17:49:29.071-06:00] 2026-01-07 16:00:14,013 [INFO] [bmc_mac=d0:f4:05:76:52:4b, serial=MX-P1A72EJ625420093]:: [MX-P1A72EJ625420093] Executing step: Wait For ILOM To Return To Network[0m
+[2026-01-07T17:49:29.071-06:00] [2026-01-07T16:03:14.046-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.071-06:00] [2026-01-07T16:03:14.046-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.071-06:00] [2026-01-07T16:05:15.136-06:00] Foximan completed test: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.071-06:00] [0m
+[2026-01-07T17:49:29.071-06:00] 2026-01-07 16:00:14,013 [INFO] [bmc_mac=d0:f4:05:76:52:4b, serial=MX-P1A72EJ625420093]:: [MX-P1A72EJ625420093] Step=Wait For ILOM To Return To Network: Res=None[0m
+[2026-01-07T17:49:29.071-06:00] 2026-01-07 16:00:14,014 [INFO] [bmc_mac=d0:f4:05:76:52:4b, serial=MX-P1A72EJ625420093]:: [MX-P1A72EJ625420093] Waiting 5 minutes before checking ILOM...[0m
+[2026-01-07T17:49:29.071-06:00] [DHCPLeases] Writing Dict[0m
+[2026-01-07T17:49:29.071-06:00] 2026-01-07 16:05:15,132 [INFO] [bmc_mac=d0:f4:05:76:52:4b, serial=MX-P1A72EJ625420093]:: [MX-P1A72EJ625420093] ILOM is responsive[0m
+[2026-01-07T17:49:29.071-06:00] 2026-01-07 16:05:15,134 [INFO] [bmc_mac=d0:f4:05:76:52:4b, serial=MX-P1A72EJ625420093]:: [MX-P1A72EJ625420093] Completed step: Wait For ILOM To Return To Network[0m
+[2026-01-07T17:49:29.071-06:00] [2026-01-07T16:05:15.139-06:00] Foximan starts test: [Fetch NTP server details][0m
+[2026-01-07T17:49:29.071-06:00] [0m
+[2026-01-07T17:49:29.072-06:00] 2026-01-07 16:05:15,135 [INFO] [bmc_mac=d0:f4:05:76:52:4b, serial=MX-P1A72EJ625420093]:: [MX-P1A72EJ625420093] Executing step: Fetch NTP server details[0m
+[2026-01-07T17:49:29.072-06:00] [2026-01-07T16:05:15.143-06:00] Foximan skipping step: Disable NTP server[0m
+[2026-01-07T17:49:29.072-06:00] [0m
+[2026-01-07T17:49:29.072-06:00] 2026-01-07 16:05:15,135 [INFO] [bmc_mac=d0:f4:05:76:52:4b, serial=MX-P1A72EJ625420093]:: [MX-P1A72EJ625420093] Step=Fetch NTP server details: Res=False[0m
+[2026-01-07T17:49:29.072-06:00] 2026-01-07 16:05:15,135 [ERROR] [bmc_mac=d0:f4:05:76:52:4b, serial=MX-P1A72EJ625420093]:: [MX-P1A72EJ625420093] 'Fetch NTP server details' failed: 'Failed to fetch valid ntp server details[0m
+[2026-01-07T17:49:29.072-06:00] 2026-01-07 16:05:15,137 [ERROR] [bmc_mac=d0:f4:05:76:52:4b, serial=MX-P1A72EJ625420093]:: [MX-P1A72EJ625420093] Received exception: Verification failed: Failed to fetch valid ntp server details[0m
+[2026-01-07T17:49:29.072-06:00] Step: Fetch NTP server details allow_failure=True, continuing...[0m
+[2026-01-07T17:49:29.072-06:00] 2026-01-07 16:05:15,137 [INFO] [bmc_mac=d0:f4:05:76:52:4b, serial=MX-P1A72EJ625420093]:: [MX-P1A72EJ625420093] Skipping step: Disable NTP server[0m
+[2026-01-07T17:49:29.072-06:00] [2026-01-07T16:05:15.144-06:00] Foximan skipping step: Set ILOM Time[0m
+[2026-01-07T17:49:29.072-06:00] [0m
+[2026-01-07T17:49:29.072-06:00] 2026-01-07 16:05:15,138 [INFO] [bmc_mac=d0:f4:05:76:52:4b, serial=MX-P1A72EJ625420093]:: [MX-P1A72EJ625420093] Skipping step: Set ILOM Time[0m
+[2026-01-07T17:49:29.072-06:00] [2026-01-07T16:05:15.145-06:00] Foximan skipping step: Set NTP server address[0m
+[2026-01-07T17:49:29.072-06:00] [0m
+[2026-01-07T17:49:29.072-06:00] 2026-01-07 16:05:15,139 [INFO] [bmc_mac=d0:f4:05:76:52:4b, serial=MX-P1A72EJ625420093]:: [MX-P1A72EJ625420093] Skipping step: Set NTP server address[0m
+[2026-01-07T17:49:29.072-06:00] [2026-01-07T16:05:15.146-06:00] Foximan skipping step: Enable NTP server[0m
+[2026-01-07T17:49:29.072-06:00] [0m
+[2026-01-07T17:49:29.072-06:00] 2026-01-07 16:05:15,141 [INFO] [bmc_mac=d0:f4:05:76:52:4b, serial=MX-P1A72EJ625420093]:: [MX-P1A72EJ625420093] Skipping step: Enable NTP server[0m
+[2026-01-07T17:49:29.072-06:00] [2026-01-07T16:05:15.147-06:00] Foximan starts test: [Show SP Clock][0m
+[2026-01-07T17:49:29.072-06:00] [0m
+[2026-01-07T17:49:29.072-06:00] 2026-01-07 16:05:15,143 [INFO] [bmc_mac=d0:f4:05:76:52:4b, serial=MX-P1A72EJ625420093]:: [MX-P1A72EJ625420093] Executing step: Show SP Clock[0m
+[2026-01-07T17:49:29.072-06:00] [2026-01-07T16:05:16.236-06:00] Foximan completed test: [Show SP Clock][0m
+[2026-01-07T17:49:29.072-06:00] [0m
+[2026-01-07T17:49:29.072-06:00] 2026-01-07 16:05:16,231 [INFO] [bmc_mac=d0:f4:05:76:52:4b, serial=MX-P1A72EJ625420093]:: [MX-P1A72EJ625420093] Step=Show SP Clock: Res=/SP/clock[0m
+[2026-01-07T17:49:29.073-06:00]     Targets:[0m
+[2026-01-07T17:49:29.073-06:00] [0m
+[2026-01-07T17:49:29.073-06:00]     Properties:[0m
+[2026-01-07T17:49:29.073-06:00]         datetime = Sun Mar 19 07:06:00 2000[0m
+[2026-01-07T17:49:29.073-06:00]         timezone = GMT (GMT)[0m
+[2026-01-07T17:49:29.073-06:00]         uptime = 17 days, 00:32:42[0m
+[2026-01-07T17:49:29.073-06:00]         usentpserver = enabled[0m
+[2026-01-07T17:49:29.073-06:00] [0m
+[2026-01-07T17:49:29.073-06:00]     Commands:[0m
+[2026-01-07T17:49:29.073-06:00]         cd[0m
+[2026-01-07T17:49:29.073-06:00]         set[0m
+[2026-01-07T17:49:29.073-06:00]         show[0m
+[2026-01-07T17:49:29.073-06:00] 2026-01-07 16:05:16,234 [INFO] [bmc_mac=d0:f4:05:76:52:4b, serial=MX-P1A72EJ625420093]:: [MX-P1A72EJ625420093] Completed step: Show SP Clock[0m
+[2026-01-07T17:49:29.073-06:00] [2026-01-07T16:05:16.239-06:00] Foximan starts test: [Ping ILOM IP with retries][0m
+[2026-01-07T17:49:29.073-06:00] [0m
+[2026-01-07T17:49:29.073-06:00] 2026-01-07 16:05:16,237 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] Executing step: Ping ILOM IP with retries[0m
+[2026-01-07T17:49:29.073-06:00] [2026-01-07T16:08:16.248-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.073-06:00] [2026-01-07T16:08:16.248-06:00] Foximan continuing step: [Ping ILOM IP with retries][0m
+[2026-01-07T17:49:29.073-06:00] [2026-01-07T16:11:16.256-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.073-06:00] [2026-01-07T16:11:16.256-06:00] Foximan continuing step: [Ping ILOM IP with retries][0m
+[2026-01-07T17:49:29.073-06:00] [2026-01-07T16:12:46.105-06:00] Foximan starts test: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.073-06:00] [0m
+[2026-01-07T17:49:29.074-06:00] 2026-01-07 16:05:28,538 [WARNING] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] SP 172.17.2.176 is unreachable in ping_ip_for_host[0m
+[2026-01-07T17:49:29.074-06:00] 2026-01-07 16:05:28,538 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Retry attempt 1 for Ping ILOM IP ...[0m
+[2026-01-07T17:49:29.074-06:00] [DHCPLeases] Writing Dict[0m
+[2026-01-07T17:49:29.074-06:00] [DHCPLeases] Writing Dict[0m
+[2026-01-07T17:49:29.074-06:00] 2026-01-07 16:06:10,810 [WARNING] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] SP 172.17.2.176 is unreachable in ping_ip_for_host[0m
+[2026-01-07T17:49:29.074-06:00] 2026-01-07 16:06:10,810 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Retry attempt 2 for Ping ILOM IP ...[0m
+[2026-01-07T17:49:29.074-06:00] 2026-01-07 16:06:55,010 [WARNING] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] SP 172.17.2.176 is unreachable in ping_ip_for_host[0m
+[2026-01-07T17:49:29.074-06:00] 2026-01-07 16:06:55,010 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Retry attempt 3 for Ping ILOM IP ...[0m
+[2026-01-07T17:49:29.074-06:00] [DHCPLeases] Writing Dict[0m
+[2026-01-07T17:49:29.074-06:00] [DHCPLeases] Writing Dict[0m
+[2026-01-07T17:49:29.074-06:00] 2026-01-07 16:07:39,234 [WARNING] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] SP 172.17.2.176 is unreachable in ping_ip_for_host[0m
+[2026-01-07T17:49:29.074-06:00] 2026-01-07 16:07:39,234 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Retry attempt 4 for Ping ILOM IP ...[0m
+[2026-01-07T17:49:29.074-06:00] 2026-01-07 16:08:21,530 [WARNING] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] SP 172.17.2.176 is unreachable in ping_ip_for_host[0m
+[2026-01-07T17:49:29.074-06:00] 2026-01-07 16:08:21,530 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Retry attempt 5 for Ping ILOM IP ...[0m
+[2026-01-07T17:49:29.074-06:00] 2026-01-07 16:09:05,730 [WARNING] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] SP 172.17.2.176 is unreachable in ping_ip_for_host[0m
+[2026-01-07T17:49:29.074-06:00] 2026-01-07 16:09:05,730 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Retry attempt 6 for Ping ILOM IP ...[0m
+[2026-01-07T17:49:29.074-06:00] 2026-01-07 16:09:48,026 [WARNING] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] SP 172.17.2.176 is unreachable in ping_ip_for_host[0m
+[2026-01-07T17:49:29.074-06:00] 2026-01-07 16:09:48,026 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Retry attempt 7 for Ping ILOM IP ...[0m
+[2026-01-07T17:49:29.074-06:00] [DHCPLeases] Writing Dict[0m
+[2026-01-07T17:49:29.074-06:00] 2026-01-07 16:10:32,226 [WARNING] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] SP 172.17.2.176 is unreachable in ping_ip_for_host[0m
+[2026-01-07T17:49:29.074-06:00] 2026-01-07 16:10:32,226 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Retry attempt 8 for Ping ILOM IP ...[0m
+[2026-01-07T17:49:29.074-06:00] 2026-01-07 16:11:14,522 [WARNING] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] SP 172.17.2.176 is unreachable in ping_ip_for_host[0m
+[2026-01-07T17:49:29.074-06:00] 2026-01-07 16:11:14,522 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Retry attempt 9 for Ping ILOM IP ...[0m
+[2026-01-07T17:49:29.074-06:00] 2026-01-07 16:11:58,722 [WARNING] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] SP 172.17.2.176 is unreachable in ping_ip_for_host[0m
+[2026-01-07T17:49:29.075-06:00] 2026-01-07 16:11:58,722 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Retry attempt 10 for Ping ILOM IP ...[0m
+[2026-01-07T17:49:29.075-06:00] 2026-01-07 16:12:42,946 [WARNING] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] SP 172.17.2.176 is unreachable in ping_ip_for_host[0m
+[2026-01-07T17:49:29.075-06:00] 2026-01-07 16:12:42,946 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] Step=Ping ILOM IP with retries: Res=False[0m
+[2026-01-07T17:49:29.075-06:00] 2026-01-07 16:12:42,946 [ERROR] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] 'Ping ILOM IP with retries' failed: 'Unable to ping ILOM IP for host[0m
+[2026-01-07T17:49:29.075-06:00] 2026-01-07 16:12:42,948 [ERROR] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] Failed at step 'Ping ILOM IP with retries': Verification failed: Unable to ping ILOM IP for host[0m
+[2026-01-07T17:49:29.075-06:00] 2026-01-07 16:12:42,949 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Checking Critical Redfish events[0m
+[2026-01-07T17:49:29.075-06:00] 2026-01-07 16:12:42,949 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: afid_sag_path = /opt/foximan/utils/AFID_SAG.json[0m
+[2026-01-07T17:49:29.075-06:00] 2026-01-07 16:12:42,951 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Checking Critical Redfish events v2[0m
+[2026-01-07T17:49:29.075-06:00] 2026-01-07 16:12:42,958 [WARNING] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Bad AFID regex (afid=10011): global flags not at the start of the expression at position 1[0m
+[2026-01-07T17:49:29.075-06:00] 2026-01-07 16:12:42,958 [WARNING] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Bad AFID regex (afid=10012): global flags not at the start of the expression at position 1[0m
+[2026-01-07T17:49:29.075-06:00] 2026-01-07 16:12:42,979 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] Fetching Redfish EventLog entries (all pages)...[0m
+[2026-01-07T17:49:29.075-06:00] 2026-01-07 16:12:46,076 [ERROR] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] Failed to get Redfish entries at URI: /redfish/v1/Systems/UBB/LogServices/EventLog/Entries[0m
+[2026-01-07T17:49:29.075-06:00] 2026-01-07 16:12:46,077 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] No Redfish entries returned.[0m
+[2026-01-07T17:49:29.075-06:00] 2026-01-07 16:12:46,077 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] No Redfish events to evaluate.[0m
+[2026-01-07T17:49:29.075-06:00] 2026-01-07 16:12:46,077 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Critical Redfish events check completed[0m
+[2026-01-07T17:49:29.075-06:00] 2026-01-07 16:12:46,077 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Checking and Printing AGFHC error mapping[0m
+[2026-01-07T17:49:29.075-06:00] 2026-01-07 16:12:46,077 [ERROR] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] AGFHC mapping: Could not find AGFHC tarball: /var/log/foximan/runs/2026-01-07_16-00-04_439968_0/agfhc_all_lvl5_res.tgz in /var/log/foximan/runs/2026-01-07_16-00-04_439968_0/[0m
+[2026-01-07T17:49:29.075-06:00] 2026-01-07 16:12:46,077 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: AGFHC Error mapping completed[0m
+[2026-01-07T17:49:29.075-06:00] 2026-01-07 16:12:46,081 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Executing step: Wait For ILOM To Return To Network[0m
+[2026-01-07T17:49:29.075-06:00] [2026-01-07T16:15:46.115-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.075-06:00] [2026-01-07T16:15:46.115-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.075-06:00] [2026-01-07T16:17:47.179-06:00] Foximan completed test: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.075-06:00] [0m
+[2026-01-07T17:49:29.076-06:00] 2026-01-07 16:12:46,081 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Step=Wait For ILOM To Return To Network: Res=None[0m
+[2026-01-07T17:49:29.076-06:00] 2026-01-07 16:12:46,081 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Waiting 5 minutes before checking ILOM...[0m
+[2026-01-07T17:49:29.076-06:00] 2026-01-07 16:17:47,173 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] ILOM is responsive[0m
+[2026-01-07T17:49:29.076-06:00] 2026-01-07 16:17:47,176 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Completed step: Wait For ILOM To Return To Network[0m
+[2026-01-07T17:49:29.076-06:00] [2026-01-07T16:17:47.182-06:00] Foximan starts test: [run liveos cmd: lspci -nntv][0m
+[2026-01-07T17:49:29.076-06:00] [0m
+[2026-01-07T17:49:29.076-06:00] 2026-01-07 16:17:47,177 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Executing step: run liveos cmd: lspci -nntv[0m
+[2026-01-07T17:49:29.076-06:00] [2026-01-07T16:20:47.190-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.076-06:00] [2026-01-07T16:20:47.190-06:00] Foximan continuing step: [run liveos cmd: lspci -nntv][0m
+[2026-01-07T17:49:29.076-06:00] [2026-01-07T16:23:47.198-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.076-06:00] [2026-01-07T16:23:47.198-06:00] Foximan continuing step: [run liveos cmd: lspci -nntv][0m
+[2026-01-07T17:49:29.076-06:00] [2026-01-07T16:23:53.524-06:00] Foximan starts test: [run liveos cmd: lspci -vvv][0m
+[2026-01-07T17:49:29.076-06:00] [0m
+[2026-01-07T17:49:29.076-06:00] 2026-01-07 16:17:47,178 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Initializing to get PCIE CX7 IP Address[0m
+[2026-01-07T17:49:29.076-06:00] 2026-01-07 16:17:47,178 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Ssh to Host bmc: sshpass -p changeme ssh -o StrictHostKeyChecking=no root@172.17.5.245[0m
+[2026-01-07T17:49:29.076-06:00] 2026-01-07 16:17:48,455 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Executing start console command: start -script -f /HOST/console/[0m
+[2026-01-07T17:49:29.076-06:00] 2026-01-07 16:17:53,505 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Waiting for connecting host serial console, timeout is 360s[0m
+[2026-01-07T17:49:29.076-06:00] 2026-01-07 16:23:53,507 [ERROR] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Failed to connect to host serial console via ILOM. Check if Host is booted up or Power ON[0m
+[2026-01-07T17:49:29.076-06:00] 2026-01-07 16:23:53,510 [ERROR] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Received exception: Timeout exceeded.[0m
+[2026-01-07T17:49:29.076-06:00] <pexpect.pty_spawn.spawn object at 0x75a085b6dd30>[0m
+[2026-01-07T17:49:29.076-06:00] command: /usr/bin/sshpass[0m
+[2026-01-07T17:49:29.076-06:00] args: [b'/usr/bin/sshpass', b'-p', b'changeme', b'ssh', b'-o', b'StrictHostKeyChecking=no', b'root@172.17.5.245'][0m
+[2026-01-07T17:49:29.077-06:00] buffer (last 100 chars): '37H1\x1b[16;1H\x1b[16;37H2\x1b[16;1H\x1b[16;37H3\x1b[16;1H\x1b[16;37H4\x1b[16;1H\x1b[16;37H5\x1b[16;1H\x1b[16;37H6\x1b[16;1H\x1b[16;37H7'[0m
+[2026-01-07T17:49:29.077-06:00] before (last 100 chars): '37H1\x1b[16;1H\x1b[16;37H2\x1b[16;1H\x1b[16;37H3\x1b[16;1H\x1b[16;37H4\x1b[16;1H\x1b[16;37H5\x1b[16;1H\x1b[16;37H6\x1b[16;1H\x1b[16;37H7'[0m
+[2026-01-07T17:49:29.077-06:00] after: <class 'pexpect.exceptions.TIMEOUT'>[0m
+[2026-01-07T17:49:29.077-06:00] match: None[0m
+[2026-01-07T17:49:29.077-06:00] match_index: None[0m
+[2026-01-07T17:49:29.077-06:00] exitstatus: None[0m
+[2026-01-07T17:49:29.077-06:00] flag_eof: False[0m
+[2026-01-07T17:49:29.077-06:00] pid: 454834[0m
+[2026-01-07T17:49:29.077-06:00] child_fd: 8[0m
+[2026-01-07T17:49:29.077-06:00] closed: False[0m
+[2026-01-07T17:49:29.077-06:00] timeout: 300[0m
+[2026-01-07T17:49:29.077-06:00] delimiter: <class 'pexpect.exceptions.EOF'>[0m
+[2026-01-07T17:49:29.077-06:00] logfile: None[0m
+[2026-01-07T17:49:29.077-06:00] logfile_read: None[0m
+[2026-01-07T17:49:29.077-06:00] logfile_send: None[0m
+[2026-01-07T17:49:29.077-06:00] maxread: 2000[0m
+[2026-01-07T17:49:29.077-06:00] ignorecase: False[0m
+[2026-01-07T17:49:29.077-06:00] searchwindowsize: None[0m
+[2026-01-07T17:49:29.077-06:00] delaybeforesend: 0.05[0m
+[2026-01-07T17:49:29.077-06:00] delayafterclose: 0.1[0m
+[2026-01-07T17:49:29.077-06:00] delayafterterminate: 0.1[0m
+[2026-01-07T17:49:29.077-06:00] searcher: searcher_re:[0m
+[2026-01-07T17:49:29.077-06:00]     0: re.compile('\\[root@[\\w\\s]+.*\\]# ')[0m
+[2026-01-07T17:49:29.077-06:00] Step: run liveos cmd: lspci -nntv allow_failure=True, continuing...[0m
+[2026-01-07T17:49:29.077-06:00] 2026-01-07 16:23:53,512 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Executing step: run liveos cmd: lspci -vvv[0m
+[2026-01-07T17:49:29.077-06:00] [2026-01-07T16:26:53.529-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.077-06:00] [2026-01-07T16:26:53.529-06:00] Foximan continuing step: [run liveos cmd: lspci -vvv][0m
+[2026-01-07T17:49:29.077-06:00] [2026-01-07T16:29:53.540-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.077-06:00] [2026-01-07T16:29:53.541-06:00] Foximan continuing step: [run liveos cmd: lspci -vvv][0m
+[2026-01-07T17:49:29.077-06:00] [2026-01-07T16:29:59.867-06:00] Foximan starts test: [Run HWDiag I2C Test All][0m
+[2026-01-07T17:49:29.077-06:00] [0m
+[2026-01-07T17:49:29.078-06:00] 2026-01-07 16:23:53,513 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Initializing to get PCIE CX7 IP Address[0m
+[2026-01-07T17:49:29.078-06:00] 2026-01-07 16:23:53,513 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Ssh to Host bmc: sshpass -p changeme ssh -o StrictHostKeyChecking=no root@172.17.5.245[0m
+[2026-01-07T17:49:29.078-06:00] 2026-01-07 16:23:54,797 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Executing start console command: start -script -f /HOST/console/[0m
+[2026-01-07T17:49:29.078-06:00] 2026-01-07 16:23:59,847 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Waiting for connecting host serial console, timeout is 360s[0m
+[2026-01-07T17:49:29.078-06:00] 2026-01-07 16:29:59,849 [ERROR] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Failed to connect to host serial console via ILOM. Check if Host is booted up or Power ON[0m
+[2026-01-07T17:49:29.078-06:00] 2026-01-07 16:29:59,852 [ERROR] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Received exception: Timeout exceeded.[0m
+[2026-01-07T17:49:29.078-06:00] <pexpect.pty_spawn.spawn object at 0x75a085cebc50>[0m
+[2026-01-07T17:49:29.078-06:00] command: /usr/bin/sshpass[0m
+[2026-01-07T17:49:29.078-06:00] args: [b'/usr/bin/sshpass', b'-p', b'changeme', b'ssh', b'-o', b'StrictHostKeyChecking=no', b'root@172.17.5.245'][0m
+[2026-01-07T17:49:29.078-06:00] buffer (last 100 chars): '7H7\x1b[16;1H\x1b[16;37H8\x1b[16;1H\x1b[16;37H9\x1b[16;1H\x1b[16;36H30\x1b[16;1H\x1b[16;37H1\x1b[16;1H\x1b[16;37H2\x1b[16;1H\x1b[16;37H3'[0m
+[2026-01-07T17:49:29.078-06:00] before (last 100 chars): '7H7\x1b[16;1H\x1b[16;37H8\x1b[16;1H\x1b[16;37H9\x1b[16;1H\x1b[16;36H30\x1b[16;1H\x1b[16;37H1\x1b[16;1H\x1b[16;37H2\x1b[16;1H\x1b[16;37H3'[0m
+[2026-01-07T17:49:29.078-06:00] after: <class 'pexpect.exceptions.TIMEOUT'>[0m
+[2026-01-07T17:49:29.078-06:00] match: None[0m
+[2026-01-07T17:49:29.078-06:00] match_index: None[0m
+[2026-01-07T17:49:29.078-06:00] exitstatus: None[0m
+[2026-01-07T17:49:29.078-06:00] flag_eof: False[0m
+[2026-01-07T17:49:29.078-06:00] pid: 460730[0m
+[2026-01-07T17:49:29.078-06:00] child_fd: 9[0m
+[2026-01-07T17:49:29.078-06:00] closed: False[0m
+[2026-01-07T17:49:29.078-06:00] timeout: 300[0m
+[2026-01-07T17:49:29.078-06:00] delimiter: <class 'pexpect.exceptions.EOF'>[0m
+[2026-01-07T17:49:29.078-06:00] logfile: None[0m
+[2026-01-07T17:49:29.078-06:00] logfile_read: None[0m
+[2026-01-07T17:49:29.078-06:00] logfile_send: None[0m
+[2026-01-07T17:49:29.078-06:00] maxread: 2000[0m
+[2026-01-07T17:49:29.078-06:00] ignorecase: False[0m
+[2026-01-07T17:49:29.078-06:00] searchwindowsize: None[0m
+[2026-01-07T17:49:29.078-06:00] delaybeforesend: 0.05[0m
+[2026-01-07T17:49:29.078-06:00] delayafterclose: 0.1[0m
+[2026-01-07T17:49:29.078-06:00] delayafterterminate: 0.1[0m
+[2026-01-07T17:49:29.078-06:00] searcher: searcher_re:[0m
+[2026-01-07T17:49:29.078-06:00]     0: re.compile('\\[root@[\\w\\s]+.*\\]# ')[0m
+[2026-01-07T17:49:29.078-06:00] Step: run liveos cmd: lspci -vvv allow_failure=True, continuing...[0m
+[2026-01-07T17:49:29.079-06:00] 2026-01-07 16:29:59,854 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Executing step: Run HWDiag I2C Test All[0m
+[2026-01-07T17:49:29.079-06:00] [2026-01-07T16:30:02.178-06:00] Foximan completed test: [Run HWDiag I2C Test All][0m
+[2026-01-07T17:49:29.079-06:00] [0m
+[2026-01-07T17:49:29.079-06:00] 2026-01-07 16:29:59,854 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Running hwdiag i2c test all[0m
+[2026-01-07T17:49:29.079-06:00] 2026-01-07 16:30:01,005 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]::   I2C DEVICE                          CHIP       BUS/MUX1/CH1/MUX0/CH0/ADDR   RESULT[0m
+[2026-01-07T17:49:29.079-06:00]   ----------------------------------------------------------------------------------[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/MB/CLK_MNG                          9FGP204BKLFT 1/0xFF/0xFF/0xFF/0xFF/0xC0     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/MB/CLK_GEN1                         9SQ440NQQI8 1/0xFF/0xFF/0xFF/0xFF/0xD2     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/MB/CLK_GEN2                         9QXL2001BNHGI8 1/0xFF/0xFF/0xFF/0xFF/0xCA     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/MB/CLK_GEN3                         9QXL2001BNHGI8 1/0xFF/0xFF/0xFF/0xFF/0xDE     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/MB/CLK_GEN4                         9ZXL0851EKILFT 1/0xFF/0xFF/0xFF/0xFF/0xD8     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/MB/VRD_MUX                          PCA9542    2/0xFF/0xFF/0xFF/0xFF/0xE0     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/MB/VDD_CORE0_CPU1_REN               RAA229620GNP 2/0xFF/0xFF/0xE0/0x00/0xC2     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/MB/VDD_CORE1_CPU1_REN               RAA229620GNP 2/0xFF/0xFF/0xE0/0x00/0xC4     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/MB/VDD_IO_CPU1_REN                  RAA229621GNP 2/0xFF/0xFF/0xE0/0x00/0xC6     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/MB/VDD_CORE0_CPU2_REN               RAA229620GNP 2/0xFF/0xFF/0xE0/0x01/0xE8     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/MB/VDD_CORE1_CPU2_REN               RAA229620GNP 2/0xFF/0xFF/0xE0/0x01/0xEA     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/MB/VDD_IO_CPU2_REN                  RAA229621GNP 2/0xFF/0xFF/0xE0/0x01/0xEC     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/MB/FANCTRL1_1                       MAX31790   3/0xFF/0xFF/0xFF/0xFF/0x58     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/MB/FANCTRL2_1                       MAX31790   3/0xFF/0xFF/0xFF/0xFF/0x5E     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/PDB/CPLD/CTL                        LCMXO2_4000 3/0xFF/0xFF/0xFF/0xFF/0x12     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/PDB/CPLD/EFB0                       LCMXO2_4000_EFB 3/0xFF/0xFF/0xFF/0xFF/0xB8     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/PDB/CPLD/EFB1                       LCMXO2_4000_EFB 3/0xFF/0xFF/0xFF/0xFF/0xBA     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/PDB/VRD12V                          RAA228004GNPHA 3/0xFF/0xFF/0xFF/0xFF/0xC0     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/PDB/VRD12V_STBY                     RAA228000GNPHA 3/0xFF/0xFF/0xFF/0xFF/0xC2     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/PDB/HSC48V_FAN1                     TPS16890VMAR 3/0xFF/0xFF/0xFF/0xFF/0x8A     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/PDB/HSC48V_FAN2                     TPS16890VMAR 3/0xFF/0xFF/0xFF/0xFF/0x8C     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/PDB/HSC48V_FAN3                     TPS16890VMAR 3/0xFF/0xFF/0xFF/0xFF/0x8E     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/PDB/HSC48V_FAN4                     TPS16890VMAR 3/0xFF/0xFF/0xFF/0xFF/0x90     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/PDB/HSC48V                          LTC4286AUK 3/0xFF/0xFF/0xFF/0xFF/0x82     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/PDB/HSC48V_AUX                      LTC4286AUK 3/0xFF/0xFF/0xFF/0xFF/0x86     OK[0m
+[2026-01-07T17:49:29.079-06:00]   /SYS/PDB/HSC48V_PLD                      LTC4286AUK 3/0xFF/0xFF/0xFF/0xFF/0x84     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/PDB/FRUID                           M24256_BFMC6TG 3/0xFF/0xFF/0xFF/0xFF/0xA6     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/PDB/TEMP                            TMP1075DR  3/0xFF/0xFF/0xFF/0xFF/0x92     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/PDB/LEAK_DET                        MAX1363    3/0xFF/0xFF/0xFF/0xFF/0x6A     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/MB/INLET_TEMP                       TMP1075DR  4/0xFF/0xFF/0xFF/0xFF/0x92     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/MB/OUTLET1_TEMP                     TMP1075DR  4/0xFF/0xFF/0xFF/0xFF/0x94     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/MB/OUTLET2_TEMP                     TMP1075DR  4/0xFF/0xFF/0xFF/0xFF/0x90     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/MB/FRUID                            M24C64_FMN6TP 4/0xFF/0xFF/0xFF/0xFF/0xA0     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/MB/CPLD/CTL                         LCMXO3LF_9400C 4/0xFF/0xFF/0xFF/0xFF/0x12     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/SP/TEMP                             TMP1075DR  5/0xFF/0xFF/0xFF/0xFF/0x92     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/SP/RTC                              DS1338     6/0xFF/0xFF/0xFF/0xFF/0xD0     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/MB/PCA9547_SMB6                     PCA9547    6/0xFF/0xFF/0xFF/0xFF/0xE2     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/CRB1/FRUID                          M24256_BFMC6TG 6/0xFF/0xFF/0xE2/0x01/0xAE     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/CRB1/TEMP                           TMP1075DR  6/0xFF/0xFF/0xE2/0x01/0x92     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/CRB1/PCIE1/GXR3                     AT24C128   6/0xFF/0xFF/0xE2/0x01/0xA0     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/CRB1/PCIE1/GXR3_STATUS              PCA9554A   6/0xFF/0xFF/0xE2/0x01/0x42     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/CRB2/FRUID                          M24256_BFMC6TG 6/0xFF/0xFF/0xE2/0x03/0xAE     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/CRB2/TEMP                           TMP1075DR  6/0xFF/0xFF/0xE2/0x03/0x92     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/CRB2/PCIE2/GXR3                     AT24C128   6/0xFF/0xFF/0xE2/0x03/0xA0     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/CRB2/PCIE2/GXR3_STATUS              PCA9554A   6/0xFF/0xFF/0xE2/0x03/0x42     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/CRB3/FRUID                          M24256_BFMC6TG 6/0xFF/0xFF/0xE2/0x05/0xAE     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/CRB3/TEMP                           TMP1075DR  6/0xFF/0xFF/0xE2/0x05/0x92     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/CRB3/PCIE3/GXR3                     AT24C128   6/0xFF/0xFF/0xE2/0x05/0xA0     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/CRB3/PCIE3/GXR3_STATUS              PCA9554A   6/0xFF/0xFF/0xE2/0x05/0x42     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/CRB7/FRUID                          M24256_BFMC6TG 6/0xFF/0xFF/0xE2/0x07/0xAE     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/CRB7/TEMP                           TMP1075DR  6/0xFF/0xFF/0xE2/0x07/0x92     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/CRB7/PCIE7/GXR3                     AT24C128   6/0xFF/0xFF/0xE2/0x07/0xA0     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/CRB7/PCIE7/GXR3_STATUS              PCA9554A   6/0xFF/0xFF/0xE2/0x07/0x42     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/SP/FRUID                            M24256_BRMN6TP 8/0xFF/0xFF/0xFF/0xFF/0xA0     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/SP/CPLD/CTL                         LCMXO3LF_4300 8/0xFF/0xFF/0xFF/0xFF/0x12     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/SP/CPLD/EFB0                        LCMXO3LF_4300_EFB 8/0xFF/0xFF/0xFF/0xFF/0x80     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/SP/CPLD/EFB1                        LCMXO3LF_4300_EFB 8/0xFF/0xFF/0xFF/0xFF/0x82     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/SP/LED_DIMMER                       PCA9532    9/0xFF/0xFF/0xFF/0xFF/0xC0     OK[0m
+[2026-01-07T17:49:29.080-06:00]   /SYS/MB/HPM_I2C_MUX2                     PCA9547    A/0xFF/0xFF/0xFF/0xFF/0xE0     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/CRB8/FRUID                          M24256_BFMC6TG A/0xFF/0xFF/0xE0/0x02/0xAE     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/CRB8/TEMP                           TMP1075DR  A/0xFF/0xFF/0xE0/0x02/0x92     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/CRB8/PCIE8/GXR3                     AT24C128   A/0xFF/0xFF/0xE0/0x02/0xA0     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/CRB8/PCIE8/GXR3_STATUS              PCA9554A   A/0xFF/0xFF/0xE0/0x02/0x42     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/MB/HPM_I2C_MUX3                     PCA9547    A/0xFF/0xFF/0xFF/0xFF/0xE2     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/CRB4/FRUID                          M24256_BFMC6TG A/0xFF/0xFF/0xE2/0x01/0xAE     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/CRB4/TEMP                           TMP1075DR  A/0xFF/0xFF/0xE2/0x01/0x92     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/CRB4/PCIE4/GXR3                     AT24C128   A/0xFF/0xFF/0xE2/0x01/0xA0     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/CRB4/PCIE4/GXR3_STATUS              PCA9554A   A/0xFF/0xFF/0xE2/0x01/0x42     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/CRB6/FRUID                          M24256_BFMC6TG A/0xFF/0xFF/0xE2/0x02/0xAE     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/CRB6/TEMP                           TMP1075DR  A/0xFF/0xFF/0xE2/0x02/0x92     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/CRB6/PCIE6/GXR3                     AT24C128   A/0xFF/0xFF/0xE2/0x02/0xA0     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/CRB6/PCIE6/GXR3_STATUS              PCA9554A   A/0xFF/0xFF/0xE2/0x02/0x42     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/CRB5/FRUID                          M24256_BFMC6TG A/0xFF/0xFF/0xE2/0x05/0xAE     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/CRB5/TEMP                           TMP1075DR  A/0xFF/0xFF/0xE2/0x05/0x92     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/CRB5/PCIE5/GXR3                     AT24C128   A/0xFF/0xFF/0xE2/0x05/0xA0     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/CRB5/PCIE5/GXR3_STATUS              PCA9554A   A/0xFF/0xFF/0xE2/0x05/0x42     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/MB/CPU1/SBRMI                       SBRMI      B/0xFF/0xFF/0xFF/0xFF/0x78     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/MB/CPU1/SBTSI                       SBTSI      B/0xFF/0xFF/0xFF/0xFF/0x98     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/SP/ROT_PCA9555                      PCA9555    C/0xFF/0xFF/0xFF/0xFF/0x40     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/FIM                                 AT24C64    D/0xFF/0xFF/0xFF/0xFF/0xA0     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/FIM/TEMP                            ADT7461    D/0xFF/0xFF/0xFF/0xFF/0x98     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/MB/CPU2/SBRMI                       SBRMI      E/0xFF/0xFF/0xFF/0xFF/0x70     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/MB/CPU2/SBTSI                       SBTSI      E/0xFF/0xFF/0xFF/0xFF/0x90     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/MB/DBG_EEPROM1                      M24C64_FMN6TP F/0xFF/0xFF/0xFF/0xFF/0xA4     OK[0m
+[2026-01-07T17:49:29.081-06:00]   /SYS/MB/DBG_EEPROM2                      M24C64_FMN6TP 10/0xFF/0xFF/0xFF/0xFF/0xA4    OK[0m
+[2026-01-07T17:49:29.081-06:00] [0m
+[2026-01-07T17:49:29.081-06:00] I2C Test Result: PASS[0m
+[2026-01-07T17:49:29.081-06:00] 2026-01-07 16:30:01,006 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Step=Run HWDiag I2C Test All: Res={'I2cTest': {'/SYS/MB/CLK_MNG': {'Chip': '9FGP204BKLFT', 'Bus': '0x01', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0xC0', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/CLK_GEN1': {'Chip': '9SQ440NQQI8', 'Bus': '0x01', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0xD2', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/CLK_GEN2': {'Chip': '9QXL2001BNHGI8', 'Bus': '0x01', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0xCA', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/CLK_GEN3': {'Chip': '9QXL2001BNHGI8', 'Bus': '0x01', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0xDE', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/CLK_GEN4': {'Chip': '9ZXL0851EKILFT', 'Bus': '0x01', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0xD8', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/VRD_MUX': {'Chip': 'PCA9542', 'Bus': '0x02', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0xE0', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/VDD_CORE0_CPU1_REN': {'Chip': 'RAA229620GNP', 'Bus': '0x02', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE0', 'Channel0': '0x00', 'Address': '0xC2', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/VDD_CORE1_CPU1_REN': {'Chip': 'RAA229620GNP', 'Bus': '0x02', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE0', 'Channel0': '0x00', 'Address': '0xC4', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/VDD_IO_CPU1_REN': {'Chip': 'RAA229621GNP', 'Bus': '0x02', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE0', 'Channel0': '0x00', 'Address': '0xC6', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/VDD_CORE0_CPU2_REN': {'Chip': 'RAA229620GNP', 'Bus': '0x02', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE0', 'Channel0': '0x01', 'Address': '0xE8', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/VDD_CORE1_CPU2_REN': {'Chip': 'RAA229620GNP', 'Bus': '0x02', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE0', 'Channel0': '0x01', 'Address': '0xEA', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/VDD_IO_CPU2_REN': {'Chip': 'RAA229621GNP', 'Bus': '0x02', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE0', 'Channel0': '0x01', 'Address': '0xEC', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/FANCTRL1_1': {'Chip': 'MAX31790', 'Bus': '0x03', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x58', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/FANCTRL2_1': {'Chip': 'MAX31790', 'Bus': '0x03', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x5E', 'Base': 16, 'Status': 'OK'}, '/SYS/PDB/CPLD/CTL': {'Chip': 'LCMXO2_4000', 'Bus': '0x03', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x12', 'Base': 16, 'Status': 'OK'}, '/SYS/PDB/CPLD/EFB0': {'Chip': 'LCMXO2_4000_EFB', 'Bus': '0x03', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0xB8', 'Base': 16, 'Status': 'OK'}, '/SYS/PDB/CPLD/EFB1': {'Chip': 'LCMXO2_4000_EFB', 'Bus': '0x03', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0xBA', 'Base': 16, 'Status': 'OK'}, '/SYS/PDB/VRD12V': {'Chip': 'RAA228004GNPHA', 'Bus': '0x03', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0xC0', 'Base': 16, 'Status': 'OK'}, '/SYS/PDB/VRD12V_STBY': {'Chip': 'RAA228000GNPHA', 'Bus': '0x03', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0xC2', 'Base': 16, 'Status': 'OK'}, '/SYS/PDB/HSC48V_FAN1': {'Chip': 'TPS16890VMAR', 'Bus': '0x03', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x8A', 'Base': 16, 'Status': 'OK'}, '/SYS/PDB/HSC48V_FAN2': {'Chip': 'TPS16890VMAR', 'Bus': '0x03', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x8C', 'Base': 16, 'Status': 'OK'}, '/SYS/PDB/HSC48V_FAN3': {'Chip': 'TPS16890VMAR', 'Bus': '0x03', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x8E', 'Base': 16, 'Status': 'OK'}, '/SYS/PDB/HSC48V_FAN4': {'Chip': 'TPS16890VMAR', 'Bus': '0x03', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x90', 'Base': 16, 'Status': 'OK'}, '/SYS/PDB/HSC48V': {'Chip': 'LTC4286AUK', 'Bus': '0x03', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x82', 'Base': 16, 'Status': 'OK'}, '/SYS/PDB/HSC48V_AUX': {'Chip': 'LTC4286AUK', 'Bus': '0x03', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x86', 'Base': 16, 'Status': 'OK'}, '/SYS/PDB/HSC48V_PLD': {'Chip': 'LTC4286AUK', 'Bus': '0x03', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x84', 'Base': 16, 'Status': 'OK'}, '/SYS/PDB/FRUID': {'Chip': 'M24256_BFMC6TG', 'Bus': '0x03', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0xA6', 'Base': 16, 'Status': 'OK'}, '/SYS/PDB/TEMP': {'Chip': 'TMP1075DR', 'Bus': '0x03', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x92', 'Base': 16, 'Status': 'OK'}, '/SYS/PDB/LEAK_DET': {'Chip': 'MAX1363', 'Bus': '0x03', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x6A', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/INLET_TEMP': {'Chip': 'TMP1075DR', 'Bus': '0x04', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x92', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/OUTLET1_TEMP': {'Chip': 'TMP1075DR', 'Bus': '0x04', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x94', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/OUTLET2_TEMP': {'Chip': 'TMP1075DR', 'Bus': '0x04', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x90', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/FRUID': {'Chip': 'M24C64_FMN6TP', 'Bus': '0x04', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0xA0', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/CPLD/CTL': {'Chip': 'LCMXO3LF_9400C', 'Bus': '0x04', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x12', 'Base': 16, 'Status': 'OK'}, '/SYS/SP/TEMP': {'Chip': 'TMP1075DR', 'Bus': '0x05', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x92', 'Base': 16, 'Status': 'OK'}, '/SYS/SP/RTC': {'Chip': 'DS1338', 'Bus': '0x06', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0xD0', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/PCA9547_SMB6': {'Chip': 'PCA9547', 'Bus': '0x06', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0xE2', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB1/FRUID': {'Chip': 'M24256_BFMC6TG', 'Bus': '0x06', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x01', 'Address': '0xAE', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB1/TEMP': {'Chip': 'TMP1075DR', 'Bus': '0x06', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x01', 'Address': '0x92', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB1/PCIE1/GXR3': {'Chip': 'AT24C128', 'Bus': '0x06', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x01', 'Address': '0xA0', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB1/PCIE1/GXR3_STATUS': {'Chip': 'PCA9554A', 'Bus': '0x06', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x01', 'Address': '0x42', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB2/FRUID': {'Chip': 'M24256_BFMC6TG', 'Bus': '0x06', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x03', 'Address': '0xAE', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB2/TEMP': {'Chip': 'TMP1075DR', 'Bus': '0x06', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x03', 'Address': '0x92', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB2/PCIE2/GXR3': {'Chip': 'AT24C128', 'Bus': '0x06', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x03', 'Address': '0xA0', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB2/PCIE2/GXR3_STATUS': {'Chip': 'PCA9554A', 'Bus': '0x06', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x03', 'Address': '0x42', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB3/FRUID': {'Chip': 'M24256_BFMC6TG', 'Bus': '0x06', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x05', 'Address': '0xAE', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB3/TEMP': {'Chip': 'TMP1075DR', 'Bus': '0x06', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x05', 'Address': '0x92', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB3/PCIE3/GXR3': {'Chip': 'AT24C128', 'Bus': '0x06', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x05', 'Address': '0xA0', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB3/PCIE3/GXR3_STATUS': {'Chip': 'PCA9554A', 'Bus': '0x06', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x05', 'Address': '0x42', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB7/FRUID': {'Chip': 'M24256_BFMC6TG', 'Bus': '0x06', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x07', 'Address': '0xAE', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB7/TEMP': {'Chip': 'TMP1075DR', 'Bus': '0x06', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x07', 'Address': '0x92', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB7/PCIE7/GXR3': {'Chip': 'AT24C128', 'Bus': '0x06', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x07', 'Address': '0xA0', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB7/PCIE7/GXR3_STATUS': {'Chip': 'PCA9554A', 'Bus': '0x06', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x07', 'Address': '0x42', 'Base': 16, 'Status': 'OK'}, '/SYS/SP/FRUID': {'Chip': 'M24256_BRMN6TP', 'Bus': '0x08', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0xA0', 'Base': 16, 'Status': 'OK'}, '/SYS/SP/CPLD/CTL': {'Chip': 'LCMXO3LF_4300', 'Bus': '0x08', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x12', 'Base': 16, 'Status': 'OK'}, '/SYS/SP/CPLD/EFB0': {'Chip': 'LCMXO3LF_4300_EFB', 'Bus': '0x08', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x80', 'Base': 16, 'Status': 'OK'}, '/SYS/SP/CPLD/EFB1': {'Chip': 'LCMXO3LF_4300_EFB', 'Bus': '0x08', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x82', 'Base': 16, 'Status': 'OK'}, '/SYS/SP/LED_DIMMER': {'Chip': 'PCA9532', 'Bus': '0x09', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0xC0', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/HPM_I2C_MUX2': {'Chip': 'PCA9547', 'Bus': '0x0A', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0xE0', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB8/FRUID': {'Chip': 'M24256_BFMC6TG', 'Bus': '0x0A', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE0', 'Channel0': '0x02', 'Address': '0xAE', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB8/TEMP': {'Chip': 'TMP1075DR', 'Bus': '0x0A', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE0', 'Channel0': '0x02', 'Address': '0x92', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB8/PCIE8/GXR3': {'Chip': 'AT24C128', 'Bus': '0x0A', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE0', 'Channel0': '0x02', 'Address': '0xA0', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB8/PCIE8/GXR3_STATUS': {'Chip': 'PCA9554A', 'Bus': '0x0A', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE0', 'Channel0': '0x02', 'Address': '0x42', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/HPM_I2C_MUX3': {'Chip': 'PCA9547', 'Bus': '0x0A', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0xE2', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB4/FRUID': {'Chip': 'M24256_BFMC6TG', 'Bus': '0x0A', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x01', 'Address': '0xAE', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB4/TEMP': {'Chip': 'TMP1075DR', 'Bus': '0x0A', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x01', 'Address': '0x92', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB4/PCIE4/GXR3': {'Chip': 'AT24C128', 'Bus': '0x0A', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x01', 'Address': '0xA0', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB4/PCIE4/GXR3_STATUS': {'Chip': 'PCA9554A', 'Bus': '0x0A', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x01', 'Address': '0x42', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB6/FRUID': {'Chip': 'M24256_BFMC6TG', 'Bus': '0x0A', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x02', 'Address': '0xAE', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB6/TEMP': {'Chip': 'TMP1075DR', 'Bus': '0x0A', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x02', 'Address': '0x92', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB6/PCIE6/GXR3': {'Chip': 'AT24C128', 'Bus': '0x0A', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x02', 'Address': '0xA0', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB6/PCIE6/GXR3_STATUS': {'Chip': 'PCA9554A', 'Bus': '0x0A', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x02', 'Address': '0x42', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB5/FRUID': {'Chip': 'M24256_BFMC6TG', 'Bus': '0x0A', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x05', 'Address': '0xAE', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB5/TEMP': {'Chip': 'TMP1075DR', 'Bus': '0x0A', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x05', 'Address': '0x92', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB5/PCIE5/GXR3': {'Chip': 'AT24C128', 'Bus': '0x0A', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x05', 'Address': '0xA0', 'Base': 16, 'Status': 'OK'}, '/SYS/CRB5/PCIE5/GXR3_STATUS': {'Chip': 'PCA9554A', 'Bus': '0x0A', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xE2', 'Channel0': '0x05', 'Address': '0x42', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/CPU1/SBRMI': {'Chip': 'SBRMI', 'Bus': '0x0B', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x78', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/CPU1/SBTSI': {'Chip': 'SBTSI', 'Bus': '0x0B', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x98', 'Base': 16, 'Status': 'OK'}, '/SYS/SP/ROT_PCA9555': {'Chip': 'PCA9555', 'Bus': '0x0C', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x40', 'Base': 16, 'Status': 'OK'}, '/SYS/FIM': {'Chip': 'AT24C64', 'Bus': '0x0D', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0xA0', 'Base': 16, 'Status': 'OK'}, '/SYS/FIM/TEMP': {'Chip': 'ADT7461', 'Bus': '0x0D', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x98', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/CPU2/SBRMI': {'Chip': 'SBRMI', 'Bus': '0x0E', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x70', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/CPU2/SBTSI': {'Chip': 'SBTSI', 'Bus': '0x0E', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0x90', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/DBG_EEPROM1': {'Chip': 'M24C64_FMN6TP', 'Bus': '0x0F', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0xA4', 'Base': 16, 'Status': 'OK'}, '/SYS/MB/DBG_EEPROM2': {'Chip': 'M24C64_FMN6TP', 'Bus': '0x10', 'Mux1': '0xFF', 'Channel1': '0xFF', 'Mux0': '0xFF', 'Channel0': '0xFF', 'Address': '0xA4', 'Base': 16, 'Status': 'OK'}}, 'Result': 'PASS'}[0m
+[2026-01-07T17:49:29.081-06:00] 2026-01-07 16:30:01,011 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Validating hwdiag i2c test all[0m
+[2026-01-07T17:49:29.082-06:00] 2026-01-07 16:30:01,014 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Completed step: Run HWDiag I2C Test All[0m
+[2026-01-07T17:49:29.082-06:00] [2026-01-07T16:30:02.178-06:00] Foximan starts test: [Get ilom snapshot][0m
+[2026-01-07T17:49:29.082-06:00] [0m
+[2026-01-07T17:49:29.082-06:00] 2026-01-07 16:30:01,016 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Executing step: Get ilom snapshot[0m
+[2026-01-07T17:49:29.082-06:00] [2026-01-07T16:33:02.183-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.082-06:00] [2026-01-07T16:33:02.183-06:00] Foximan continuing step: [Get ilom snapshot][0m
+[2026-01-07T17:49:29.082-06:00] [2026-01-07T16:36:02.192-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.082-06:00] [2026-01-07T16:36:02.192-06:00] Foximan continuing step: [Get ilom snapshot][0m
+[2026-01-07T17:49:29.082-06:00] [2026-01-07T16:39:02.197-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.082-06:00] [2026-01-07T16:39:02.198-06:00] Foximan continuing step: [Get ilom snapshot][0m
+[2026-01-07T17:49:29.082-06:00] [2026-01-07T16:42:02.202-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.082-06:00] [2026-01-07T16:42:02.203-06:00] Foximan continuing step: [Get ilom snapshot][0m
+[2026-01-07T17:49:29.082-06:00] [2026-01-07T16:44:20.852-06:00] Foximan completed test: [Get ilom snapshot][0m
+[2026-01-07T17:49:29.082-06:00] [0m
+[2026-01-07T17:49:29.082-06:00] [DHCPLeases] Writing Dict[0m
+[2026-01-07T17:49:29.082-06:00] 2026-01-07 16:44:20,847 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Step=Get ilom snapshot: Res=True[0m
+[2026-01-07T17:49:29.082-06:00] 2026-01-07 16:44:20,850 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Completed step: Get ilom snapshot[0m
+[2026-01-07T17:49:29.082-06:00] [2026-01-07T16:44:20.855-06:00] Foximan starts test: [Scp /var/log/gpuv6_amd/gpuv6_update_amd.log from sunservice to DHCP][0m
+[2026-01-07T17:49:29.082-06:00] [0m
+[2026-01-07T17:49:29.082-06:00] 2026-01-07 16:44:20,853 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Executing step: Scp /var/log/gpuv6_amd/gpuv6_update_amd.log from sunservice to DHCP[0m
+[2026-01-07T17:49:29.082-06:00] [2026-01-07T16:44:22.173-06:00] Foximan completed test: [Scp /var/log/gpuv6_amd/gpuv6_update_amd.log from sunservice to DHCP][0m
+[2026-01-07T17:49:29.082-06:00] [0m
+[2026-01-07T17:49:29.082-06:00] 2026-01-07 16:44:22,168 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Step=Scp /var/log/gpuv6_amd/gpuv6_update_amd.log from sunservice to DHCP: Res=True[0m
+[2026-01-07T17:49:29.082-06:00] 2026-01-07 16:44:22,171 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72EJ625420093] Completed step: Scp /var/log/gpuv6_amd/gpuv6_update_amd.log from sunservice to DHCP[0m
+[2026-01-07T17:49:29.082-06:00] [2026-01-07T16:44:22.381-06:00] Foximan starts test: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.082-06:00] [0m
+[2026-01-07T17:49:29.082-06:00] 2026-01-07 16:44:22,378 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] Executing step: Wait For ILOM To Return To Network[0m
+[2026-01-07T17:49:29.082-06:00] [2026-01-07T16:47:22.386-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.082-06:00] [2026-01-07T16:47:22.386-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.082-06:00] [2026-01-07T16:50:22.392-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T16:50:22.392-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T16:53:22.398-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T16:53:22.398-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T16:56:22.404-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T16:56:22.404-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T16:59:22.414-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T16:59:22.414-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T17:02:22.421-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T17:02:22.421-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T17:05:22.426-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T17:05:22.427-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T17:08:22.432-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T17:08:22.432-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T17:11:22.438-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T17:11:22.438-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T17:14:22.448-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T17:14:22.448-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T17:17:22.454-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T17:17:22.454-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T17:20:22.459-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T17:20:22.460-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T17:23:22.465-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T17:23:22.466-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T17:26:22.471-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T17:26:22.472-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T17:29:22.478-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T17:29:22.478-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.083-06:00] [2026-01-07T17:32:22.483-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.084-06:00] [2026-01-07T17:32:22.484-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.084-06:00] [2026-01-07T17:35:22.494-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.084-06:00] [2026-01-07T17:35:22.495-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.084-06:00] [2026-01-07T17:38:22.501-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.084-06:00] [2026-01-07T17:38:22.501-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.084-06:00] [2026-01-07T17:41:22.507-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.084-06:00] [2026-01-07T17:41:22.507-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.084-06:00] [2026-01-07T17:44:22.513-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.084-06:00] [2026-01-07T17:44:22.514-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.084-06:00] [2026-01-07T17:47:22.520-06:00] Timeout (180s) waiting for: [re.compile('Executing step: (?P<test>.+)'), re.compile('Completed step: (?P<test>.+)'), re.compile('Skipping step: (?P<skip_step>.+)'), 'AMD\\ system\\ tests\\ completed', re.compile('(?i)(?:\\x1b\\[[0-9;]*m)*.*?@.*?DHCP.*?(?:\\x1b\\[[0-9;]*m)*:(?:\\x1b\\[[0-9;]*m)*(?P<current_path>.*?)(?:\\x1b\\[[0-9;]*m)*[#$] ', re.IGNORECASE)]. Called from: /home/op/e6_fvt_foximan_the_same_as_epd2/module/oracle/e6_foximan_system.py at line 1041 in run_foximan_system() (e6_foximan_system)[0m
+[2026-01-07T17:49:29.084-06:00] [2026-01-07T17:47:22.520-06:00] Foximan continuing step: [Wait For ILOM To Return To Network][0m
+[2026-01-07T17:49:29.084-06:00] [0m
+[2026-01-07T17:49:29.084-06:00] 2026-01-07 16:44:22,378 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] Step=Wait For ILOM To Return To Network: Res=None[0m
+[2026-01-07T17:49:29.084-06:00] 2026-01-07 16:44:22,378 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] Waiting 5 minutes before checking ILOM...[0m
+[2026-01-07T17:49:29.084-06:00] [DHCPLeases] Writing Dict[0m
+[2026-01-07T17:49:29.084-06:00] [DHCPLeases] Writing Dict[0m
+[2026-01-07T17:49:29.084-06:00] [DHCPLeases] Writing Dict[0m
+[2026-01-07T17:49:29.084-06:00] [DHCPLeases] Writing Dict[0m
+[2026-01-07T17:49:29.084-06:00] 2026-01-07 17:49:28,973 [WARNING] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] ILOM did not respond within 3600 seconds[0m
+[2026-01-07T17:49:29.084-06:00] 2026-01-07 17:49:28,973 [ERROR] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] 'Wait For ILOM To Return To Network' failed: 'ILOM failed to come online before exception check amd system tail node[0m
+[2026-01-07T17:49:29.084-06:00] 2026-01-07 17:49:28,976 [ERROR] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [MX-P1A72ELA26020130] Failed at step 'Wait For ILOM To Return To Network': Verification failed: ILOM failed to come online before exception check amd system tail node[0m
+[2026-01-07T17:49:29.084-06:00] 2026-01-07 17:49:28,976 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Runbook for 'Wait For ILOM To Return To Network': ILOM did not return to network before exception check amd system tail node. Ensure ILOM is cabled correctly & foximan is executing from the correct DHCP server.[0m
+[2026-01-07T17:49:29.084-06:00] 2026-01-07 17:49:28,976 [ERROR] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Failed to execute post-error-handling checks on tail node: Host: 'MX-P1A72ELA26020130' SKU: 'G6' Elevation: '' BMC IP: '172.17.2.176' BMC MAC: 'd0:f4:05:76:e3:d3' ROT IP: '172.17.2.175' ROT MAC: 'a8:69:8c:49:58:05' BF3 IPs: '['', '']' BF3 MACs: '['', '']' PCIE CX7 MAC: '' SERIAL CONSOLE IP ADDR: 'None' SERIAL CONSOLE PORT: 'None' exc:Verification failed: ILOM failed to come online before exception check amd system tail node[0m
+[2026-01-07T17:49:29.084-06:00] 2026-01-07 17:49:28,978 [ERROR] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: [Headnode=Host: 'MX-P1A72EJ625420093' SKU: 'E6' Elevation: '' BMC IP: '172.17.5.245' BMC MAC: 'd0:f4:05:76:52:4b' ROT IP: '172.17.5.253' ROT MAC: 'a8:69:8c:4c:1e:30' BF3 IPs: '['', '']' BF3 MACs: '['', '']' PCIE CX7 MAC: 'e0:9d:73:88:00:4a' SERIAL CONSOLE IP ADDR: 'None' SERIAL CONSOLE PORT: 'None' Tailnode=Host: 'MX-P1A72ELA26020130' SKU: 'G6' Elevation: '' BMC IP: '172.17.2.176' BMC MAC: 'd0:f4:05:76:e3:d3' ROT IP: '172.17.2.175' ROT MAC: 'a8:69:8c:49:58:05' BF3 IPs: '['', '']' BF3 MACs: '['', '']' PCIE CX7 MAC: '' SERIAL CONSOLE IP ADDR: 'None' SERIAL CONSOLE PORT: 'None'][0m
+[2026-01-07T17:49:29.084-06:00] FAILED TESTING[0m
+[2026-01-07T17:49:29.084-06:00] Foximan v:0.5.137[0m
+[2026-01-07T17:49:29.084-06:00] Exception: Verification failed: Unable to ping ILOM IP for host[0m
+[2026-01-07T17:49:29.084-06:00] 2026-01-07 17:49:28,980 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Found Golden Nodes File[0m
+[2026-01-07T17:49:29.084-06:00] 2026-01-07 17:49:28,984 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Found Golden Nodes File[0m
+[2026-01-07T17:49:29.084-06:00] 2026-01-07 17:49:28,985 [ERROR] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]::[0m
+[2026-01-07T17:49:29.084-06:00] ================================================================================[0m
+[2026-01-07T17:49:29.085-06:00] =================================== SUMMARY ====================================[0m
+[2026-01-07T17:49:29.085-06:00] [0m
+[2026-01-07T17:49:29.085-06:00] !!! 1 host(s)/rack(s) failed during the update process.[0m
+[2026-01-07T17:49:29.085-06:00] [0m
+[2026-01-07T17:49:29.085-06:00] [TARGET: MX-P1A72ELA26020130][0m
+[2026-01-07T17:49:29.085-06:00]   FAILED at step: Ping ILOM IP with retries[0m
+[2026-01-07T17:49:29.085-06:00]   --> Error: Verification failed: Unable to ping ILOM IP for host[0m
+[2026-01-07T17:49:29.085-06:00] ================================================================================[0m
+[2026-01-07T17:49:29.085-06:00] Foximan v0.5.137[0m
+[2026-01-07T17:49:29.085-06:00] [0m
+[2026-01-07T17:49:29.085-06:00] 2026-01-07 17:49:28,985 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: CRABBER All Log files available in: /var/log/foximan/runs/2026-01-07_16-00-04_439968_0/[0m
+[2026-01-07T17:49:29.085-06:00] 2026-01-07 17:49:28,985 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: CRABBER Structured step-by-step results available in: /var/log/foximan/runs/2026-01-07_16-00-04_439968_0/run.json[0m
+[2026-01-07T17:49:29.085-06:00] 2026-01-07 17:49:28,985 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: CRABBER Structured step-by-step TDMS results available in: /var/log/foximan/runs/2026-01-07_16-00-04_439968_0/run_tdms.json[0m
+[2026-01-07T17:49:29.085-06:00] 2026-01-07 17:49:28,985 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Invoke TRS for run_id: 2026-01-07_16-00-04_439968_0[0m
+[2026-01-07T17:49:29.085-06:00] 2026-01-07 17:49:28,987 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: TRS starts running at: 2026-01-07 17:49:28.987239[0m
+[2026-01-07T17:49:29.085-06:00] 2026-01-07 17:49:28,996 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: TRS ends running at: 2026-01-07 17:49:28.996312[0m
+[2026-01-07T17:49:29.085-06:00] 2026-01-07 17:49:28,996 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: TRS report will be fill in /var/log/foximan/runs/2026-01-07_16-00-04_439968_0/run.json[0m
+[2026-01-07T17:49:29.085-06:00] (venv) root@DHCP:/home/op/e6_fvt_foximan#[0m
+[2026-01-07T17:49:29.085-06:00] [2026-01-07T17:49:29.063-06:00] output length: 4688[0m
+[2026-01-07T17:49:29.085-06:00] [2026-01-07T17:49:29.064-06:00] all output length: 44896[0m
+[2026-01-07T17:49:29.085-06:00] [2026-01-07T17:49:29.064-06:00] ----- Last 20 Lines Start -----[0m
+[2026-01-07T17:49:29.085-06:00] [2026-01-07T17:49:29.064-06:00] (venv) root@DHCP:/home/op/e6_fvt_foximan#[0m
+[2026-01-07T17:49:29.085-06:00] [2026-01-07T17:49:29.064-06:00] 2026-01-07 17:49:28,996 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: TRS report will be fill in /var/log/foximan/runs/2026-01-07_16-00-04_439968_0/run.json[0m
+[2026-01-07T17:49:29.085-06:00] [2026-01-07T17:49:29.064-06:00] 2026-01-07 17:49:28,996 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: TRS ends running at: 2026-01-07 17:49:28.996312[0m
+[2026-01-07T17:49:29.085-06:00] [2026-01-07T17:49:29.064-06:00] 2026-01-07 17:49:28,987 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: TRS starts running at: 2026-01-07 17:49:28.987239[0m
+[2026-01-07T17:49:29.085-06:00] [2026-01-07T17:49:29.064-06:00] 2026-01-07 17:49:28,985 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: Invoke TRS for run_id: 2026-01-07_16-00-04_439968_0[0m
+[2026-01-07T17:49:29.085-06:00] [2026-01-07T17:49:29.064-06:00] 2026-01-07 17:49:28,985 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: CRABBER Structured step-by-step TDMS results available in: /var/log/foximan/runs/2026-01-07_16-00-04_439968_0/run_tdms.json[0m
+[2026-01-07T17:49:29.085-06:00] [2026-01-07T17:49:29.065-06:00] 2026-01-07 17:49:28,985 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: CRABBER Structured step-by-step results available in: /var/log/foximan/runs/2026-01-07_16-00-04_439968_0/run.json[0m
+[2026-01-07T17:49:29.085-06:00] [2026-01-07T17:49:29.065-06:00] 2026-01-07 17:49:28,985 [INFO] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]:: CRABBER All Log files available in: /var/log/foximan/runs/2026-01-07_16-00-04_439968_0/[0m
+[2026-01-07T17:49:29.085-06:00] [2026-01-07T17:49:29.065-06:00][0m
+[2026-01-07T17:49:29.085-06:00] [2026-01-07T17:49:29.065-06:00] Foximan v0.5.137[0m
+[2026-01-07T17:49:29.086-06:00] [2026-01-07T17:49:29.065-06:00] ================================================================================[0m
+[2026-01-07T17:49:29.086-06:00] [2026-01-07T17:49:29.065-06:00]   --> Error: Verification failed: Unable to ping ILOM IP for host[0m
+[2026-01-07T17:49:29.086-06:00] [2026-01-07T17:49:29.065-06:00]   FAILED at step: Ping ILOM IP with retries[0m
+[2026-01-07T17:49:29.086-06:00] [2026-01-07T17:49:29.065-06:00] [TARGET: MX-P1A72ELA26020130][0m
+[2026-01-07T17:49:29.086-06:00] [2026-01-07T17:49:29.065-06:00][0m
+[2026-01-07T17:49:29.086-06:00] [2026-01-07T17:49:29.065-06:00] !!! 1 host(s)/rack(s) failed during the update process.[0m
+[2026-01-07T17:49:29.086-06:00] [2026-01-07T17:49:29.065-06:00][0m
+[2026-01-07T17:49:29.086-06:00] [2026-01-07T17:49:29.066-06:00] =================================== SUMMARY ====================================[0m
+[2026-01-07T17:49:29.086-06:00] [2026-01-07T17:49:29.066-06:00] ================================================================================[0m
+[2026-01-07T17:49:29.086-06:00] [2026-01-07T17:49:29.066-06:00] 2026-01-07 17:49:28,985 [ERROR] [bmc_mac=d0:f4:05:76:e3:d3, serial=MX-P1A72ELA26020130]::[0m
+[2026-01-07T17:49:29.086-06:00] [2026-01-07T17:49:29.066-06:00] ----- Last 20 Lines End -----[0m
+[2026-01-07T17:49:29.086-06:00] [0m
+[31m[2026-01-07T17:49:29.092-06:00] **************************************************** FOXIMAN/AMD/SYSTEM FOXIMAN run command Error List *****************************************************[0m
+[31m[2026-01-07T17:49:29.092-06:00] * Error occurs during conducting Foximan system, please check Foximan system log to verify the error: [/var/log/foximan/runs/2026-01-07_16-00-04_439968_0] *[0m
+[31m[2026-01-07T17:49:29.092-06:00] * 1 host(s)/rack(s) failed during the update process.                                                                                                      *[0m
+[31m[2026-01-07T17:49:29.092-06:00] * [Ping ILOM IP with retries]: Verification failed: Unable to ping ILOM IP for host                                                                        *[0m
+[31m[2026-01-07T17:49:29.092-06:00] * Test start time: 2026-01-07 16:00:02.960131-06:00                                                                                                        *[0m
+[31m[2026-01-07T17:49:29.092-06:00] * Test end time: 2026-01-07 17:49:29.068711-06:00                                                                                                          *[0m
+[31m[2026-01-07T17:49:29.092-06:00] ************************************************************************************************************************************************************[0m
+[33m[2026-01-07T17:49:29.092-06:00] ================================================================================[0m
+[33m[2026-01-07T17:49:29.092-06:00] [0m
+[2026-01-07T17:49:31.094-06:00] TDMS: adding /var/log/foximan/runs/2026-01-07_16-00-04_439968_0/MX-P1A72EJ625420093_ilom_snapshot.zip[0m
+[2026-01-07T17:49:31.637-06:00] TDMS: adding /var/log/foximan/runs/2026-01-07_16-00-04_439968_0/MX-P1A72EJ625420093.log[0m
+[2026-01-07T17:49:32.138-06:00] TDMS: adding /var/log/foximan/runs/2026-01-07_16-00-04_439968_0/run_tdms.json[0m
+[2026-01-07T17:49:32.639-06:00] TDMS: adding /var/log/foximan/runs/2026-01-07_16-00-04_439968_0/run.json[0m
+[2026-01-07T17:49:33.140-06:00] TDMS: adding /var/log/foximan/runs/2026-01-07_16-00-04_439968_0/MX-P1A72ELA26020130.log[0m
+[2026-01-07T17:49:33.642-06:00] TDMS: adding /var/log/foximan/runs/2026-01-07_16-00-04_439968_0/run.log[0m
+[2026-01-07T17:49:34.143-06:00] TDMS: adding /var/log/foximan/runs/2026-01-07_16-00-04_439968_0/MX-P1A72EJ625420093_gpuv6_update_amd.log[0m
+[2026-01-07T17:49:34.650-06:00] Found /var/log/foximan/runs/2026-01-07_16-00-04_439968_0/run_tdms.json and breaking up the steps[0m
+[2026-01-07T17:49:34.650-06:00] Adding 0000_Ping ILOM IP with retries to TDMS[0m
+[2026-01-07T17:49:36.154-06:00] Adding 0000_Wait For ILOM To Return To Network to TDMS[0m
+[2026-01-07T17:49:37.657-06:00] Adding 0000_Fetch NTP server details to TDMS[0m
+[2026-01-07T17:49:39.161-06:00] Adding 0000_Disable NTP server to TDMS[0m
+[2026-01-07T17:49:40.664-06:00] Adding 0000_Set ILOM Time to TDMS[0m
+[2026-01-07T17:49:42.168-06:00] Adding 0000_Set NTP server address to TDMS[0m
+[2026-01-07T17:49:43.672-06:00] Adding 0000_Enable NTP server to TDMS[0m
+[2026-01-07T17:49:45.176-06:00] Adding 0000_Show SP Clock to TDMS[0m
+[2026-01-07T17:49:46.680-06:00] Adding 0000_Wait For ILOM To Return To Network to TDMS[0m
+[2026-01-07T17:49:47.183-06:00] Adding 0000_run liveos cmd: lspci -nntv to TDMS[0m
+[2026-01-07T17:49:48.687-06:00] Adding 0000_run liveos cmd: lspci -vvv to TDMS[0m
+[2026-01-07T17:49:50.192-06:00] Adding 0000_Run HWDiag I2C Test All to TDMS[0m
+[2026-01-07T17:49:51.696-06:00] Adding 0000_Get ilom snapshot to TDMS[0m
+[2026-01-07T17:49:53.201-06:00] Adding 0000_Scp /var/log/gpuv6_amd/gpuv6_update_amd.log from sunservice to DHCP to TDMS[0m
+[2026-01-07T17:49:54.705-06:00] Adding 0001_Ping ILOM IP with retries to TDMS[0m
+[2026-01-07T17:49:56.711-06:00] Adding 0001_Wait For ILOM To Return To Network to TDMS[0m
+[1m[36m[2026-01-07T17:49:58.716-06:00] Test 'FOXIMAN/TDMS/TDMS log generation' was SKIPPED.[0m
+[2026-01-07T17:49:58.989-06:00] Tasks finished. Breaking main loop.[0m
+[2026-01-07T17:49:58.990-06:00] No pending result handlers to wait for.[0m
+[2026-01-07T17:49:58.990-06:00] Final cleanup...[0m
+[2026-01-07T17:49:59.293-06:00] Port 30460 in use (attempt 1/1): [Errno 98] Address already in use[0m
+[2026-01-07T17:49:59.293-06:00] Port 30460 still in use after 1 retries[0m
+[33m[2026-01-07T17:49:59.293-06:00] Port 30460 still in use after cleanup.[0m
+[33m[2026-01-07T17:49:59.328-06:00] [0m
+[33m[2026-01-07T17:49:59.329-06:00] [0m
+[33m[2026-01-07T17:49:59.329-06:00] [0m
+[33m[2026-01-07T17:49:59.329-06:00] ################################## Test Ended ##################################[0m
+[33m[2026-01-07T17:49:59.329-06:00] Test start: 2026-01-07T15:59:59.829243-06:00[0m
+[33m[2026-01-07T17:49:59.329-06:00] Test end: 2026-01-07T17:49:59.328749-06:00[0m
+[33m[2026-01-07T17:49:59.329-06:00] Test duration: 01:49:59.499506[0m
+[33m[2026-01-07T17:49:59.330-06:00] [0m
+[33m[2026-01-07T17:49:59.330-06:00] --------------------------------- Test Result ----------------------------------[0m
+[1m[32m[2026-01-07T17:49:59.330-06:00] FOXIMAN/BASH/Open Bash Shell--------------------------------------------[PASSED][0m
+[1m[32m[2026-01-07T17:49:59.330-06:00] FOXIMAN/INFO/Dump test info---------------------------------------------[PASSED][0m
+[31m[2026-01-07T17:49:59.330-06:00] FOXIMAN/AMD/SYSTEM FOXIMAN run command----------------------------------[FAILED][0m
+[31m[2026-01-07T17:49:59.330-06:00] FOXIMAN/SYSTEM/Ping ILOM IP with retries--------------------------------[FAILED][0m
+[1m[36m[2026-01-07T17:49:59.330-06:00] FOXIMAN/TDMS/TDMS log generation---------------------------------------[SKIPPED][0m
+[33m[2026-01-07T17:49:59.339-06:00] [0m
+[1m[31m[2026-01-07T17:49:59.339-06:00] ########    ###    #### ##          #### ####[0m
+[1m[31m[2026-01-07T17:49:59.339-06:00] ##         ## ##    ##  ##          #### ####[0m
+[1m[31m[2026-01-07T17:49:59.339-06:00] ##        ##   ##   ##  ##          #### ####[0m
+[1m[31m[2026-01-07T17:49:59.339-06:00] ######   ##     ##  ##  ##           ##   ##[0m
+[1m[31m[2026-01-07T17:49:59.339-06:00] ##       #########  ##  ##[0m
+[1m[31m[2026-01-07T17:49:59.339-06:00] ##       ##     ##  ##  ##          #### ####[0m
+[1m[31m[2026-01-07T17:49:59.339-06:00] ##       ##     ## #### ########    #### ####[0m
+[1m[31m[2026-01-07T17:49:59.340-06:00] [0m
+[31m[2026-01-07T17:49:59.340-06:00] All errors encountered during the test:[0m
+[31m[2026-01-07T17:49:59.340-06:00] **************************************************** FOXIMAN/AMD/SYSTEM FOXIMAN run command Error List *****************************************************[0m
+[31m[2026-01-07T17:49:59.340-06:00] * Error occurs during conducting Foximan system, please check Foximan system log to verify the error: [/var/log/foximan/runs/2026-01-07_16-00-04_439968_0] *[0m
+[31m[2026-01-07T17:49:59.340-06:00] * 1 host(s)/rack(s) failed during the update process.                                                                                                      *[0m
+[31m[2026-01-07T17:49:59.340-06:00] * [Ping ILOM IP with retries]: Verification failed: Unable to ping ILOM IP for host                                                                        *[0m
+[31m[2026-01-07T17:49:59.340-06:00] * Test start time: 2026-01-07 16:00:02.960131-06:00                                                                                                        *[0m
+[31m[2026-01-07T17:49:59.340-06:00] * Test end time: 2026-01-07 17:49:29.068711-06:00                                                                                                          *[0m
+[31m[2026-01-07T17:49:59.340-06:00] ************************************************************************************************************************************************************[0m
+[2026-01-07T17:49:59.340-06:00] Task Manager closing process starts now.[0m
+[2026-01-07T17:50:01.178-06:00] bin.jar: logs/20260107_155959.829_INGRASYS_MX-P1A72EJ625420093_L10_TEST/jar/INGRASYS_2602XQ1076_L10TEST_20260107155959_collected/INGRASYS_2602XQ1076_L10TEST_20260107155959.bin.jar[0m
+[2026-01-07T17:50:01.178-06:00] xml.jar: logs/20260107_155959.829_INGRASYS_MX-P1A72EJ625420093_L10_TEST/jar/INGRASYS_2602XQ1076_L10TEST_20260107155959_collected/INGRASYS_2602XQ1076_L10TEST_20260107155959.xml.jar[0m
+[2026-01-07T17:50:01.178-06:00] view_archive.jar: logs/20260107_155959.829_INGRASYS_MX-P1A72EJ625420093_L10_TEST/jar/INGRASYS_2602XQ1076_L10TEST_20260107155959_collected/INGRASYS_2602XQ1076_L10TEST_20260107155959.jar[0m
+[2026-01-07T17:50:01.178-06:00] TDMS jar: /home/op/e6_fvt_foximan_the_same_as_epd2/logs/20260107_155959.829_INGRASYS_MX-P1A72EJ625420093_L10_TEST/jar/INGRASYS_2602XQ1076_L10TEST_20260107155959_collected.jar[0m
+[2026-01-07T17:50:01.178-06:00] Executing command: sshpass -p 'Ingrasys123!@#' sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null oracle@10.12.192.157:/Oracle/OracleToTDMS <<< $'put /home/op/e6_fvt_foximan_the_same_as_epd2/logs/20260107_155959.829_INGRASYS_MX-P1A72EJ625420093_L10_TEST/jar/INGRASYS_2602XQ1076_L10TEST_20260107155959_collected.jar'[0m
+[2026-01-07T17:50:01.917-06:00] TDMS JAR uploaded successfully[0m
+[2026-01-07T17:50:01.917-06:00] Task Manager gracefully closed.[0m
+[33m[2026-01-07T17:50:01.930-06:00] G6 ec code:0002039VFA1ZFWGB[0m
+[2026-01-07T17:50:01.930-06:00] Updating G6 test log for SN: MX-P1A72ELA26020130[0m
+[2026-01-07T17:50:01.930-06:00] ========[0m
+[2026-01-07T17:50:01.930-06:00] {[0m
+[2026-01-07T17:50:01.930-06:00]   "SN": "MX-P1A72ELA26020130",[0m
+[2026-01-07T17:50:01.931-06:00]   "STATION_ID": "SYS_TEST",[0m
+[2026-01-07T17:50:01.931-06:00]   "EMP_NO": "FXTE123",[0m
+[2026-01-07T17:50:01.931-06:00]   "EQP_NO": "SYS_TEST-MTF#22-1",[0m
+[2026-01-07T17:50:01.931-06:00]   "RESULT": "FAIL",[0m
+[2026-01-07T17:50:01.931-06:00]   "START_DATE": "2026/01/07 15:59:59",[0m
+[2026-01-07T17:50:01.931-06:00]   "END_DATE": "2026/01/07 17:49:59",[0m
+[2026-01-07T17:50:01.931-06:00]   "EC": "0002039VFA1ZFWGB",[0m
+[2026-01-07T17:50:01.931-06:00]   "EC_DETAIL": {}[0m
+[2026-01-07T17:50:01.931-06:00] }[0m
+[2026-01-07T17:50:01.932-06:00] curl -X POST -H 'Content-Type: application/json' -d '{"SN": "MX-P1A72ELA26020130", "STATION_ID": "SYS_TEST", "EMP_NO": "FXTE123", "EQP_NO": "SYS_TEST-MTF#22-1", "RESULT": "FAIL", "START_DATE": "2026/01/07 15:59:59", "END_DATE": "2026/01/07 17:49:59", "EC": "0002039VFA1ZFWGB", "EC_DETAIL": {}}' 'http://10.12.192.157:8001/SFCAPI/SFC/UpdateTestLog'[0m
+[2026-01-07T17:50:01.932-06:00] ========[0m
+[2026-01-07T17:50:01.977-06:00] Successfully checked route at http://10.12.192.157:8001/SFCAPI/SFC/UpdateTestLog[0m
+[2026-01-07T17:50:01.977-06:00] {'RESULT': 'OK'}[0m
+[2026-01-07T17:50:01.978-06:00] [0m
+[2026-01-07T17:50:01.978-06:00] [0m
+[2026-01-07T17:50:01.978-06:00] E6 PN input: [1A72EJ600-36L-G][0m
+[2026-01-07T17:50:01.978-06:00] E6 SN input: [MX-P1A72EJ625420093][0m
+[2026-01-07T17:50:01.978-06:00] G6 PN input: [1A72ELA00-36L-G][0m
+[2026-01-07T17:50:01.978-06:00] G6 SN input: [MX-P1A72ELA26020130][0m
+[2026-01-07T17:50:01.978-06:00] OPID input: [FXTE123][0m
+[2026-01-07T17:50:01.978-06:00] MTF input: [MTF#22-1][0m
+[2026-01-07T17:50:01.979-06:00] [0m
+[2026-01-07T17:50:01.979-06:00] [0m
