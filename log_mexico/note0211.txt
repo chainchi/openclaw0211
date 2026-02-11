@@ -1,0 +1,1 @@
+create a log folder to save the log and exchange with openclaw
