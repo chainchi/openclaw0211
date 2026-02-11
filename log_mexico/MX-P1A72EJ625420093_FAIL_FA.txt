@@ -1,0 +1,19 @@
+# Oracle FVT Log Failure Analysis Report
+# File: MX-P1A72EJ625420093_FAIL.log
+# Analyzer: Senior Server System Engineer (Qi)
+
+1. 總結
+本測試在 FOXIMAN/SYSTEM/Ping ILOM IP with retries 階段宣告失敗。主因是 G6 側的 ILOM (IP: 172.17.2.176) 在系統重啟後未能如期回到網路上。
+
+2. FAIL LOG 分析及判斷重點
+- 發生時間：2026-01-07 17:49:28
+- 失敗原因：Unable to ping ILOM IP for host。
+- 診斷：E6 側正常，但 G6 側持續逾時。推測 G6 側的 BMC 可能發生 Hang-up、IP 取得失敗或實體線路鬆脫。
+
+3. 建議除錯及驗證動作
+- 實體層檢查：檢查 G6 側網路連線及機台背後網路燈號。
+- BMC Reset：嘗試進行 BMC Cold Reset。
+- 驗證：手動執行 ping 172.17.2.176 成功後再重試。
+
+4. 重點文件
+- E6_SYS_PingILOMIPwithretries.html

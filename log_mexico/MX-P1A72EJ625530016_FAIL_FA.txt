@@ -1,0 +1,18 @@
+# Oracle FVT Log Failure Analysis Report
+# File: MX-P1A72EJ625530016_FAIL.log
+# Analyzer: Senior Server System Engineer (Qi)
+
+1. 總結
+失敗點位於 Poll BKC firmware update progress，韌體更新進度輪詢逾時。
+
+2. FAIL LOG 分析及判斷重點
+- 發生時間：2026-01-07 17:33:14
+- 失敗原因：Poll BKC firmware update progress FAILED。
+- 診斷：裝置 Reset 後未能在預期時間內 Ready。
+
+3. 建議除錯及驗證動作
+- 登入 ILOM 檢視 /var/log/gpuv6_amd/gpuv6_update_amd.log。
+- 手動檢查版本。
+
+4. 重點文件
+- E6_SYS_PollBKC_firmware_update_progress.html

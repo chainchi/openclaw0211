@@ -1,0 +1,19 @@
+# Oracle FVT Log Failure Analysis Report
+# File: MX-P1A72EJ625530040_FAIL.log
+# Analyzer: Senior Server System Engineer (Qi)
+
+1. 總結
+機台在 HWDiag System Fabric Test 階段偵測到 Fabric 鏈路異常。
+
+2. FAIL LOG 分析及判斷重點
+- 發生時間：2026-01-07 15:05:04
+- 失敗原因：HWDiag System Fabric Test FAILED。
+- 診斷：通常與 GPU 間的 XGMI/WAFL 通訊品質有關。
+
+3. 建議除錯及驗證動作
+- 優先檢查 CDFP Cable 緊固度與順序。
+- 執行 hwdiag system wafl status。
+
+4. 重點文件
+- E6_SYS_HwDiag_System_Fabric_Test_failed.html
+- G6_SYS_pollBKC_update_progress_CheckCDFPcable.html
