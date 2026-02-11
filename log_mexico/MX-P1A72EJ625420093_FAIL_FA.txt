@@ -1,0 +1,36 @@
+# Oracle FVT Log Failure Analysis Report
+# File: MX-P1A72EJ625420093_FAIL.log
+# Analyzer: Senior Server System Engineer (Qi)
+
+1. 總結
+本測試在 FOXIMAN/SYSTEM/Ping ILOM IP with retries 階段宣告失敗。主因是 G6 側的 ILOM (IP: 172.17.2.176) 在系統重啟後未能如期回到網路上。雖然 E6 側的 ILOM 連線正常，但 G6 側持續逾時，導致測試無法繼續執行。
+
+2. FAIL LOG 分析及判斷重點
+
+a. 測試流程時間軸
+- 16:00:00：測試啟動，讀取 e6_foximan_system 設定。
+- 16:00:01：SFC 資料抓取成功。確認機台序號 E6: ...20093, G6: ...20130。
+- 16:00:06：第一階段 Ping ILOM IP with retries (E6) 成功。
+- 16:03:14：發生第一次 Timeout (180s)，等待 ILOM 回到網路。
+- 16:05:16：針對 G6 側啟動 Ping ILOM IP with retries。
+- 16:05:28 - 16:12:42：進入重試循環（Retry 1 到 10）。每次重試皆回報 SP 172.17.2.176 is unreachable。
+- 17:49:28：測試最終宣告失敗，總共耗時約 1 小時 50 分鐘。
+
+b. Open Problems 分析
+- 關鍵錯誤：Unable to ping ILOM IP for host。
+- 診斷推論：E6 側正常，但 G6 側直到測試結束都沒有回應。推測 G6 側的 BMC 可能發生 Hang-up、IP 取得失敗或實體線路（CDFP 或網路線）鬆脫。
+
+c. Metrics & EC Code 分析
+- EC (Error Code): 0002039VFA1ZFWGB (ILOM Network Connection Timeout)。
+- Metrics: 測試版本 0.5.137，重試次數達到 10 次上限觸發 FAIL。
+
+3. 建議除錯及驗證除錯成功的動作
+- 實體層檢查 (Workmanship)：檢查 G6 側網路連線及機台背後網路燈號。
+- BMC Reset：嘗試進行 BMC Cold Reset，確認韌體是否能正常初始化並取得 IP。
+- DHCP Lease 檢查：確認 172.20.48.242 (DHCP Server) 是否有正確發放租約。
+- 驗證動作：手動執行 ping 172.17.2.176，直到穩定後再重新執行測試。
+
+4. 重點文件 (關聯度高)
+- E6_SYS_PingILOMIPwithretries.html (定義完全吻合)
+- G6_INIT_Poll BKCfirmware_updateprogress.html (病徵相同)
+- E6_INIT_Check_ILOMorAMIBMCstatus.html (下一步檢查參考)
