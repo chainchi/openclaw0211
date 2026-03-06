@@ -3,3 +3,4 @@ MX-P1A72EJ625420093_FAIL.log,2026-01-07 17:49:59,Ping ILOM IP with retries FAILE
 MX-P1A72EJ625520289_FAIL.log,2026-01-07 13:48:42,Check CPLD versions (PRECHECK) FAILED,檢查 CPLD 韌體狀態與 I2C 通道連通性；確認 CPLD 暫存器 Power Good 狀態。,E6_INIT_Check_ILOMorAMIBMCstatus.html
 MX-P1A72EJ625530016_FAIL.log,2026-01-07 17:33:14,Poll BKC firmware update progress FAILED,進入 ILOM 檢查更新 Log ；確認是否因下載逾時或版本衝突導致失敗後重試。,E6_SYS_PollBKC_firmware_update_progress.html
 MX-P1A72EJ625530040_FAIL.log,2026-01-07 15:05:04,HWDiag System Fabric Test FAILED,檢查 CDFP 線材連接順序與牢固度；若排除線材問題請執行 AC Cycle 重啟。,E6_SYS_HwDiag_System_Fabric_Test_failed.html
+MX-P1A72EJ625520289A_FAIL.log,2026-01-07 13:48:29,Check CPLD versions (PRECHECK) FAILED - PDB CPLD I2C Bus 2 無法存取 + bytes_to_version() 參數錯誤,重新插拔 PDB 板卡；手動執行 i2ctransfer -y 2 w1@0x9 0x0 r2 驗證 I2C；更新 FOXIMAN 修正 bytes_to_version() Bug。,E6_INIT_CheckCPLDversions.html
