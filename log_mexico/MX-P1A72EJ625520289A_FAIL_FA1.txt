@@ -1,0 +1,182 @@
+# Oracle E6 FOXIMAN / HWDiag 測試 FAIL LOG 分析報告
+# FA Report - MX-P1A72EJ625520289A
+
+================================================================================
+## 1. 總結 (Summary)
+================================================================================
+
+| 項目              | 內容                                          |
+|-------------------|-----------------------------------------------|
+| 測試機台 SN       | MX-P1A72EJ625520289                           |
+| 機型 PN           | 1A72EJ600-36L-G (Oracle E6-IS)                |
+| 專案              | ORACLE_E6-IS                                  |
+| 測試站別          | L10 INIT_TEST                                 |
+| MTF               | MTF#26-1                                      |
+| OPID              | FXTE123                                       |
+| FOXIMAN 版本      | 0.5.137                                       |
+| OneDiag 版本      | 0.1.3-dev (2025-11-04)                        |
+| DHCP Server       | 172.20.48.243                                 |
+| SFC Server        | 10.12.192.157:8001                            |
+| 測試開始時間      | 2026-01-07 13:48:18 (CST, UTC-6)              |
+| 測試結束時間      | 2026-01-07 13:48:42 (CST, UTC-6)              |
+| 測試總時長        | 00:00:24 (24秒)                               |
+| 最終結果          | ❌ FAIL                                       |
+| EC Code           | 0003037NHHF828R7                              |
+| 失敗階段          | check_cpld_versions_precheck                  |
+| BMC 類型          | AMI BMC (AMID0F405795980)                     |
+
+================================================================================
+## 2. FAIL LOG 分析
+================================================================================
+
+### 2.1 測試流程時間軸 (Timeline)
+
+| 時間 (CST)   | 階段                                    | 結果    | 說明                                      |
+|--------------|-----------------------------------------|---------|-------------------------------------------|
+| 13:48:18     | FOXIMAN 初始化                          | OK      | 版本 0.5.137, SFC 資料取得成功              |
+| 13:48:19     | SFC ProcessStart / CheckRoute           | OK      | Route check PASS                           |
+| 13:48:19     | BOM 建立                                | OK      | 81 sub-items, 2 CPUs, 24 RDIMMs, 2 DPUs   |
+| 13:48:20     | check_bash_prompt                       | ✅ PASS | Bash shell 正常                            |
+| 13:48:23     | show_test_info                          | ✅ PASS | 測試資訊正確                               |
+| 13:48:24     | check_sp_bmc_status                     | ✅ PASS | AMI BMC detected (AMID0F405795980)         |
+| 13:48:27     | login_e6_ilom_or_ami_bmc_precheck       | ✅ PASS | 成功登入 AMI BMC (sysadmin)                |
+| 13:48:29     | check_cpld_versions_precheck            | ❌ FAIL | PDB CPLD 讀取失敗 → 觸發 FIRST FAILURE    |
+| 13:48:29~31  | 後續所有測試項目                        | ⏭ SKIP | 因 cof:false 全部跳過 (約50+個測試)        |
+| 13:48:42     | 測試結束 / TDMS 上傳                    | OK      | JAR 上傳 TDMS 成功                         |
+
+### 2.2 錯誤根因分析 (Root Cause Analysis)
+
+#### 主要錯誤 (Primary Failure)
+```
+Failed to read PDB CPLD version. Please check if the PDB CPLD is functioning properly.: 
+bytes_to_version() takes 2 positional arguments but 9 were given
+```
+
+#### 失敗位置
+- **函數**: `check_cpld_versions_precheck` in `e6_foximan_init.py`
+- **I2C 命令**: `i2ctransfer -y 2 w1@0x9 0x0 r2`
+- **I2C Bus 2 回應**: `Error: Sending messages failed: No such device or address`
+- **I2C Bus 3 回應**: `0x01 0x02` (正常)
+- **I2C Bus 7 回應**: `0x11 0x01` (正常)
+
+#### 根因判斷
+
+**這是一個「複合性問題」，包含兩個層面：**
+
+1. **硬體層 — PDB CPLD I2C 通訊失敗**
+   - I2C Bus 2 上的 PDB CPLD (地址 0x9) 無法存取
+   - 回報 "No such device or address"
+   - 這表示 PDB (Power Distribution Board) 上的 CPLD 晶片可能：
+     - PDB CPLD 本身故障
+     - I2C Bus 2 上有 Pull-up Resistor 問題
+     - PDB 板卡未正確安裝或接觸不良
+     - PDB CPLD 尚未完成初始化
+
+2. **軟體層 — bytes_to_version() 參數錯誤**
+   - 錯誤訊息 `bytes_to_version() takes 2 positional arguments but 9 were given`
+   - 表示 FOXIMAN 程式在處理 I2C 讀取結果時，傳入了錯誤數量的參數
+   - 這可能是 FOXIMAN 0.5.137 版本的 Bug
+   - 正常情況下，即使 I2C 讀取失敗，也不應出現參數數量錯誤
+
+### 2.3 連鎖影響分析 (Cascade Impact)
+
+```
+check_cpld_versions_precheck FAIL
+    ├── [CRITICAL] FIRST FAILURE DETECTED
+    ├── e6_foximan_init: 所有後續測試 SKIPPED (cof:false)
+    │   ├── find_e6_rot_ip
+    │   ├── rot_clear_lockdown
+    │   ├── telnet_to_ilom_or_ami_bmc_via_digi_server
+    │   ├── find_ilom_or_bmc_ip
+    │   ├── upgrade_hpm_cpld_if_necessary
+    │   ├── upgrade_bmc_cpld_if_necessary
+    │   ├── run_foximan_init
+    │   └── ... (共 17+ 項目)
+    │
+    └── ssh_e6_foximan_fru: 因 dependency SKIPPED，全部跳過
+        ├── connect_to_e6_ilom
+        ├── write_oracle_12vpdb_fru_bin
+        ├── write_oracle_bmc_fru_bin
+        ├── write_oracle_hpm_fru_bin
+        ├── write_e6_cableriser[1-8]_fru_data
+        ├── write_fan_psu_module_fru
+        └── ... (共 30+ 項目)
+```
+
+### 2.4 與前次 FAIL LOG (MX-P1A72EJ625440237) 對比
+
+| 比較項目           | 前次 (625440237)                      | 本次 (625520289)                          |
+|--------------------|---------------------------------------|-------------------------------------------|
+| 失敗階段           | check_sp_bmc_status                   | check_cpld_versions_precheck              |
+| BMC 狀態           | BMC 完全無回應 (Timeout)              | BMC 正常登入 (AMI BMC PASS)               |
+| 失敗原因           | BMC/Serial Console 連線問題           | PDB CPLD I2C 讀取 + 程式 Bug             |
+| Timeout 行為       | 360秒 x 10次 (約60分鐘)              | 無 Timeout (立即失敗)                     |
+| 測試總時長         | ~60 分鐘                              | 24 秒                                     |
+| 失敗性質           | 基礎設施問題 (Console 連線)           | 硬體+軟體問題 (CPLD + Code Bug)           |
+
+================================================================================
+## 3. 建議除錯及驗證動作 (Debug & Verification)
+================================================================================
+
+### 3.1 立即檢查項目
+
+| 順序 | 檢查項目                          | 動作                                                    |
+|------|-----------------------------------|---------------------------------------------------------|
+| 1    | PDB 板卡安裝                      | 確認 PDB 板卡連接器完全到位，重新插拔 PDB               |
+| 2    | I2C Bus 2 手動測試                | 手動執行 `i2ctransfer -y 2 w1@0x9 0x0 r2` 驗證         |
+| 3    | I2C Bus Scan                      | 執行 `i2cdetect -y 2` 確認 Bus 2 上所有設備             |
+| 4    | PDB CPLD 電源                     | 檢查 PDB CPLD 供電是否正常 (VCC 3.3V)                   |
+| 5    | FOXIMAN 版本更新                  | 確認是否有更新版本修正 bytes_to_version() Bug            |
+
+### 3.2 進階除錯
+
+| 順序 | 檢查項目                          | 動作                                                    |
+|------|-----------------------------------|---------------------------------------------------------|
+| 6    | 其他 Bus CPLD 比對                | Bus 3 (0x01 0x02) 和 Bus 7 (0x11 0x01) 正常可讀        |
+| 7    | PDB CPLD FW 版本                  | 從其他正常機台確認預期版本                               |
+| 8    | AC Cycle                          | 嘗試完整斷電重開，讓 CPLD 重新初始化                     |
+| 9    | 更換 PDB                          | 如 I2C 持續失敗，更換 PDB 板卡                           |
+| 10   | FOXIMAN 程式碼檢查                | 檢查 bytes_to_version() 函數定義和呼叫端                 |
+
+### 3.3 驗證成功標準
+
+1. `i2ctransfer -y 2 w1@0x9 0x0 r2` 回傳 2 bytes 版本號 (如 `0xXX 0xYY`)
+2. `check_cpld_versions_precheck` 測試 PASS
+3. 後續 CPLD 升級和 FRU Programming 正常執行
+4. 完整 L10 INIT 測試 PASS
+
+================================================================================
+## 4. 相關 RAG 參考文件
+================================================================================
+
+| 相關度        | HTML 檔案                                          | 說明                           |
+|---------------|----------------------------------------------------|---------------------------------|
+| ⭐⭐⭐ 最高  | E6_INIT_CheckCPLDversions.html                     | CPLD 版本檢查 SOP              |
+| ⭐⭐⭐ 最高  | E6_INIT_Check_ILOMorAMIBMCstatus.html              | BMC 狀態檢查 (本次 PASS)        |
+| ⭐⭐         | E6_INIT_LoginILOMorAMIBMC.html                     | BMC 登入流程                    |
+| ⭐⭐         | E6_INIT_UpgradeHPMCPLD.html                        | HPM CPLD 升級 SOP               |
+| ⭐⭐         | E6_INIT_UpgradeBMCCPLD.html                        | BMC CPLD 升級 SOP               |
+| ⭐           | E6_INIT_Run_hardwarediagnose_debugjumper_check.html | 硬體診斷跳線檢查                |
+
+================================================================================
+## 5. 結論
+================================================================================
+
+本次失敗為 **PDB CPLD I2C 通訊問題 + FOXIMAN 程式 Bug 複合型故障**。
+
+- **硬體面**：I2C Bus 2 上的 PDB CPLD (0x9) 無法被存取，回報 "No such device or address"。
+  Bus 3 和 Bus 7 的 CPLD 正常可讀，排除 BMC I2C Controller 整體故障的可能。
+- **軟體面**：`bytes_to_version()` 函數接收到 9 個參數但只預期 2 個，這是 FOXIMAN 0.5.137 
+  版本中的程式問題，需要更新修正。
+- **影響範圍**：因為 CPLD PRECHECK 是 Critical 測試項，失敗後觸發 cof:false 策略，
+  導致後續約 50+ 個測試全部 SKIPPED，包含 CPLD 升級、FRU Programming、FRU 驗證等。
+
+**建議優先順序**：
+1. 先更新 FOXIMAN 修正 bytes_to_version() Bug
+2. 手動檢查 PDB CPLD I2C 連線
+3. 重新執行測試
+
+================================================================================
+分析人員: AI Assistant (阿琪)
+分析日期: 2026-03-06
+================================================================================

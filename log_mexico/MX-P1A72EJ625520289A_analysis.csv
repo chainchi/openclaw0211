@@ -1,0 +1,41 @@
+Item,Category,Value,Status,Notes
+Serial Number,System Info,MX-P1A72EJ625520289,INFO,
+Part Number,System Info,1A72EJ600-36L-G,INFO,Oracle E6-IS
+Project,System Info,ORACLE_E6-IS,INFO,
+Station,System Info,L10 INIT_TEST,INFO,
+MTF,System Info,MTF#26-1,INFO,
+OPID,System Info,FXTE123,INFO,
+FOXIMAN Version,Software,0.5.137,INFO,
+OneDiag Version,Software,0.1.3-dev (2025-11-04),INFO,
+OneDiag FOXIMAN Module,Software,0.0.153 (2025-12-08),INFO,
+DHCP Server,Network,172.20.48.243,INFO,
+SFC Server,Network,10.12.192.157:8001,INFO,
+BMC Type,Hardware,AMI BMC (AMID0F405795980),PASS,
+CPU P1,Hardware,9MM4815N50082_100-000001554,INFO,/SYS/MB/P1
+CPU P2,Hardware,9MM4815N50018_100-000001554,INFO,/SYS/MB/P2
+RDIMM Count,Hardware,24 DIMMs (P0/D1~D24),INFO,802C series Micron
+DPU1,Hardware,FPF25371173,INFO,/SYS/DPU1
+DPU2,Hardware,FPF2537140B,INFO,/SYS/DPU2
+ROT (FIM),Hardware,AK03553143,INFO,/SYS/FIM
+CX7 Host NIC,Hardware,4657746-2501703305,INFO,/SYS/CX7_1
+Test Start Time,Timeline,2026-01-07 13:48:18 CST (UTC-6),INFO,
+Test End Time,Timeline,2026-01-07 13:48:42 CST (UTC-6),INFO,
+Test Duration,Timeline,00:00:24,INFO,24 seconds
+Overall Result,Result,FAIL,FAIL,EC: 0003037NHHF828R7
+check_bash_prompt,Test Result,PASS,PASS,Bash shell OK
+show_test_info,Test Result,PASS,PASS,
+check_sp_bmc_status,Test Result,PASS,PASS,AMI BMC detected
+login_e6_ilom_or_ami_bmc_precheck,Test Result,PASS,PASS,sysadmin login OK
+check_cpld_versions_precheck,Test Result,FAIL,FAIL,PDB CPLD read error + bytes_to_version() bug
+I2C Bus 2 (PDB CPLD),I2C Detail,No such device or address,FAIL,Address 0x9 - PDB CPLD unreachable
+I2C Bus 3 (CPLD),I2C Detail,0x01 0x02,PASS,Normal response
+I2C Bus 7 (CPLD),I2C Detail,0x11 0x01,PASS,Normal response
+Error Message,Failure Detail,bytes_to_version() takes 2 positional arguments but 9 were given,FAIL,FOXIMAN code bug
+Cascade Impact,Failure Detail,50+ tests SKIPPED due to cof:false,SKIP,Both agents affected
+Root Cause 1,Root Cause,PDB CPLD I2C Bus 2 communication failure,FAIL,Hardware: device not found at 0x9
+Root Cause 2,Root Cause,FOXIMAN bytes_to_version() parameter count mismatch,FAIL,Software: code bug in v0.5.137
+Recommended Action 1,Debug,Reseat PDB board and check connector,TODO,Physical check
+Recommended Action 2,Debug,Manual i2ctransfer -y 2 w1@0x9 0x0 r2,TODO,Verify I2C Bus 2
+Recommended Action 3,Debug,Run i2cdetect -y 2 to scan bus,TODO,Check all devices on Bus 2
+Recommended Action 4,Debug,Update FOXIMAN to fix bytes_to_version(),TODO,Software update
+Recommended Action 5,Debug,AC Cycle and retest,TODO,Full power reset
