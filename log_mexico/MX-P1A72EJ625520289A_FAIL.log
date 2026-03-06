@@ -1,0 +1,523 @@
+[2026-01-07T13:48:18.837-06:00] [INFO] Foximan version: 0.5.137[0m
+[2026-01-07T13:48:18.838-06:00] ############## OneDiag (f6b164f9152b509454f9a5ab3597846d028c660e) ##############[0m
+[2026-01-07T13:48:18.838-06:00] Core version: 0.1.3-dev[0m
+[2026-01-07T13:48:18.838-06:00] Core release date: 2025-11-04 10:57:14+0800[0m
+[2026-01-07T13:48:18.838-06:00] OneDiag - FOXIMAN module version: 0.0.153[0m
+[2026-01-07T13:48:18.838-06:00] OneDiag - FOXIMAN release date: 2025-12-08 16:06:49+0800[0m
+[2026-01-07T13:48:18.838-06:00] FOXIMAN version: 0.5.137[0m
+[2026-01-07T13:48:18.849-06:00] DHCP Server IP: 172.20.48.243[0m
+[2026-01-07T13:48:18.849-06:00] ################################################################################[0m
+[2026-01-07T13:48:18.850-06:00] [0m
+[2026-01-07T13:48:18.850-06:00] [0m
+[2026-01-07T13:48:18.850-06:00] [0m
+[2026-01-07T13:48:18.850-06:00] [0m
+[2026-01-07T13:48:18.850-06:00] [0m
+[2026-01-07T13:48:18.850-06:00] E6 PN input: [1A72EJ600-36L-G][0m
+[2026-01-07T13:48:18.850-06:00] E6 SN input: [MX-P1A72EJ625520289][0m
+[2026-01-07T13:48:18.851-06:00] OPID input: [FXTE123][0m
+[2026-01-07T13:48:18.851-06:00] MTF input: [MTF#26-1][0m
+[2026-01-07T13:48:18.851-06:00] [0m
+[2026-01-07T13:48:18.851-06:00] [0m
+[2026-01-07T13:48:18.920-06:00] Checking controller: e6_foximan_init[0m
+[2026-01-07T13:48:18.920-06:00] Found configuration file: configs/e6_foximan_init.yaml[0m
+[2026-01-07T13:48:18.920-06:00] Found Python module: module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.939-06:00] Verified: Function 'check_bash_prompt' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.939-06:00] Verified: Function 'show_test_info' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.939-06:00] Verified: Function 'check_sp_bmc_status' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'login_e6_ilom_or_ami_bmc_precheck' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'check_cpld_versions_precheck' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'find_e6_rot_ip' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'quit_telnet' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'rot_clear_lockdown' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'telnet_to_ilom_or_ami_bmc_via_digi_server' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'find_ilom_or_bmc_ip' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'upgrade_hpm_cpld_if_necessary' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'ac_cycle_for_ilom_or_ami_bmc_hpm_cpld' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'wait_until_ilom_or_ami_bmc_ready_hpm_cpld' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'login_e6_ilom_or_ami_bmc_hpm_cpld' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'check_cpld_versions_hpm_cpld' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'upgrade_bmc_cpld_if_necessary' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'ac_cycle_for_ilom_or_ami_bmc_bmc_cpld' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'wait_until_ilom_or_ami_bmc_ready_bmc_cpld' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'login_e6_ilom_or_ami_bmc_bmc_cpld' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'check_cpld_versions_bmc_cpld' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'quit_telnet' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'run_foximan_init' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'dummy_trigger_fru_start' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Skipping flow control command check: WAIT:ssh_e6_foximan_fru:enable_i2c_polling[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'telnet_to_e6_via_digi_server' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'reset_e6_ilom_to_login_prompt' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'login_e6_ilom_after_fru' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'ac_cycle' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'wait_until_ilom_ready' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'login_e6_ilom_verify_fru' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.940-06:00] Verified: Function 'verify_fru_all' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.941-06:00] Verified: Function 'verify_fru_vendor' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.941-06:00] Verified: Function 'quit_telnet' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.941-06:00] Verified: Function 'rot_set_lockdown' exists in module/oracle/e6_foximan_init.py[0m
+[2026-01-07T13:48:18.941-06:00] Checking controller: ssh_e6_foximan_fru[0m
+[2026-01-07T13:48:18.941-06:00] Found configuration file: configs/ssh_e6_foximan_fru.yaml[0m
+[2026-01-07T13:48:18.941-06:00] Found Python module: module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.951-06:00] Skipping flow control command check: WAIT:e6_foximan_init:dummy_trigger_fru_start[0m
+[2026-01-07T13:48:18.951-06:00] Verified: Function 'connect_to_e6_ilom' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.951-06:00] Verified: Function 'check_e6_ilom_prompt' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.951-06:00] Verified: Function 'write_oracle_12vpdb_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.951-06:00] Verified: Function 'write_oracle_bmc_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.951-06:00] Verified: Function 'write_oracle_hpm_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.951-06:00] Verified: Function 'set_system_identity_and_asset_tag_pdb' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'verify_and_fix_fru_vendor' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'load_riser1_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'write_e6_cableriser1_fru_data_by_eepromblaster' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'load_riser2_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'write_e6_cableriser2_fru_data_by_eepromblaster' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'load_riser3_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'write_e6_cableriser3_fru_data_by_eepromblaster' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'load_riser4_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'write_e6_cableriser4_fru_data_by_eepromblaster' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'load_riser5_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'write_e6_cableriser5_fru_data_by_eepromblaster' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'load_riser6_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'write_e6_cableriser6_fru_data_by_eepromblaster' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'load_riser7_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'write_e6_cableriser7_fru_data_by_eepromblaster' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'load_riser8_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'write_e6_cableriser8_fru_data_by_eepromblaster' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'write_fan_psu_module_fru' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'set_hpm_fru' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'set_sp_fru' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'disable_i2c_polling' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'load_riser_host_nic_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'write_e6_cableriser_host_nic_fru_data_by_eepromblaster' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'load_riser_dpu_top_bottom_fru_bin' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'write_e6_cableriser_dpu_fru_data_by_eepromblaster' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] Verified: Function 'enable_i2c_polling' exists in module/oracle/ssh_e6_foximan_fru.py[0m
+[2026-01-07T13:48:18.952-06:00] [0m
+[2026-01-07T13:48:18.952-06:00] All configuration checks passed successfully[0m
+[2026-01-07T13:48:18.953-06:00] [0m
+[2026-01-07T13:48:18.953-06:00] Fetching E6 SFC data for SN: MX-P1A72EJ625520289[0m
+[2026-01-07T13:48:18.953-06:00] ========[0m
+[2026-01-07T13:48:18.953-06:00] {[0m
+[2026-01-07T13:48:18.953-06:00]   "SN": "MX-P1A72EJ625520289",[0m
+[2026-01-07T13:48:18.953-06:00]   "STATION_ID": "SYSTEM",[0m
+[2026-01-07T13:48:18.953-06:00]   "PROJECT": "ORACLE_E6-IS"[0m
+[2026-01-07T13:48:18.953-06:00] }[0m
+[2026-01-07T13:48:18.953-06:00] ========[0m
+[2026-01-07T13:48:19.677-06:00] Successfully fetched data from http://10.12.192.157:8001/SFCAPI/SFC/GetConfigurations[0m
+[2026-01-07T13:48:19.698-06:00] E6 SFC data OK for SN: MX-P1A72EJ625520289, PN: 1A72EJ600-36L-G[0m
+[2026-01-07T13:48:19.698-06:00] Running E6 process_start/check_route for SN: MX-P1A72EJ625520289[0m
+[2026-01-07T13:48:19.698-06:00] ========[0m
+[2026-01-07T13:48:19.698-06:00] {[0m
+[2026-01-07T13:48:19.698-06:00]   "TimeStamp": "2026-01-07T13:48:18.265835-06:00",[0m
+[2026-01-07T13:48:19.699-06:00]   "EQP_No": "INIT_TEST-MTF#26-1",[0m
+[2026-01-07T13:48:19.699-06:00]   "Station_Name": "INIT_TEST",[0m
+[2026-01-07T13:48:19.699-06:00]   "Emp_No": "FXTE123",[0m
+[2026-01-07T13:48:19.699-06:00]   "Serial_Number": "MX-P1A72EJ625520289",[0m
+[2026-01-07T13:48:19.699-06:00]   "Start_Time": "2026-01-07T19:48:18.265835+00:00",[0m
+[2026-01-07T13:48:19.699-06:00]   "Result": "OK",[0m
+[2026-01-07T13:48:19.699-06:00]   "Message": ""[0m
+[2026-01-07T13:48:19.699-06:00] }[0m
+[2026-01-07T13:48:19.699-06:00] curl -X POST -H 'Content-Type: application/json' -d '{"TimeStamp": "2026-01-07T13:48:18.265835-06:00", "EQP_No": "INIT_TEST-MTF#26-1", "Station_Name": "INIT_TEST", "Emp_No": "FXTE123", "Serial_Number": "MX-P1A72EJ625520289", "Start_Time": "2026-01-07T19:48:18.265835+00:00", "Result": "OK", "Message": ""}' 'http://10.12.192.157:8001/SFCAPI/SFC/ProcessStart'[0m
+[2026-01-07T13:48:19.699-06:00] ========[0m
+[2026-01-07T13:48:19.704-06:00] Successfully run TCCS process start at http://10.12.192.157:8001/SFCAPI/SFC/ProcessStart[0m
+[2026-01-07T13:48:19.705-06:00] {'Code': '0', 'Message': ''}[0m
+[2026-01-07T13:48:19.705-06:00] ========[0m
+[2026-01-07T13:48:19.705-06:00] {[0m
+[2026-01-07T13:48:19.705-06:00]   "SN": "MX-P1A72EJ625520289",[0m
+[2026-01-07T13:48:19.705-06:00]   "STATION_ID": "INIT_TEST",[0m
+[2026-01-07T13:48:19.705-06:00]   "EMP_NO": "FXTE123",[0m
+[2026-01-07T13:48:19.705-06:00]   "MODEL_NAME": "1A72EJ600-36L-G"[0m
+[2026-01-07T13:48:19.705-06:00] }[0m
+[2026-01-07T13:48:19.705-06:00] curl -X POST -H 'Content-Type: application/json' -d '{"SN": "MX-P1A72EJ625520289", "STATION_ID": "INIT_TEST", "EMP_NO": "FXTE123", "MODEL_NAME": "1A72EJ600-36L-G"}' 'http://10.12.192.157:8001/SFCAPI/SFC/CheckRoute'[0m
+[2026-01-07T13:48:19.705-06:00] ========[0m
+[2026-01-07T13:48:19.731-06:00] Successfully checked route at http://10.12.192.157:8001/SFCAPI/SFC/CheckRoute[0m
+[2026-01-07T13:48:19.732-06:00] {'RESULT': 'OK'}[0m
+[2026-01-07T13:48:19.800-06:00] Base folder created: logs/20260107_134818.265_INGRASYS_MX-P1A72EJ625520289_L10_INIT[0m
+[2026-01-07T13:48:19.809-06:00] Collected E6 MAC addresses.[0m
+[2026-01-07T13:48:19.944-06:00] TDMS directory structure created: logs/20260107_134818.265_INGRASYS_MX-P1A72EJ625520289_L10_INIT/INGRASYS_2552XQ10H1_L10INIT_20260107134818_collected[0m
+[2026-01-07T13:48:19.945-06:00] TDMS xml directory created: logs/20260107_134818.265_INGRASYS_MX-P1A72EJ625520289_L10_INIT/INGRASYS_2552XQ10H1_L10INIT_20260107134818_collected/INGRASYS_2552XQ10H1_L10INIT_20260107134818.xml/2552XQ10H1[0m
+[2026-01-07T13:48:19.945-06:00] TDMS xml directory created: logs/20260107_134818.265_INGRASYS_MX-P1A72EJ625520289_L10_INIT/INGRASYS_2552XQ10H1_L10INIT_20260107134818_collected/INGRASYS_2552XQ10H1_L10INIT_20260107134818.xml[0m
+[2026-01-07T13:48:19.945-06:00] TDMS bin directory created: logs/20260107_134818.265_INGRASYS_MX-P1A72EJ625520289_L10_INIT/INGRASYS_2552XQ10H1_L10INIT_20260107134818_collected/INGRASYS_2552XQ10H1_L10INIT_20260107134818.bin[0m
+[2026-01-07T13:48:19.945-06:00] TDMS view_archive directory created: logs/20260107_134818.265_INGRASYS_MX-P1A72EJ625520289_L10_INIT/INGRASYS_2552XQ10H1_L10INIT_20260107134818_collected/INGRASYS_2552XQ10H1_L10INIT_20260107134818[0m
+[2026-01-07T13:48:19.954-06:00] 2026-01-07 13:48:19,954 - INFO - Successfully created BOM for '2552XQ10H1' with 81 sub-items.[0m
+[2026-01-07T13:48:19.956-06:00] 2026-01-07 13:48:19,956 - INFO - Added device '9MM4815N50082_100-000001554' at '/SYS/MB/P1' (CPU).[0m
+[2026-01-07T13:48:19.956-06:00] 2026-01-07 13:48:19,956 - INFO - Added device '9MM4815N50018_100-000001554' at '/SYS/MB/P2' (CPU).[0m
+[2026-01-07T13:48:19.957-06:00] 2026-01-07 13:48:19,956 - INFO - Added device '802C0624504CAB613B' at '/SYS/MB/P0/D1' (RDIMM).[0m
+[2026-01-07T13:48:19.957-06:00] 2026-01-07 13:48:19,957 - INFO - Added device '802C0624504CAB786B' at '/SYS/MB/P0/D2' (RDIMM).[0m
+[2026-01-07T13:48:19.957-06:00] 2026-01-07 13:48:19,957 - INFO - Added device '802C0624504CAB77CD' at '/SYS/MB/P0/D3' (RDIMM).[0m
+[2026-01-07T13:48:19.957-06:00] 2026-01-07 13:48:19,957 - INFO - Added device '802C0624504CAB7349' at '/SYS/MB/P0/D4' (RDIMM).[0m
+[2026-01-07T13:48:19.957-06:00] 2026-01-07 13:48:19,957 - INFO - Added device '802C0624504CAB693B' at '/SYS/MB/P0/D5' (RDIMM).[0m
+[2026-01-07T13:48:19.958-06:00] 2026-01-07 13:48:19,957 - INFO - Added device '802C0624504CAB784E' at '/SYS/MB/P0/D6' (RDIMM).[0m
+[2026-01-07T13:48:19.958-06:00] 2026-01-07 13:48:19,958 - INFO - Added device '802C0624504CAB67E5' at '/SYS/MB/P0/D7' (RDIMM).[0m
+[2026-01-07T13:48:19.958-06:00] 2026-01-07 13:48:19,958 - INFO - Added device '802C0624504CAB77FC' at '/SYS/MB/P0/D8' (RDIMM).[0m
+[2026-01-07T13:48:19.958-06:00] 2026-01-07 13:48:19,958 - INFO - Added device '802C0624504CAB6BCB' at '/SYS/MB/P0/D9' (RDIMM).[0m
+[2026-01-07T13:48:19.958-06:00] 2026-01-07 13:48:19,958 - INFO - Added device '802C0624504CAB77A9' at '/SYS/MB/P0/D10' (RDIMM).[0m
+[2026-01-07T13:48:19.958-06:00] 2026-01-07 13:48:19,958 - INFO - Added device '802C0624504CAB77AC' at '/SYS/MB/P0/D11' (RDIMM).[0m
+[2026-01-07T13:48:19.958-06:00] 2026-01-07 13:48:19,958 - INFO - Added device '802C0624504CAB737A' at '/SYS/MB/P0/D12' (RDIMM).[0m
+[2026-01-07T13:48:19.958-06:00] 2026-01-07 13:48:19,958 - INFO - Added device '802C0624504CAB7842' at '/SYS/MB/P0/D13' (RDIMM).[0m
+[2026-01-07T13:48:19.959-06:00] 2026-01-07 13:48:19,959 - INFO - Added device '802C0624504CAB67D4' at '/SYS/MB/P0/D14' (RDIMM).[0m
+[2026-01-07T13:48:19.959-06:00] 2026-01-07 13:48:19,959 - INFO - Added device '802C0624504CAB7813' at '/SYS/MB/P0/D15' (RDIMM).[0m
+[2026-01-07T13:48:19.959-06:00] 2026-01-07 13:48:19,959 - INFO - Added device '802C0624504CAB7859' at '/SYS/MB/P0/D16' (RDIMM).[0m
+[2026-01-07T13:48:19.959-06:00] 2026-01-07 13:48:19,959 - INFO - Added device '802C0624504CAB786A' at '/SYS/MB/P0/D17' (RDIMM).[0m
+[2026-01-07T13:48:19.959-06:00] 2026-01-07 13:48:19,959 - INFO - Added device '802C0624504CAB6803' at '/SYS/MB/P0/D18' (RDIMM).[0m
+[2026-01-07T13:48:19.959-06:00] 2026-01-07 13:48:19,959 - INFO - Added device '802C0624504CAB67B0' at '/SYS/MB/P0/D19' (RDIMM).[0m
+[2026-01-07T13:48:19.959-06:00] 2026-01-07 13:48:19,959 - INFO - Added device '802C0624504CAB77F6' at '/SYS/MB/P0/D20' (RDIMM).[0m
+[2026-01-07T13:48:19.960-06:00] 2026-01-07 13:48:19,959 - INFO - Added device '802C0624504CAB7869' at '/SYS/MB/P0/D21' (RDIMM).[0m
+[2026-01-07T13:48:19.960-06:00] 2026-01-07 13:48:19,960 - INFO - Added device '802C0624504CAB4B10' at '/SYS/MB/P0/D22' (RDIMM).[0m
+[2026-01-07T13:48:19.960-06:00] 2026-01-07 13:48:19,960 - INFO - Added device '802C0624504CAB5452' at '/SYS/MB/P0/D23' (RDIMM).[0m
+[2026-01-07T13:48:19.960-06:00] 2026-01-07 13:48:19,960 - INFO - Added device '802C0624504CAB53F2' at '/SYS/MB/P0/D24' (RDIMM).[0m
+[2026-01-07T13:48:19.960-06:00] 2026-01-07 13:48:19,960 - INFO - Added device 'FPF25371173' at '/SYS/DPU1' (DPU).[0m
+[2026-01-07T13:48:19.961-06:00] 2026-01-07 13:48:19,961 - INFO - Added device 'FPF2537140B' at '/SYS/DPU2' (DPU).[0m
+[2026-01-07T13:48:19.961-06:00] 2026-01-07 13:48:19,961 - INFO - Added device 'AK03553143' at '/SYS/FIM' (ROT).[0m
+[2026-01-07T13:48:19.961-06:00] 2026-01-07 13:48:19,961 - INFO - Added device '4657746-2501703305' at '/SYS/CX7_1' (CX7_HOSTNIC).[0m
+[2026-01-07T13:48:19.973-06:00] E6 TDMS generator initialized.[0m
+[2026-01-07T13:48:19.973-06:00] Port 40707 is available (attempt 1/3)[0m
+[2026-01-07T13:48:19.973-06:00] Found available port: 40707[0m
+[2026-01-07T13:48:19.973-06:00] Assigned port 40707 to controller e6_foximan_init (type: subprocess)[0m
+[2026-01-07T13:48:19.977-06:00] Port 40708 is available (attempt 1/3)[0m
+[2026-01-07T13:48:19.977-06:00] Found available port: 40708[0m
+[2026-01-07T13:48:19.978-06:00] Assigned port 40708 to controller ssh_e6_foximan_fru (type: ssh)[0m
+[2026-01-07T13:48:19.978-06:00] Starting async operations:[0m
+[2026-01-07T13:48:19.979-06:00] Waiting for async_start to complete...[0m
+[2026-01-07T13:48:19.982-06:00] Controller 'e6_foximan_init' in Eager-Init mode. Initializing now.[0m
+[2026-01-07T13:48:19.982-06:00] Controller 'e6_foximan_init': JIT Initializing worker resources...[0m
+[33m[2026-01-07T13:48:19.983-06:00] Controller 'ssh_e6_foximan_fru' in On-Demand mode. Deferring initialization.[0m
+[2026-01-07T13:48:19.983-06:00] ssh_e6_foximan_fru process start successfully[0m
+[2026-01-07T13:48:20.987-06:00] Connected to worker on port 40707[0m
+[2026-01-07T13:48:20.987-06:00] SubprocessController: Connected to worker on port 40707[0m
+[2026-01-07T13:48:20.988-06:00] Controller 'e6_foximan_init': Worker resources initialized successfully.[0m
+[2026-01-07T13:48:20.988-06:00] e6_foximan_init process start successfully[0m
+[2026-01-07T13:48:20.989-06:00] Scheduler: Dispatching 'check_bash_prompt' for agent 'e6_foximan_init' (Attempt 1/1)[0m
+[2026-01-07T13:48:20.992-06:00] 'ssh_e6_foximan_fru' is now waiting for sync point 'e6_foximan_init:dummy_trigger_fru_start'...[0m
+[2026-01-07T13:48:20.993-06:00] Scheduler: Dispatching 'show_test_info' for agent 'e6_foximan_init' (Attempt 1/1)[0m
+[2026-01-07T13:48:21.003-06:00] Scheduler: Dispatching 'check_sp_bmc_status' for agent 'e6_foximan_init' (Attempt 1/1)[0m
+[33m[2026-01-07T13:48:21.005-06:00] ================================================================================[0m
+[33m[2026-01-07T13:48:21.005-06:00] = FOXIMAN - BASH - Open Bash Shell (1)                                         =[0m
+[33m[2026-01-07T13:48:21.005-06:00] ================================================================================[0m
+[2026-01-07T13:48:21.005-06:00] (venv) root@DHCP:/home/op/e6_fvt_foximan#[0m
+[1m[32m[2026-01-07T13:48:21.006-06:00] ********************** FOXIMAN/BASH/Open Bash Shell PASS ***********************[0m
+[1m[32m[2026-01-07T13:48:21.006-06:00] * Test start time: 2026-01-07 13:48:20.990047-06:00                            *[0m
+[1m[32m[2026-01-07T13:48:21.006-06:00] * Test end time: 2026-01-07 13:48:20.992980-06:00                              *[0m
+[1m[32m[2026-01-07T13:48:21.006-06:00] ********************************************************************************[0m
+[33m[2026-01-07T13:48:21.007-06:00] ================================================================================[0m
+[33m[2026-01-07T13:48:21.007-06:00] [0m
+[33m[2026-01-07T13:48:23.012-06:00] ================================================================================[0m
+[33m[2026-01-07T13:48:23.012-06:00] = FOXIMAN - INFO - Dump test info (1)                                          =[0m
+[33m[2026-01-07T13:48:23.012-06:00] ================================================================================[0m
+[2026-01-07T13:48:23.012-06:00] {"mtf": "MTF#26-1", "foximan_cli": "foximan", "dhcp_ip": "172.20.48.243"}[0m
+[1m[32m[2026-01-07T13:48:23.013-06:00] *********************** FOXIMAN/INFO/Dump test info PASS ***********************[0m
+[1m[32m[2026-01-07T13:48:23.013-06:00] * Test start time: 2026-01-07 13:48:20.993286-06:00                            *[0m
+[1m[32m[2026-01-07T13:48:23.013-06:00] * Test end time: 2026-01-07 13:48:21.003525-06:00                              *[0m
+[1m[32m[2026-01-07T13:48:23.013-06:00] ********************************************************************************[0m
+[33m[2026-01-07T13:48:23.013-06:00] ================================================================================[0m
+[33m[2026-01-07T13:48:23.013-06:00] [0m
+[2026-01-07T13:48:24.619-06:00] Scheduler: Dispatching 'login_e6_ilom_or_ami_bmc_precheck' for agent 'e6_foximan_init' (Attempt 1/1)[0m
+[33m[2026-01-07T13:48:24.620-06:00] ================================================================================[0m
+[33m[2026-01-07T13:48:24.621-06:00] = E6 - BMC - Check ILOM or AMI BMC status (1)                                  =[0m
+[33m[2026-01-07T13:48:24.621-06:00] ================================================================================[0m
+[2026-01-07T13:48:24.621-06:00] [0m
+[2026-01-07T13:48:24.621-06:00] [0m
+[2026-01-07T13:48:24.621-06:00] [0m
+[2026-01-07T13:48:24.621-06:00] [0m
+[2026-01-07T13:48:24.621-06:00] AMID0F405795980 login:[0m
+[2026-01-07T13:48:24.622-06:00] AMI BMC found[0m
+[2026-01-07T13:48:24.622-06:00] [0m
+[2026-01-07T13:48:24.622-06:00] AMID0F405795980 login:[0m
+[1m[32m[2026-01-07T13:48:24.622-06:00] ******************* E6/BMC/Check ILOM or AMI BMC status PASS *******************[0m
+[1m[32m[2026-01-07T13:48:24.623-06:00] * Test start time: 2026-01-07 13:48:21.003941-06:00                            *[0m
+[1m[32m[2026-01-07T13:48:24.623-06:00] * Test end time: 2026-01-07 13:48:24.619650-06:00                              *[0m
+[1m[32m[2026-01-07T13:48:24.623-06:00] ********************************************************************************[0m
+[33m[2026-01-07T13:48:24.623-06:00] ================================================================================[0m
+[33m[2026-01-07T13:48:24.623-06:00] [0m
+[2026-01-07T13:48:27.162-06:00] Scheduler: Dispatching 'check_cpld_versions_precheck' for agent 'e6_foximan_init' (Attempt 1/1)[0m
+[2026-01-07T13:48:27.162-06:00] bmc_cpld_need_upgrade: True, bmc_cpld_version:[0m
+[2026-01-07T13:48:27.162-06:00] hpm_cpld_need_upgrade: True, hpm_cpld_version:[0m
+[33m[2026-01-07T13:48:27.163-06:00] ================================================================================[0m
+[33m[2026-01-07T13:48:27.163-06:00] = E6_ILOM - LOGIN - Login E6 ILOM or AMI BMC and check prompt (PRECHECK) (1)   =[0m
+[33m[2026-01-07T13:48:27.163-06:00] ================================================================================[0m
+[2026-01-07T13:48:27.163-06:00] [0m
+[2026-01-07T13:48:27.163-06:00] [0m
+[2026-01-07T13:48:27.163-06:00] AMID0F405795980 login:[0m
+[2026-01-07T13:48:27.164-06:00] [0m
+[2026-01-07T13:48:27.164-06:00] AMID0F405795980 login:[0m
+[2026-01-07T13:48:27.164-06:00] [0m
+[2026-01-07T13:48:27.164-06:00] AMID0F405795980 login: sysadmin[0m
+[2026-01-07T13:48:27.164-06:00] Password:[0m
+[2026-01-07T13:48:27.164-06:00] [1700 : 1700 INFO]SERIAL Login from IP:127.0.0.1 user:sysadmin[0m
+[2026-01-07T13:48:27.164-06:00] [0m
+[2026-01-07T13:48:27.164-06:00] ~ #[0m
+[1m[32m[2026-01-07T13:48:27.165-06:00] *** E6_ILOM/LOGIN/Login E6 ILOM or AMI BMC and check prompt (PRECHECK) PASS ****[0m
+[1m[32m[2026-01-07T13:48:27.165-06:00] * Test start time: 2026-01-07 13:48:24.620052-06:00                            *[0m
+[1m[32m[2026-01-07T13:48:27.165-06:00] * Test end time: 2026-01-07 13:48:27.161738-06:00                              *[0m
+[1m[32m[2026-01-07T13:48:27.166-06:00] ********************************************************************************[0m
+[33m[2026-01-07T13:48:27.166-06:00] ================================================================================[0m
+[33m[2026-01-07T13:48:27.166-06:00] [0m
+[31m[2026-01-07T13:48:29.171-06:00] Failed to read PDB CPLD version. Please check if the PDB CPLD is functioning properly.: bytes_to_version() takes 2 positional arguments but 9 were given[0m
+[35m[2026-01-07T13:48:29.348-06:00][CRITICAL] FIRST FAILURE DETECTED in 'check_cpld_versions_precheck'. Activating post-failure policies.[0m
+[33m[2026-01-07T13:48:29.348-06:00] SKIPPING 'find_e6_rot_ip': Item ('find_e6_rot_ip') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:29.349-06:00] SKIPPING 'quit_telnet': Item ('quit_telnet') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:29.349-06:00] SKIPPING 'rot_clear_lockdown': Item ('rot_clear_lockdown') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:29.349-06:00] SKIPPING 'telnet_to_ilom_or_ami_bmc_via_digi_server': Item ('telnet_to_ilom_or_ami_bmc_via_digi_server') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:29.349-06:00] SKIPPING 'find_ilom_or_bmc_ip': Item ('find_ilom_or_bmc_ip') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:29.349-06:00] SKIPPING 'upgrade_hpm_cpld_if_necessary': Item ('upgrade_hpm_cpld_if_necessary') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:29.350-06:00] SKIPPING 'ac_cycle_for_ilom_or_ami_bmc_hpm_cpld': Item ('ac_cycle_for_ilom_or_ami_bmc_hpm_cpld') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:29.350-06:00] SKIPPING 'wait_until_ilom_or_ami_bmc_ready_hpm_cpld': Item ('wait_until_ilom_or_ami_bmc_ready_hpm_cpld') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:29.350-06:00] SKIPPING 'login_e6_ilom_or_ami_bmc_hpm_cpld': Item ('login_e6_ilom_or_ami_bmc_hpm_cpld') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:29.350-06:00] SKIPPING 'check_cpld_versions_hpm_cpld': Item ('check_cpld_versions_hpm_cpld') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:29.350-06:00] SKIPPING 'upgrade_bmc_cpld_if_necessary': Item ('upgrade_bmc_cpld_if_necessary') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:29.351-06:00] SKIPPING 'ac_cycle_for_ilom_or_ami_bmc_bmc_cpld': Item ('ac_cycle_for_ilom_or_ami_bmc_bmc_cpld') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:29.351-06:00] SKIPPING 'wait_until_ilom_or_ami_bmc_ready_bmc_cpld': Item ('wait_until_ilom_or_ami_bmc_ready_bmc_cpld') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:29.351-06:00] SKIPPING 'login_e6_ilom_or_ami_bmc_bmc_cpld': Item ('login_e6_ilom_or_ami_bmc_bmc_cpld') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:29.351-06:00] SKIPPING 'check_cpld_versions_bmc_cpld': Item ('check_cpld_versions_bmc_cpld') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:29.351-06:00] SKIPPING 'quit_telnet': Item ('quit_telnet') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:29.352-06:00] SKIPPING 'run_foximan_init': Item ('run_foximan_init') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:29.352-06:00] SKIPPING 'dummy_trigger_fru_start': Item ('dummy_trigger_fru_start') is marked as critical (cof:false).[0m
+[2026-01-07T13:48:29.352-06:00] Releasing waiters for 'e6_foximan_init:dummy_trigger_fru_start' because it was SKIPPED.[0m
+[2026-01-07T13:48:29.352-06:00] 'e6_foximan_init' is now waiting for sync point 'ssh_e6_foximan_fru:enable_i2c_polling'...[0m
+[33m[2026-01-07T13:48:29.352-06:00] ================================================================================[0m
+[33m[2026-01-07T13:48:29.353-06:00] = E6_ILOM - CPLD - Check CPLD versions (PRECHECK) (1)                          =[0m
+[33m[2026-01-07T13:48:29.353-06:00] ================================================================================[0m
+[2026-01-07T13:48:29.353-06:00] i2ctransfer -y 2 w1@0x9 0x0 r2[0m
+[2026-01-07T13:48:29.353-06:00] Error: Sending messages failed: No such device or address[0m
+[2026-01-07T13:48:29.353-06:00] ~ #[0m
+[2026-01-07T13:48:29.353-06:00] Failed to read PDB CPLD version. Please check if the PDB CPLD is functioning properly.[0m
+[2026-01-07T13:48:29.354-06:00] i2ctransfer -y 3 w1@0x9 0x0 r2[0m
+[2026-01-07T13:48:29.354-06:00] 0x01 0x02[0m
+[2026-01-07T13:48:29.354-06:00] ~ # i2ctransfer -y 7 w1@0x9 0x0 r2[0m
+[2026-01-07T13:48:29.354-06:00] 0x11 0x01[0m
+[2026-01-07T13:48:29.354-06:00] ~ #[0m
+[33m[2026-01-07T13:48:29.355-06:00] ================================================================================[0m
+[33m[2026-01-07T13:48:29.355-06:00] [0m
+[1m[36m[2026-01-07T13:48:31.359-06:00] Test 'E6_ROT/ROT/Find E6 ROT IP' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.359-06:00] Test 'E6_ILOM/TELNET/Quit telnet' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.359-06:00] Test 'E6_ROT/LOCKDOWN/Clear lockdown status' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.360-06:00] Test 'E6_ILOM/TELNET/Telnet to E6 ILOM or AMI BMC via digi server' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.360-06:00] Test 'E6_ILOM/AVAILABILITY/Find ILOM or AMI BMC IP' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.360-06:00] Test 'E6/HPM_CPLD/Upgrade HPM CPLD firmware' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.360-06:00] Test 'E6_ILOM/AC/AC cycle E6 (HPM_CPLD)' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.360-06:00] Test 'E6_ILOM/READINESS/Wait until ILOM or AMI BMC is ready (HPM_CPLD)' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.360-06:00] Test 'E6_ILOM/LOGIN/Login E6 ILOM or AMI BMC and check prompt (HPM_CPLD)' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.361-06:00] Test 'E6_ILOM/CPLD/Check CPLD versions (HPM_CPLD)' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.361-06:00] Test 'E6/BMC_CPLD/Upgrade BMC CPLD firmware' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.361-06:00] Test 'E6_ILOM/AC/AC cycle E6 (BMC_CPLD)' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.361-06:00] Test 'E6_ILOM/READINESS/Wait until ILOM or AMI BMC is ready (BMC_CPLD)' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.361-06:00] Test 'E6_ILOM/LOGIN/Login E6 ILOM or AMI BMC and check prompt (BMC_CPLD)' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.361-06:00] Test 'E6_ILOM/CPLD/Check CPLD versions (BMC_CPLD)' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.361-06:00] Test 'E6_ILOM/TELNET/Quit telnet' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.362-06:00] Test 'FOXIMAN/AMD/INIT FOXIMAN run command' was SKIPPED.[0m
+[2026-01-07T13:48:31.362-06:00] 'ssh_e6_foximan_fru' released from wait on 'e6_foximan_init:dummy_trigger_fru_start'. Final state: SKIPPED.[0m
+[31m[2026-01-07T13:48:31.362-06:00] Dependency 'e6_foximan_init:dummy_trigger_fru_start' for agent 'ssh_e6_foximan_fru' did not complete (State: SKIPPED). Aborting subsequent tests for this agent.[0m
+[33m[2026-01-07T13:48:31.362-06:00] SKIPPING 'connect_to_e6_ilom': Item ('connect_to_e6_ilom') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.362-06:00] SKIPPING 'check_e6_ilom_prompt': Item ('check_e6_ilom_prompt') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.363-06:00] SKIPPING 'write_oracle_12vpdb_fru_bin': Item ('write_oracle_12vpdb_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.363-06:00] SKIPPING 'write_oracle_bmc_fru_bin': Item ('write_oracle_bmc_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.363-06:00] SKIPPING 'write_oracle_hpm_fru_bin': Item ('write_oracle_hpm_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.363-06:00] SKIPPING 'set_system_identity_and_asset_tag_pdb': Item ('set_system_identity_and_asset_tag_pdb') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.363-06:00] SKIPPING 'verify_and_fix_fru_vendor': Item ('verify_and_fix_fru_vendor') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.364-06:00] SKIPPING 'load_riser1_fru_bin': Item ('load_riser1_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.364-06:00] SKIPPING 'write_e6_cableriser1_fru_data_by_eepromblaster': Item ('write_e6_cableriser1_fru_data_by_eepromblaster') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.364-06:00] SKIPPING 'load_riser2_fru_bin': Item ('load_riser2_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.364-06:00] SKIPPING 'write_e6_cableriser2_fru_data_by_eepromblaster': Item ('write_e6_cableriser2_fru_data_by_eepromblaster') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.364-06:00] SKIPPING 'load_riser3_fru_bin': Item ('load_riser3_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.364-06:00] SKIPPING 'write_e6_cableriser3_fru_data_by_eepromblaster': Item ('write_e6_cableriser3_fru_data_by_eepromblaster') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.365-06:00] SKIPPING 'load_riser4_fru_bin': Item ('load_riser4_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.365-06:00] SKIPPING 'write_e6_cableriser4_fru_data_by_eepromblaster': Item ('write_e6_cableriser4_fru_data_by_eepromblaster') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.365-06:00] SKIPPING 'load_riser5_fru_bin': Item ('load_riser5_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.365-06:00] SKIPPING 'write_e6_cableriser5_fru_data_by_eepromblaster': Item ('write_e6_cableriser5_fru_data_by_eepromblaster') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.365-06:00] SKIPPING 'load_riser6_fru_bin': Item ('load_riser6_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.366-06:00] SKIPPING 'write_e6_cableriser6_fru_data_by_eepromblaster': Item ('write_e6_cableriser6_fru_data_by_eepromblaster') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.366-06:00] SKIPPING 'load_riser7_fru_bin': Item ('load_riser7_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.366-06:00] SKIPPING 'write_e6_cableriser7_fru_data_by_eepromblaster': Item ('write_e6_cableriser7_fru_data_by_eepromblaster') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.366-06:00] SKIPPING 'load_riser8_fru_bin': Item ('load_riser8_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.366-06:00] SKIPPING 'write_e6_cableriser8_fru_data_by_eepromblaster': Item ('write_e6_cableriser8_fru_data_by_eepromblaster') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.367-06:00] SKIPPING 'write_fan_psu_module_fru': Item ('write_fan_psu_module_fru') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.367-06:00] SKIPPING 'set_hpm_fru': Item ('set_hpm_fru') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.367-06:00] SKIPPING 'set_sp_fru': Item ('set_sp_fru') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.367-06:00] SKIPPING 'disable_i2c_polling': Item ('disable_i2c_polling') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.367-06:00] SKIPPING 'load_riser_host_nic_fru_bin': Item ('load_riser_host_nic_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.367-06:00] SKIPPING 'write_e6_cableriser_host_nic_fru_data_by_eepromblaster': Item ('write_e6_cableriser_host_nic_fru_data_by_eepromblaster') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.368-06:00] SKIPPING 'load_riser_dpu_top_bottom_fru_bin': Item ('load_riser_dpu_top_bottom_fru_bin') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.368-06:00] SKIPPING 'write_e6_cableriser_dpu_fru_data_by_eepromblaster': Item ('write_e6_cableriser_dpu_fru_data_by_eepromblaster') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.368-06:00] SKIPPING 'enable_i2c_polling': Item ('enable_i2c_polling') is marked as critical (cof:false).[0m
+[2026-01-07T13:48:31.368-06:00] Releasing waiters for 'ssh_e6_foximan_fru:enable_i2c_polling' because it was SKIPPED.[0m
+[2026-01-07T13:48:31.368-06:00] Agent 'ssh_e6_foximan_fru' has finished processing all its test items.[0m
+[1m[36m[2026-01-07T13:48:31.369-06:00] Test 'E6_ILOM/DUMMY/Dummy function to trigger FRU programming' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.369-06:00] Test 'E6_ILOM/SSH/Connect to ILOM via SSH' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.369-06:00] Test 'E6_ILOM/Availability/Login E6 ILOM and check prompt' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.369-06:00] Test 'E6_ILOM/FRU/Write Oracle 12vpdb FRU bin file' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.369-06:00] Test 'E6_ILOM/FRU/Write Oracle bmc FRU bin file' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.369-06:00] Test 'E6_ILOM/FRU/Write Oracle hpm FRU bin file' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.370-06:00] Test 'E6_ILOM/FRU/Set System Identity and ASSET Tag pdb' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.370-06:00] Test 'E6_ILOM/FRU/Verify & Auto-Fix VENDOR FRU info' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.370-06:00] Test 'E6_ILOM/FRU/Load cableriser1 fru bin' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.370-06:00] Test 'E6_ILOM/I2C/Write E6 cableriser1 FRU data by eepromblaster' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.370-06:00] Test 'E6_ILOM/FRU/Load cableriser2 fru bin' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.370-06:00] Test 'E6_ILOM/FRU/Write E6 cableriser2 FRU data by eepromblaster' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.370-06:00] Test 'E6_ILOM/FRU/Load cableriser3 fru bin' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.370-06:00] Test 'E6_ILOM/FRU/Write E6 cableriser3 FRU data by eepromblaster' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.370-06:00] Test 'E6_ILOM/FRU/Load cableriser4 fru bin' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.371-06:00] Test 'E6_ILOM/FRU/Write E6 cableriser4 FRU data by eepromblaster' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.371-06:00] Test 'E6_ILOM/FRU/Load cableriser5 fru bin' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.371-06:00] Test 'E6_ILOM/FRU/Write E6 cableriser5 FRU data by eepromblaster' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.371-06:00] Test 'E6_ILOM/FRU/Load cableriser6 fru bin' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.371-06:00] Test 'E6_ILOM/FRU/Write E6 cableriser6 FRU data by eepromblaster' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.371-06:00] Test 'E6_ILOM/FRU/Load cableriser7 fru bin' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.371-06:00] Test 'E6_ILOM/FRU/Write E6 cableriser7 FRU data by eepromblaster' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.371-06:00] Test 'E6_ILOM/FRU/Load cableriser8 fru bin' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.371-06:00] Test 'E6_ILOM/FRU/Write E6 cableriser8 FRU data by eepromblaster' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.371-06:00] Test 'E6_ILOM/FRU/Write fan psu module fru' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.372-06:00] Test 'E6_ILOM/FRU/Set HPM FRU' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.372-06:00] Test 'E6_ILOM/FRU/Set SP FRU' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.372-06:00] Test 'E6_ILOM/I2C/Disable polling' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.372-06:00] Test 'E6_ILOM/FRU/Load cableriser HOST NIC fru bin' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.372-06:00] Test 'E6_ILOM/FRU/Write E6 cableriser HOST NIC FRU data' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.372-06:00] Test 'E6_ILOM/FRU/Load cableriser DPU TOP BOTTOM fru bin' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.372-06:00] Test 'E6_ILOM/FRU/Write E6 cableriser DPU FRU data' was SKIPPED.[0m
+[2026-01-07T13:48:31.372-06:00] 'e6_foximan_init' released from wait on 'ssh_e6_foximan_fru:enable_i2c_polling'. Final state: SKIPPED.[0m
+[31m[2026-01-07T13:48:31.372-06:00] Dependency 'ssh_e6_foximan_fru:enable_i2c_polling' for agent 'e6_foximan_init' did not complete (State: SKIPPED). Aborting subsequent tests for this agent.[0m
+[33m[2026-01-07T13:48:31.373-06:00] SKIPPING 'telnet_to_e6_via_digi_server': Item ('telnet_to_e6_via_digi_server') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.373-06:00] SKIPPING 'reset_e6_ilom_to_login_prompt': Item ('reset_e6_ilom_to_login_prompt') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.373-06:00] SKIPPING 'login_e6_ilom_after_fru': Item ('login_e6_ilom_after_fru') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.373-06:00] SKIPPING 'ac_cycle': Item ('ac_cycle') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.373-06:00] SKIPPING 'wait_until_ilom_ready': Item ('wait_until_ilom_ready') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.373-06:00] SKIPPING 'login_e6_ilom_verify_fru': Item ('login_e6_ilom_verify_fru') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.373-06:00] SKIPPING 'verify_fru_all': Item ('verify_fru_all') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.373-06:00] SKIPPING 'verify_fru_vendor': Item ('verify_fru_vendor') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.374-06:00] SKIPPING 'quit_telnet': Item ('quit_telnet') is marked as critical (cof:false).[0m
+[33m[2026-01-07T13:48:31.374-06:00] SKIPPING 'rot_set_lockdown': Item ('rot_set_lockdown') is marked as critical (cof:false).[0m
+[2026-01-07T13:48:31.374-06:00] Agent 'e6_foximan_init' has finished processing all its test items.[0m
+[1m[36m[2026-01-07T13:48:31.374-06:00] Test 'E6_ILOM/I2C/Enble polling' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.374-06:00] Test 'E6_ILOM/TELNET/Telnet to E6 headnode via digi server' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.374-06:00] Test 'E6_ILOM/RESET/Reset ILOM to login prompt' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.375-06:00] Test 'E6_ILOM/LOGIN/Login E6_ILOM and check prompt (AFTER FRU)' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.375-06:00] Test 'E6_ILOM/POWER/AC cycle E6' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.375-06:00] Test 'E6_ILOM/READINESS/Wait until ILOM is ready' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.375-06:00] Test 'E6_ILOM/LOGIN/Login E6_ILOM and check prompt (VERIFY FRU)' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.375-06:00] Test 'E6_ILOM/FRU/Verify all FRUID information' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.375-06:00] Test 'E6_ILOM/FRU/Verify VENDOR FRU information' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.375-06:00] Test 'E6_ILOM/TELNET/Quit telnet' was SKIPPED.[0m
+[1m[36m[2026-01-07T13:48:31.375-06:00] Test 'E6_ROT/LOCKDOWN/Set lockdown status' was SKIPPED.[0m
+[2026-01-07T13:48:31.991-06:00] Tasks finished. Breaking main loop.[0m
+[2026-01-07T13:48:31.992-06:00] No pending result handlers to wait for.[0m
+[2026-01-07T13:48:31.992-06:00] Final cleanup...[0m
+[2026-01-07T13:48:42.108-06:00] Port 40707 in use (attempt 1/1): [Errno 98] Address already in use[0m
+[2026-01-07T13:48:42.108-06:00] Port 40707 still in use after 1 retries[0m
+[33m[2026-01-07T13:48:42.108-06:00] Port 40707 still in use after cleanup.[0m
+[2026-01-07T13:48:42.209-06:00] Port 40708 is available (attempt 1/1)[0m
+[33m[2026-01-07T13:48:42.284-06:00] [0m
+[33m[2026-01-07T13:48:42.284-06:00] [0m
+[33m[2026-01-07T13:48:42.284-06:00] [0m
+[33m[2026-01-07T13:48:42.284-06:00] ################################## Test Ended ##################################[0m
+[33m[2026-01-07T13:48:42.284-06:00] Test start: 2026-01-07T13:48:18.265835-06:00[0m
+[33m[2026-01-07T13:48:42.285-06:00] Test end: 2026-01-07T13:48:42.284150-06:00[0m
+[33m[2026-01-07T13:48:42.285-06:00] Test duration: 00:00:24.018315[0m
+[33m[2026-01-07T13:48:42.285-06:00] [0m
+[33m[2026-01-07T13:48:42.285-06:00] --------------------------------- Test Result ----------------------------------[0m
+[1m[32m[2026-01-07T13:48:42.285-06:00] FOXIMAN/BASH/Open Bash Shell--------------------------------------------[PASSED][0m
+[1m[32m[2026-01-07T13:48:42.286-06:00] FOXIMAN/INFO/Dump test info---------------------------------------------[PASSED][0m
+[1m[32m[2026-01-07T13:48:42.286-06:00] E6/BMC/Check ILOM or AMI BMC status-------------------------------------[PASSED][0m
+[1m[32m[2026-01-07T13:48:42.286-06:00] E6_ILOM/LOGIN/Login E6 ILOM or AMI BMC and check prompt (PRECHECK)------[PASSED][0m
+[31m[2026-01-07T13:48:42.286-06:00] E6_ILOM/CPLD/Check CPLD versions (PRECHECK)-----------------------------[FAILED][0m
+[1m[36m[2026-01-07T13:48:42.286-06:00] E6_ROT/ROT/Find E6 ROT IP----------------------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.286-06:00] E6_ILOM/TELNET/Quit telnet---------------------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.286-06:00] E6_ROT/LOCKDOWN/Clear lockdown status----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.286-06:00] E6_ILOM/TELNET/Telnet to E6 ILOM or AMI BMC via digi server------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.287-06:00] E6_ILOM/AVAILABILITY/Find ILOM or AMI BMC IP---------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.287-06:00] E6/HPM_CPLD/Upgrade HPM CPLD firmware----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.287-06:00] E6_ILOM/AC/AC cycle E6 (HPM_CPLD)--------------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.287-06:00] E6_ILOM/READINESS/Wait until ILOM or AMI BMC is ready (HPM_CPLD)-------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.287-06:00] E6_ILOM/LOGIN/Login E6 ILOM or AMI BMC and check prompt (HPM_CPLD)-----[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.287-06:00] E6_ILOM/CPLD/Check CPLD versions (HPM_CPLD)----------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.287-06:00] E6/BMC_CPLD/Upgrade BMC CPLD firmware----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.287-06:00] E6_ILOM/AC/AC cycle E6 (BMC_CPLD)--------------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.288-06:00] E6_ILOM/READINESS/Wait until ILOM or AMI BMC is ready (BMC_CPLD)-------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.288-06:00] E6_ILOM/LOGIN/Login E6 ILOM or AMI BMC and check prompt (BMC_CPLD)-----[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.288-06:00] E6_ILOM/CPLD/Check CPLD versions (BMC_CPLD)----------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.288-06:00] E6_ILOM/TELNET/Quit telnet---------------------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.288-06:00] FOXIMAN/AMD/INIT FOXIMAN run command-----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.288-06:00] E6_ILOM/DUMMY/Dummy function to trigger FRU programming----------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.288-06:00] E6_ILOM/SSH/Connect to ILOM via SSH------------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.288-06:00] E6_ILOM/Availability/Login E6 ILOM and check prompt--------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.289-06:00] E6_ILOM/FRU/Write Oracle 12vpdb FRU bin file---------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.289-06:00] E6_ILOM/FRU/Write Oracle bmc FRU bin file------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.289-06:00] E6_ILOM/FRU/Write Oracle hpm FRU bin file------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.289-06:00] E6_ILOM/FRU/Set System Identity and ASSET Tag pdb----------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.289-06:00] E6_ILOM/FRU/Verify & Auto-Fix VENDOR FRU info--------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.289-06:00] E6_ILOM/FRU/Load cableriser1 fru bin-----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.289-06:00] E6_ILOM/I2C/Write E6 cableriser1 FRU data by eepromblaster-------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.289-06:00] E6_ILOM/FRU/Load cableriser2 fru bin-----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.290-06:00] E6_ILOM/FRU/Write E6 cableriser2 FRU data by eepromblaster-------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.290-06:00] E6_ILOM/FRU/Load cableriser3 fru bin-----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.290-06:00] E6_ILOM/FRU/Write E6 cableriser3 FRU data by eepromblaster-------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.290-06:00] E6_ILOM/FRU/Load cableriser4 fru bin-----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.290-06:00] E6_ILOM/FRU/Write E6 cableriser4 FRU data by eepromblaster-------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.290-06:00] E6_ILOM/FRU/Load cableriser5 fru bin-----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.290-06:00] E6_ILOM/FRU/Write E6 cableriser5 FRU data by eepromblaster-------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.290-06:00] E6_ILOM/FRU/Load cableriser6 fru bin-----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.291-06:00] E6_ILOM/FRU/Write E6 cableriser6 FRU data by eepromblaster-------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.291-06:00] E6_ILOM/FRU/Load cableriser7 fru bin-----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.291-06:00] E6_ILOM/FRU/Write E6 cableriser7 FRU data by eepromblaster-------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.291-06:00] E6_ILOM/FRU/Load cableriser8 fru bin-----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.291-06:00] E6_ILOM/FRU/Write E6 cableriser8 FRU data by eepromblaster-------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.291-06:00] E6_ILOM/FRU/Write fan psu module fru-----------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.291-06:00] E6_ILOM/FRU/Set HPM FRU------------------------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.291-06:00] E6_ILOM/FRU/Set SP FRU-------------------------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.292-06:00] E6_ILOM/I2C/Disable polling--------------------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.292-06:00] E6_ILOM/FRU/Load cableriser HOST NIC fru bin---------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.292-06:00] E6_ILOM/FRU/Write E6 cableriser HOST NIC FRU data----------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.292-06:00] E6_ILOM/FRU/Load cableriser DPU TOP BOTTOM fru bin---------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.292-06:00] E6_ILOM/FRU/Write E6 cableriser DPU FRU data---------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.292-06:00] E6_ILOM/I2C/Enble polling----------------------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.292-06:00] E6_ILOM/TELNET/Telnet to E6 headnode via digi server-------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.292-06:00] E6_ILOM/RESET/Reset ILOM to login prompt-------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.293-06:00] E6_ILOM/LOGIN/Login E6_ILOM and check prompt (AFTER FRU)---------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.293-06:00] E6_ILOM/POWER/AC cycle E6----------------------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.293-06:00] E6_ILOM/READINESS/Wait until ILOM is ready-----------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.293-06:00] E6_ILOM/LOGIN/Login E6_ILOM and check prompt (VERIFY FRU)--------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.293-06:00] E6_ILOM/FRU/Verify all FRUID information-------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.293-06:00] E6_ILOM/FRU/Verify VENDOR FRU information------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.293-06:00] E6_ILOM/TELNET/Quit telnet---------------------------------------------[SKIPPED][0m
+[1m[36m[2026-01-07T13:48:42.293-06:00] E6_ROT/LOCKDOWN/Set lockdown status------------------------------------[SKIPPED][0m
+[33m[2026-01-07T13:48:42.300-06:00] [0m
+[1m[31m[2026-01-07T13:48:42.301-06:00] ########    ###    #### ##          #### ####[0m
+[1m[31m[2026-01-07T13:48:42.301-06:00] ##         ## ##    ##  ##          #### ####[0m
+[1m[31m[2026-01-07T13:48:42.301-06:00] ##        ##   ##   ##  ##          #### ####[0m
+[1m[31m[2026-01-07T13:48:42.301-06:00] ######   ##     ##  ##  ##           ##   ##[0m
+[1m[31m[2026-01-07T13:48:42.301-06:00] ##       #########  ##  ##[0m
+[1m[31m[2026-01-07T13:48:42.301-06:00] ##       ##     ##  ##  ##          #### ####[0m
+[1m[31m[2026-01-07T13:48:42.301-06:00] ##       ##     ## #### ########    #### ####[0m
+[1m[31m[2026-01-07T13:48:42.301-06:00] [0m
+[2026-01-07T13:48:42.301-06:00] No errors encountered during the test.[0m
+[2026-01-07T13:48:42.301-06:00] Task Manager closing process starts now.[0m
+[2026-01-07T13:48:42.316-06:00] bin.jar: logs/20260107_134818.265_INGRASYS_MX-P1A72EJ625520289_L10_INIT/jar/INGRASYS_2552XQ10H1_L10INIT_20260107134818_collected/INGRASYS_2552XQ10H1_L10INIT_20260107134818.bin.jar[0m
+[2026-01-07T13:48:42.316-06:00] xml.jar: logs/20260107_134818.265_INGRASYS_MX-P1A72EJ625520289_L10_INIT/jar/INGRASYS_2552XQ10H1_L10INIT_20260107134818_collected/INGRASYS_2552XQ10H1_L10INIT_20260107134818.xml.jar[0m
+[2026-01-07T13:48:42.316-06:00] view_archive.jar: logs/20260107_134818.265_INGRASYS_MX-P1A72EJ625520289_L10_INIT/jar/INGRASYS_2552XQ10H1_L10INIT_20260107134818_collected/INGRASYS_2552XQ10H1_L10INIT_20260107134818.jar[0m
+[2026-01-07T13:48:42.316-06:00] TDMS jar: /home/op/e6_fvt_foximan_the_same_as_epd2/logs/20260107_134818.265_INGRASYS_MX-P1A72EJ625520289_L10_INIT/jar/INGRASYS_2552XQ10H1_L10INIT_20260107134818_collected.jar[0m
+[2026-01-07T13:48:42.316-06:00] Executing command: sshpass -p 'Ingrasys123!@#' sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null oracle@10.12.192.157:/Oracle/OracleToTDMS <<< $'put /home/op/e6_fvt_foximan_the_same_as_epd2/logs/20260107_134818.265_INGRASYS_MX-P1A72EJ625520289_L10_INIT/jar/INGRASYS_2552XQ10H1_L10INIT_20260107134818_collected.jar'[0m
+[2026-01-07T13:48:42.581-06:00] TDMS JAR uploaded successfully[0m
+[2026-01-07T13:48:42.581-06:00] Task Manager gracefully closed.[0m
+[33m[2026-01-07T13:48:42.591-06:00] E6 ec code:0003037NHHF828R7[0m
+[2026-01-07T13:48:42.591-06:00] Updating E6 test log for SN: MX-P1A72EJ625520289[0m
+[2026-01-07T13:48:42.591-06:00] ========[0m
+[2026-01-07T13:48:42.591-06:00] {[0m
+[2026-01-07T13:48:42.591-06:00]   "SN": "MX-P1A72EJ625520289",[0m
+[2026-01-07T13:48:42.592-06:00]   "STATION_ID": "INIT_TEST",[0m
+[2026-01-07T13:48:42.592-06:00]   "EMP_NO": "FXTE123",[0m
+[2026-01-07T13:48:42.592-06:00]   "EQP_NO": "INIT_TEST-MTF#26-1",[0m
+[2026-01-07T13:48:42.592-06:00]   "RESULT": "FAIL",[0m
+[2026-01-07T13:48:42.592-06:00]   "START_DATE": "2026/01/07 13:48:18",[0m
+[2026-01-07T13:48:42.592-06:00]   "END_DATE": "2026/01/07 13:48:42",[0m
+[2026-01-07T13:48:42.592-06:00]   "EC": "0003037NHHF828R7",[0m
+[2026-01-07T13:48:42.592-06:00]   "EC_DETAIL": {}[0m
+[2026-01-07T13:48:42.592-06:00] }[0m
+[2026-01-07T13:48:42.593-06:00] curl -X POST -H 'Content-Type: application/json' -d '{"SN": "MX-P1A72EJ625520289", "STATION_ID": "INIT_TEST", "EMP_NO": "FXTE123", "EQP_NO": "INIT_TEST-MTF#26-1", "RESULT": "FAIL", "START_DATE": "2026/01/07 13:48:18", "END_DATE": "2026/01/07 13:48:42", "EC": "0003037NHHF828R7", "EC_DETAIL": {}}' 'http://10.12.192.157:8001/SFCAPI/SFC/UpdateTestLog'[0m
+[2026-01-07T13:48:42.593-06:00] ========[0m
+[2026-01-07T13:48:42.630-06:00] Successfully checked route at http://10.12.192.157:8001/SFCAPI/SFC/UpdateTestLog[0m
+[2026-01-07T13:48:42.631-06:00] {'RESULT': 'OK'}[0m
+[2026-01-07T13:48:42.631-06:00] [0m
+[2026-01-07T13:48:42.631-06:00] [0m
+[2026-01-07T13:48:42.631-06:00] E6 PN input: [1A72EJ600-36L-G][0m
+[2026-01-07T13:48:42.631-06:00] E6 SN input: [MX-P1A72EJ625520289][0m
+[2026-01-07T13:48:42.631-06:00] OPID input: [FXTE123][0m
+[2026-01-07T13:48:42.631-06:00] MTF input: [MTF#26-1][0m
+[2026-01-07T13:48:42.631-06:00] [0m
+[2026-01-07T13:48:42.632-06:00] [0m
